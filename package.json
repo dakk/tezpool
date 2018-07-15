@@ -1,0 +1,28 @@
+{
+  "name": "tezpool",
+  "version": "0.1.0",
+  "description": "Tezos baking redistribution software",
+  "scripts": {
+    "build": "bsb",
+    "watch": "bsb -w",
+    "start": "node lib/js/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dakk/tezpool.git"
+  },
+  "keywords": [
+    "tezos",
+    "pool",
+    "xtz"
+  ],
+  "author": "Davide Gessa (gessadavide@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dakk/tezpool/issues"
+  },
+  "homepage": "https://github.com/dakk/tezpool#readme",
+  "devDependencies": {
+    "bs-platform": "^4.0.0"
+  }
+}

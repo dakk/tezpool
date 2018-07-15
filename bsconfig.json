@@ -1,0 +1,6 @@
+{
+  "name": "tezpool",
+  "sources": [
+    "src/"
+  ]
+}
