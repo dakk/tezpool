@@ -1,2 +1,4 @@
+package-lock.json
+.merlin
 node_modules
 lib
