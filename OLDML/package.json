@@ -5,7 +5,7 @@
   "scripts": {
     "build": "bsb",
     "watch": "bsb -w",
-    "start": "node lib/js/index.js"
+    "start": "node lib/js/src/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,9 @@
   "homepage": "https://github.com/dakk/tezpool#readme",
   "devDependencies": {
     "bs-platform": "^4.0.0"
+  },
+  "dependencies": {
+    "request": "^2.87.0",
+    "request-promise-native": "^1.0.5"
   }
 }
