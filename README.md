@@ -41,24 +41,24 @@ optional arguments:
                         cycle number (default is the current cycle)
 ```
 
-### Estimate the reward for cycle 8
+Estimate the reward for cycle 8:
 
 ```bash
 python3 tezpool.py --cycle 8 estimate
 ```
 
-### Get the stake percentages for cycle 8
+Get the stake percentages for cycle 8:
 
 ```bash
 python3 tezpool.py --cycle 8 percentage
 ```
 
-### Update the paylog.json with new reward
-NOTYET
+Update the docs:
 
+```bash
+python3 tezpool.py updatedocs
+```
 
-### Pay pending reward found in paylog.json
-NOTYET
 
 
 ## Donate

@@ -29,8 +29,8 @@ parser.add_argument('-c', '--config', metavar='config.json', dest='cfile', actio
 				   default='config.json',
 				   help='set a config file (default: config.json)')
 parser.add_argument('action', metavar='action', action='store',
-				   type=str, choices=['estimate', 'percentage', 'updatependings', 'paypendings'],
-				   help='action to perform (estimate, percentage, updatependings, paypendings)')
+				   type=str, choices=['estimate', 'percentage', 'updatependings', 'paypendings', 'updatedocs'],
+				   help='action to perform (estimate, percentage, updatependings, paypendings, updatedocs)')
 parser.add_argument('-cc', '--cycle', metavar='cycle', action='store', default=None,
 				   type=int, help='cycle number (default is the current cycle)')
 
@@ -81,8 +81,8 @@ def getCycleSnapshot (cycle):
 		contract_info2 = {
 			"balance": contract_info['balance'],
 			"manager": contract_info['manager'],
-			"contract": x,
-			"name": conf['deleguees'][contract_info['manager']] if (contract_info['manager'] in conf['deleguees']) else None,
+			"address": x,
+			"alias": conf['deleguees'][x] if (x in conf['deleguees']) else None,
 			"percentage": int (100. * int (contract_info['balance']) / int (delegate_info['staking_balance']))
 		}
 		delegated.append(contract_info2)
@@ -91,8 +91,8 @@ def getCycleSnapshot (cycle):
 	delegated.append({
 		"balance": delegate_info['balance'],
 		"manager": conf['pkh'],
-		"contract": None,
-		"name": conf['name'],
+		"address": conf['pkh'],
+		"alias": conf['name'],
 		"percentage": int (100. * int (delegate_info['balance']) / int (delegate_info['staking_balance']))
 	})
 
@@ -140,7 +140,7 @@ if args.action == 'estimate':
 	print()
 	for x in snap['delegated']:
 		urew = formatBalance (reward * x['percentage'] / 100.)
-		print (x['manager'], x['name'], '->', urew, 'XTZ (' + str(x['percentage']) + '%)')
+		print (x['address'], x['alias'], '->', urew, 'XTZ (' + str(x['percentage']) + '%)')
 
 
 elif args.action == 'percentage':
@@ -150,11 +150,16 @@ elif args.action == 'percentage':
 	print ('Staking Balance:', formatBalance (snap['staking_balance']))
 
 	for x in snap['delegated']:
-		print (x['manager'], x['name'], '->', formatBalance (x['balance']), 'XTZ (' + str(x['percentage']) + '%)')
+		print (x['address'], x['alias'], '->', formatBalance (x['balance']), 'XTZ (' + str(x['percentage']) + '%)')
+
+
+elif args.action == 'updatedocs':
+	pass
 
 
 elif args.action == 'updatependings':
 	pass
+
 
 elif args.action == 'paypendings':
 	pass
