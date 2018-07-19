@@ -7,7 +7,7 @@ The software is configured by modifying the config.json file.
 
 - host: the host of your node; if you run the pool in the same server of the node, leave "http://127.0.0.1:8732"
 - pkh: publickeyhash of the delegate
-- name: name of your pool (debug only)
+- name: name of your pool
 - percentage: % of tezos to distribute
 - payto: could be "contract" if you want to pay rewards to KT addresses, or "manager" if you want to pay reward to tz addresses
 - deleguees: a dictionary with "address": "alias"
@@ -24,17 +24,41 @@ pip3 install requests
 
 ## Usage
 
-Estimate the reward for cycle 8:
+```bash
+usage: tezpool.py [-h] [-c config.json] [-cc cycle] action
+
+Tezos delegate redistribution script
+
+positional arguments:
+  action                action to perform (estimate, percentage,
+                        updatependings, paypendings)
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -c config.json, --config config.json
+                        set a config file (default: config.json)
+  -cc cycle, --cycle cycle
+                        cycle number (default is the current cycle)
+```
+
+### Estimate the reward for cycle 8
 
 ```bash
 python3 tezpool.py --cycle 8 estimate
 ```
 
-Get the splitting percentages for cycle 8:
+### Get the stake percentages for cycle 8
 
 ```bash
 python3 tezpool.py --cycle 8 percentage
 ```
+
+### Update the paylog.json with new reward
+NOTYET
+
+
+### Pay pending reward found in paylog.json
+NOTYET
 
 
 ## Donate

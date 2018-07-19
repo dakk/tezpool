@@ -29,8 +29,8 @@ parser.add_argument('-c', '--config', metavar='config.json', dest='cfile', actio
 				   default='config.json',
 				   help='set a config file (default: config.json)')
 parser.add_argument('action', metavar='action', action='store',
-				   type=str, choices=['estimate', 'percentage'],
-				   help='action to perform (estimate, percentage)')
+				   type=str, choices=['estimate', 'percentage', 'updatependings', 'paypendings'],
+				   help='action to perform (estimate, percentage, updatependings, paypendings)')
 parser.add_argument('-cc', '--cycle', metavar='cycle', action='store', default=None,
 				   type=int, help='cycle number (default is the current cycle)')
 
@@ -151,3 +151,10 @@ elif args.action == 'percentage':
 
 	for x in snap['delegated']:
 		print (x['manager'], x['name'], '->', formatBalance (x['balance']), 'XTZ (' + str(x['percentage']) + '%)')
+
+
+elif args.action == 'updatependings':
+	pass
+
+elif args.action == 'paypendings':
+	pass
