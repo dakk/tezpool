@@ -2,6 +2,9 @@
     "host": "http://127.0.0.1:8732",
     "pkh": "",
     "percentage": 95,
-    "names": {
+    "payto": "contract",
+    "name": "MyAwesomePool",
+    "private": true,
+    "deleguees": {
     }
 }

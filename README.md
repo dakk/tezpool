@@ -2,6 +2,40 @@
 TezPool is an opensource redistribution software for tezos baking pools.
 
 
+## Configuration
+The software is configured by modifying the config.json file.
+
+- host: the host of your node; if you run the pool in the same server of the node, leave "http://127.0.0.1:8732"
+- pkh: publickeyhash of the delegate
+- name: name of your pool (debug only)
+- percentage: % of tezos to distribute
+- payto: could be "contract" if you want to pay rewards to KT addresses, or "manager" if you want to pay reward to tz addresses
+- deleguees: a dictionary with "address": "alias"
+- private: true if you want to split the reward only between addresses defined in deleguees
+
+## Install
+
+```bash
+git clone https://github.com/dakk/tezpool
+cd tezpool
+apt-get install python3-pip
+pip3 install requests
+```
+
+## Usage
+
+Estimate the reward for cycle 8:
+
+```bash
+python3 tezpool.py --cycle 8 estimate
+```
+
+Get the splitting percentages for cycle 8:
+
+```bash
+python3 tezpool.py --cycle 8 percentage
+```
+
 
 ## Donate
 This software is free and opensource, but donations are always appreciated;
