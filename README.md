@@ -60,6 +60,9 @@ python3 tezpool.py updatedocs
 ```
 
 
+## Frontend
+The docs/ folder contains a tiny frontend for the pool statistics; you have to run the updatedocs action in order to keep the frontend updated.
+
 
 ## Donate
 This software is free and opensource, but donations are always appreciated;
