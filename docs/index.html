@@ -1,19 +1,218 @@
-<html>
-    <head>
-        <title>dakk Tezos Private Pool</title>
-        <link href="https://bootswatch.com/3/flatly/bootstrap.min.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-        <script src="app.js"></script>
-    </head>
-    <body ng-app="delegateApp" ng-controller="indexCtrl">
-        <div class="container">
-            
-            <hr>
-            <div align="center">
-	            This software is free software created by Davide Gessa<br>
-	            <a href="https://github.com/dakk/tezpool">Fork me on Github</a>
-	        </div>
+<!DOCTYPE html>
+<html lang="en" ng-app="delegateApp" ng-controller="indexCtrl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{data.name}} Tezos Pool</title>
+
+    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="./vendor/sbadmin/css/sb-admin-2.css" rel="stylesheet">
+    <link href="./vendor/morrisjs/morris.css" rel="stylesheet">
+    <link href="./vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="page-wrapper" style="margin: 0; margin-left: 5%; margin-right: 5%; width: auto;">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">{{data.name}} Tezos Pool</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-usd fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">{{lastcycle.snapshot.staking_balance|balance}}</div>
+                                    <div>Staking Balance</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-users fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">0</div>
+                                    <div>Payed reward</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-users fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">0</div>
+                                    <div>Pending reward</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-users fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">{{lastcycle.snapshot.delegated.length}}</div>
+                                    <div>Delegators</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="general-chart"></div>
+
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default" ng-repeat="cycle in data.cycles">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Cycle {{cycle.cycle}}
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body row">
+                            <div class="col-md-12 row">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading">
+                                            <div class="row">
+                                                <div class="col-xs-3">
+                                                    <i class="fa fa-usd fa-5x"></i>
+                                                </div>
+                                                <div class="col-xs-9 text-right">
+                                                    <div class="huge">{{cycle.snapshot.staking_balance|balance}}</div>
+                                                    <div>Staking Balance</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="panel panel-green">
+                                        <div class="panel-heading">
+                                            <div class="row">
+                                                <div class="col-xs-3">
+                                                    <i class="fa fa-users fa-5x"></i>
+                                                </div>
+                                                <div class="col-xs-9 text-right">
+                                                    <div class="huge">{{cycle.snapshot.delegated.length}}</div>
+                                                    <div>Delegators</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="panel panel-yellow">
+                                        <div class="panel-heading">
+                                            <div class="row">
+                                                <div class="col-xs-3">
+                                                    <i class="fa fa-shopping-cart fa-5x"></i>
+                                                </div>
+                                                <div class="col-xs-9 text-right">
+                                                    <div class="huge">{{cycle.rights.estimated_reward | balance}}</div>
+                                                    <div>Estimated reward</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="panel panel-red">
+                                        <div class="panel-heading">
+                                            <div class="row">
+                                                <div class="col-xs-3">
+                                                    <i class="fa fa-support fa-5x"></i>
+                                                </div>
+                                                <div class="col-xs-9 text-right">
+                                                    <div class="huge">{{cycle.rights.blocks.length}} / {{cycle.rights.endorsment.length}}</div>
+                                                    <div>Block/Endorsment rights</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div id="chart-percentage-{{cycle.cycle}}"></div>
+                            </div>
+                            <div class="col-md-9">
+                                <table class="table table-hover">
+                                    <tr>
+                                        <th>Delegator</th>
+                                        <th>Address</th>
+                                        <th>Stake</th>
+                                        <th>Percentage</th>
+                                        <th>Estimated reward</th>
+                                    </tr>
+                                    <tr ng-repeat="d in cycle.snapshot.delegated">
+                                        <td>{{d.alias}}</td>
+                                        <td>{{d.address}}</td>
+                                        <td>{{d.balance|balance}}</td>
+                                        <td>{{d.percentage}}</td>
+                                        <td>{{cycle.rights.estimated_reward / 100 * d.percentage|balance}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
         </div>
-    </body>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="./vendor/raphael/raphael.min.js"></script>
+    <script src="./vendor/morrisjs/morris.min.js"></script>
+    <script src="./vendor/sbadmin/js/sb-admin-2.js"></script>
+    <script src="./vendor/angular.min.js"></script>
+    <script src="./vendor/moment.min.js"></script>
+    <script src="./app.js"></script>
+
+</body>
+
 </html>

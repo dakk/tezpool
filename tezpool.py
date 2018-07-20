@@ -154,12 +154,33 @@ elif args.action == 'percentage':
 
 
 elif args.action == 'updatedocs':
-	pass
+	data = {
+		"cycles": []
+	}
+
+	for cycle in range (7, getCurrentCycle() + PRESERVED_CYCLES + 1):
+		print ('Updating docs data for cycle', cycle)
+		snap = getCycleSnapshot(cycle)
+		brights = getBakingAndEndorsmentRights(cycle)
+		data['cycles'].append ({
+			"cycle": cycle,
+			"snapshot": snap,
+			"rights": brights,
+			"reward": []
+		})
+
+	data['pkh'] = conf['pkh']
+	data['name'] = conf['name']
+	data['deleguees'] = conf['deleguees']
+	data['percentage'] = conf['percentage']
+
+	f = open ('docs/data.json', 'w')
+	f.write (json.dumps(data))
+	f.close ()
 
 
 elif args.action == 'updatependings':
 	pass
-
 
 elif args.action == 'paypendings':
 	pass
