@@ -6,6 +6,7 @@
     "percentage": 95,
     "private": true,
     "deleguees": {
+        "tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq": "dak",
         "KT1KQhhaJdjysa2ihdNeXCsCFsekQM4PoDzA": "ond",
         "KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e": "men",
         "KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N": "red",
@@ -14,6 +15,7 @@
         "KT1HtcckeAhQoq2L9TTwreiZYcjnMANwnErh": "ana",
         "KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX": "spl",
         "KT1TpQqirScT2o4eLrcWb2qXibasVUdJ4F8f": "sio",
-        "KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X": "ste"
+        "KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X": "ste",
+        "KT1RWVF3uZq7Mu3x3AAFzhtX3aZmyF2mQhJX": "cor"
     }
 }

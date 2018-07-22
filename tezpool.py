@@ -57,8 +57,18 @@ def getBlockHashByIndex (idx):
 	head_level = requests.get (conf['host'] + '/chains/main/blocks/head/header').json()['level']
 	return requests.get (conf['host'] + '/chains/main/blocks/head~' + str (head_level - idx) + '/header').json()['hash']
 
-def getFrozenBalance ():
-	return requests.get (conf['host'] + '/chains/main/blocks/head/context/delegates/' + conf['pkh'] + '/frozen_balance_by_cycle').json()
+def getFrozenBalance (cycle):
+	# Get the snapshot block for every cycle /chains/main/blocks/head/context/raw/json/rolls/owner/snapshot/7
+	snapshot_block_offset = requests.get (conf['host'] + '/chains/main/blocks/head/context/raw/json/rolls/owner/snapshot/' + str(cycle)).json()[0]
+
+	# Then multiply the result with 256 and sum the cycle index, we get the block of the snapshot
+	snapshot_block_index = ((cycle-PRESERVED_CYCLES-2)*4096)+((snapshot_block_offset+1)*256)
+	#print ('\t', snapshot_block_index, snapshot_block_offset)
+
+	# Get the delegate information for the given snapshot
+	block_hash = getBlockHashByIndex (snapshot_block_index)
+
+	return requests.get (conf['host'] + '/chains/main/blocks/' + block_hash + '/context/delegates/' + conf['pkh'] + '/frozen_balance_by_cycle').json()
 
 def getCycleSnapshot (cycle):
 	# Get the snapshot block for every cycle /chains/main/blocks/head/context/raw/json/rolls/owner/snapshot/7
@@ -120,6 +130,7 @@ def getBakingAndEndorsmentRights (cycle):
 
 def getRewardForPastCycle (cycle):
 	pass
+
 
 
 
