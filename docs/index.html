@@ -103,15 +103,15 @@
         <!-- /.row -->
         <div class="row">
             <div class="col-md-12 page">
-                <div class="panel panel-default" ng-repeat="cycle in data.cycles" style="margin: 0; margin-left: 5%; margin-right: 5%; width: auto; margin-top: 2em;">
+                <div class="panel" ng-class="classOfCycleStatus(cycle.status)" ng-repeat="cycle in data.cycles" style="margin: 0; margin-left: 5%; margin-right: 5%; width: auto; margin-top: 2em;">
                     <div class="panel-heading">
-                        <span style="font-size: 150%; font-weight: bold"><i class="fa fa-bar-chart-o fa-fw"></i> Cycle {{cycle.cycle}} (pending)</span>
+                        <span style="font-size: 150%; font-weight: bold"><i class="fa fa-bar-chart-o fa-fw"></i> Cycle {{cycle.cycle}} ({{cycle.status}})</span>
                         <div class="pull-right">
                             <button class="btn btn-xs btn-info" data-toggle="collapse" data-target="#panel-{{cycle.cycle}}"><i class="fa fa-arrow-down"></i> Collapse</button>
                         </div>
                     </div>
                     <!-- /.panel-heading -->
-                    <div class="panel-body row panel-collapse collapse in" id="panel-{{cycle.cycle}}">
+                    <div class="panel-body row panel-collapse collapse" ng-class="{'in': cycle.status != 'past'}" id="panel-{{cycle.cycle}}">
                         <div class="col-md-12 row">
                             <div class="col-lg-3 col-md-6">
                                 <div class="panel panel-primary">
