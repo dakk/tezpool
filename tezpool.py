@@ -119,7 +119,7 @@ def getBakingAndEndorsmentRights (cycle):
 	bak = requests.get (conf['host'] + "/chains/main/blocks/head/helpers/baking_rights?delegate=" + conf['pkh'] + '&cycle=' + str(cycle)).json()
 	endors = requests.get (conf['host'] + "/chains/main/blocks/head/helpers/endorsing_rights?delegate=" + conf['pkh'] + '&cycle=' + str(cycle)).json()
 
-	b = list(filter(lambda x: x['priority'] == 1, bak))
+	b = list(filter(lambda x: x['priority'] == 0, bak))
 	e = endors
 	
 	return {
