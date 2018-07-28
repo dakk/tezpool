@@ -83,7 +83,7 @@ def getCycleSnapshot (cycle):
 			"manager": contract_info['manager'],
 			"address": x,
 			"alias": conf['deleguees'][x] if (x in conf['deleguees']) else None,
-			"percentage": int (100. * int (contract_info['balance']) / int (delegate_info['staking_balance']))
+			"percentage": (int (10000. * 100. * float (contract_info['balance']) / float (delegate_info['staking_balance']))) / 10000.
 		}
 		delegated.append(contract_info2)
 
@@ -93,7 +93,7 @@ def getCycleSnapshot (cycle):
 		"manager": conf['pkh'],
 		"address": conf['pkh'],
 		"alias": conf['name'],
-		"percentage": int (100. * int (delegate_info['balance']) / int (delegate_info['staking_balance']))
+		"percentage": (int (10000. * 100. * float (delegate_info['balance']) / float (delegate_info['staking_balance']))) / 10000.
 	})
 
 
@@ -196,7 +196,29 @@ elif args.action == 'updatedocs':
 
 
 elif args.action == 'updatependings':
-	pass
+	# This will calculate for past cycles not yet in the log and with unfrozen balance, 
+	# the total reward of the pool for the cycle; then it calculates the reward for each delegators.
+	# For each delegators there is an Object with total pending, total paied, and cycle details. It also
+	# records the last cycle update.
+
+	# Load the paylog
+	try:
+		f = open ('paylog.json', 'r')
+		data = json.loads (f.read())
+		f.close ()
+	except:
+		data = {}
+
+	elaborateddata = data
+
+	# Save the paylog
+	f = open ('paylog.json', 'w')
+	f.write (json.dumps (elaborateddata)
+	f.close ()
+	f = open ('docs/paylog.json', 'w')
+	f.write (json.dumps (elaborateddata)
+	f.close ()
+	
 
 elif args.action == 'paypendings':
 	pass
