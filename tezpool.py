@@ -155,14 +155,24 @@ elif args.action == 'percentage':
 
 
 elif args.action == 'updatedocs':
-	data = {
-		"cycles": []
-	}
-
 	curcycle = getCurrentCycle()
 	frozen = getFrozenBalance ()
 
-	for cycle in range (7, getCurrentCycle() + PRESERVED_CYCLES + 1):
+	# Load the old docs if any
+	try:
+		f = open ('docs/data.json', 'r')
+		data = json.loads (f.read())
+		f.close ()
+		lastcycle = data['cycles'][-1]['cycle'] + 1
+	except:
+		data = {
+			"cycles": []
+		}
+		lastcycle = 7
+
+	print ('Starting from cycle', lastcycle)
+
+	for cycle in range (lastcycle, getCurrentCycle() + PRESERVED_CYCLES + 1):
 		fr = list(filter(lambda y: y['cycle'] == cycle, frozen))
 	
 		print ('Updating docs data for cycle', cycle)
@@ -191,8 +201,10 @@ elif args.action == 'updatedocs':
 	data['percentage'] = conf['percentage']
 
 	f = open ('docs/data.json', 'w')
-	f.write (json.dumps(data))
+	f.write (json.dumps(data, separators=(',',':'), indent=4))
 	f.close ()
+
+	print ('Up to date')
 
 
 elif args.action == 'updatependings':
@@ -207,16 +219,16 @@ elif args.action == 'updatependings':
 		data = json.loads (f.read())
 		f.close ()
 	except:
-		data = {}
+		data = { 'cycle': 7, 'pending': 0.0, 'topay': 0.0, 'paid': 0.0, 'deleguees': {} }
 
 	elaborateddata = data
 
 	# Save the paylog
 	f = open ('paylog.json', 'w')
-	f.write (json.dumps (elaborateddata)
+	f.write (json.dumps (elaborateddata, separators=(',',':'), indent=4))
 	f.close ()
 	f = open ('docs/paylog.json', 'w')
-	f.write (json.dumps (elaborateddata)
+	f.write (json.dumps (elaborateddata, separators=(',',':'), indent=4))
 	f.close ()
 	
 
