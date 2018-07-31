@@ -1,37 +1,62 @@
 {
     "deleguees":{
-        "KT1TpQqirScT2o4eLrcWb2qXibasVUdJ4F8f":"sio",
-        "KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N":"red",
-        "tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq":"dak",
-        "KT1KPm5aNEMN61jxj61cc5TXMjsjDBZSuFF5":"and",
-        "KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X":"ste",
-        "KT1WScDDtweGCKQioUgHi7WHTc9TVsVyyM3b":"ema",
-        "KT1HtcckeAhQoq2L9TTwreiZYcjnMANwnErh":"ana",
-        "KT1RWVF3uZq7Mu3x3AAFzhtX3aZmyF2mQhJX":"cor",
         "KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX":"spl",
         "KT1KQhhaJdjysa2ihdNeXCsCFsekQM4PoDzA":"ond",
-        "KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e":"men"
+        "KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X":"ste",
+        "KT1TpQqirScT2o4eLrcWb2qXibasVUdJ4F8f":"sio",
+        "KT1HtcckeAhQoq2L9TTwreiZYcjnMANwnErh":"ana",
+        "KT1WScDDtweGCKQioUgHi7WHTc9TVsVyyM3b":"ema",
+        "KT1RWVF3uZq7Mu3x3AAFzhtX3aZmyF2mQhJX":"cor",
+        "KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e":"men",
+        "KT1KPm5aNEMN61jxj61cc5TXMjsjDBZSuFF5":"and",
+        "tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq":"dak",
+        "KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N":"red"
     },
-    "percentage":95,
     "name":"dakk",
-    "pkh":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+    "currentcycle":10,
+    "frozen":[
+        {
+            "cycle":7,
+            "rewards":"54000000",
+            "deposit":"189000000",
+            "fees":"0"
+        },
+        {
+            "cycle":8,
+            "rewards":"12000000",
+            "deposit":"48000000",
+            "fees":"0"
+        },
+        {
+            "cycle":9,
+            "rewards":"50000000",
+            "deposit":"225000000",
+            "fees":"0"
+        },
+        {
+            "cycle":10,
+            "rewards":"9000000",
+            "deposit":"50000000",
+            "fees":"0"
+        }
+    ],
     "cycles":[
         {
-            "frozen":{
+            "cycle":7,
+            "snapshot":{
                 "cycle":7,
-                "deposit":"189000000",
-                "fees":"0",
-                "rewards":"54000000"
-            },
-            "rights":{
-                "blocks":[
+                "delegated":[
                     {
-                        "level":30883,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "priority":0
+                        "alias":"dakk",
+                        "percentage":100.0,
+                        "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+                        "manager":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+                        "balance":"25004950000"
                     }
                 ],
-                "estimated_reward":54000000.0,
+                "staking_balance":"25004950000"
+            },
+            "rights":{
                 "endorsment":[
                     {
                         "slots":[
@@ -166,35 +191,33 @@
                         "level":32263,
                         "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     }
-                ]
-            },
-            "reward":[],
-            "snapshot":{
-                "staking_balance":"25004950000",
-                "cycle":7,
-                "delegated":[
+                ],
+                "estimated_reward":54000000.0,
+                "blocks":[
                     {
-                        "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "alias":"dakk",
-                        "percentage":100.0,
-                        "balance":"25004950000",
-                        "manager":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
+                        "priority":0,
+                        "level":30883,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     }
                 ]
-            },
-            "status":"past",
-            "cycle":7
+            }
         },
         {
-            "frozen":{
+            "cycle":8,
+            "snapshot":{
                 "cycle":8,
-                "deposit":"48000000",
-                "fees":"0",
-                "rewards":"12000000"
+                "delegated":[
+                    {
+                        "alias":"dakk",
+                        "percentage":100.0,
+                        "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+                        "manager":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+                        "balance":"25004950000"
+                    }
+                ],
+                "staking_balance":"25004950000"
             },
             "rights":{
-                "blocks":[],
-                "estimated_reward":12000000.0,
                 "endorsment":[
                     {
                         "slots":[
@@ -238,41 +261,41 @@
                         "level":35577,
                         "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     }
-                ]
-            },
-            "reward":[],
-            "snapshot":{
-                "staking_balance":"25004950000",
-                "cycle":8,
-                "delegated":[
-                    {
-                        "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "alias":"dakk",
-                        "percentage":100.0,
-                        "balance":"25004950000",
-                        "manager":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
-                    }
-                ]
-            },
-            "status":"past",
-            "cycle":8
+                ],
+                "estimated_reward":12000000.0,
+                "blocks":[]
+            }
         },
         {
-            "frozen":{
+            "cycle":9,
+            "snapshot":{
                 "cycle":9,
-                "deposit":"108000000",
-                "fees":"0",
-                "rewards":"24000000"
-            },
-            "rights":{
-                "blocks":[
+                "delegated":[
                     {
-                        "level":37459,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "priority":0
+                        "alias":null,
+                        "percentage":0.0,
+                        "address":"KT1CGSKd6K16K3D1XPywbZS7AdpV5NhjAffd",
+                        "manager":"tz1aoQnUis2Zg3crBEXMwAADTwoehHQH6dat",
+                        "balance":"10000"
+                    },
+                    {
+                        "alias":"red",
+                        "percentage":0.0399,
+                        "address":"KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N",
+                        "manager":"tz1aoQnUis2Zg3crBEXMwAADTwoehHQH6dat",
+                        "balance":"9990000"
+                    },
+                    {
+                        "alias":"dakk",
+                        "percentage":99.96,
+                        "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+                        "manager":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+                        "balance":"25004950000"
                     }
                 ],
-                "estimated_reward":50000000.0,
+                "staking_balance":"25014950000"
+            },
+            "rights":{
                 "endorsment":[
                     {
                         "slots":[
@@ -307,2995 +330,2934 @@
                             23
                         ],
                         "level":37818,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-28T11:47:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             2
                         ],
                         "level":37834,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-28T12:03:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             2
                         ],
                         "level":38039,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-28T15:28:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             14
                         ],
                         "level":38187,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-28T17:56:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             21
                         ],
                         "level":38362,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-28T20:51:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             27
                         ],
                         "level":38549,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-28T23:58:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             28
                         ],
                         "level":39182,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-29T10:31:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             9
                         ],
                         "level":39407,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-29T14:16:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             10
                         ],
                         "level":39890,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-29T22:19:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             25
                         ],
                         "level":40432,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-30T07:21:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             0
                         ],
                         "level":40448,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-30T07:37:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             9
                         ],
                         "level":40616,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-30T10:25:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             12
                         ],
                         "level":40779,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-30T13:08:12Z"
-                    }
-                ]
-            },
-            "reward":[],
-            "snapshot":{
-                "staking_balance":"25014950000",
-                "cycle":9,
-                "delegated":[
-                    {
-                        "address":"KT1CGSKd6K16K3D1XPywbZS7AdpV5NhjAffd",
-                        "alias":null,
-                        "percentage":0.0,
-                        "balance":"10000",
-                        "manager":"tz1aoQnUis2Zg3crBEXMwAADTwoehHQH6dat"
-                    },
-                    {
-                        "address":"KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N",
-                        "alias":"red",
-                        "percentage":0.0399,
-                        "balance":"9990000",
-                        "manager":"tz1aoQnUis2Zg3crBEXMwAADTwoehHQH6dat"
-                    },
-                    {
-                        "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "alias":"dakk",
-                        "percentage":99.96,
-                        "balance":"25004950000",
-                        "manager":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
-                    }
-                ]
-            },
-            "status":"past",
-            "cycle":9
-        },
-        {
-            "frozen":null,
-            "rights":{
-                "blocks":[
-                    {
-                        "level":42749,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-31T21:59:12Z",
-                        "priority":0
-                    },
-                    {
-                        "level":44668,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-02T05:58:12Z",
-                        "priority":0
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     }
                 ],
-                "estimated_reward":116000000.0,
+                "estimated_reward":50000000.0,
+                "blocks":[
+                    {
+                        "priority":0,
+                        "level":37459,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
+                    }
+                ]
+            }
+        },
+        {
+            "cycle":10,
+            "snapshot":{
+                "cycle":10,
+                "delegated":[
+                    {
+                        "alias":"ste",
+                        "percentage":11.8652,
+                        "address":"KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X",
+                        "manager":"tz1abo8ytLNGqbDShMkBV4SiMrGy7BnGUERz",
+                        "balance":"11499740000"
+                    },
+                    {
+                        "alias":"sio",
+                        "percentage":11.8652,
+                        "address":"KT1TpQqirScT2o4eLrcWb2qXibasVUdJ4F8f",
+                        "manager":"tz1TX2ienoCwHnrYLpS5KLAyTyJsJFqszxuf",
+                        "balance":"11499740000"
+                    },
+                    {
+                        "alias":"ond",
+                        "percentage":28.3741,
+                        "address":"KT1KQhhaJdjysa2ihdNeXCsCFsekQM4PoDzA",
+                        "manager":"tz1dEASy5o6hsTswbZxR22gpaxrEGYjUCY7j",
+                        "balance":"27500000000"
+                    },
+                    {
+                        "alias":"men",
+                        "percentage":2.9506,
+                        "address":"KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e",
+                        "manager":"tz1c1sf2snmjXwXHMZKP6zzeyLQ335S4YyGe",
+                        "balance":"2859740000"
+                    },
+                    {
+                        "alias":"ana",
+                        "percentage":5.7767,
+                        "address":"KT1HtcckeAhQoq2L9TTwreiZYcjnMANwnErh",
+                        "manager":"tz1eY7uG6SN3d6XL4pc1XSbpBAYyPRyKMd65",
+                        "balance":"5598740000"
+                    },
+                    {
+                        "alias":"spl",
+                        "percentage":6.1904,
+                        "address":"KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX",
+                        "manager":"tz1R39xjNRjNnQQfiwWCbZjFpgywJajUVJsW",
+                        "balance":"5999740000"
+                    },
+                    {
+                        "alias":"red",
+                        "percentage":7.1777,
+                        "address":"KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N",
+                        "manager":"tz1aoQnUis2Zg3crBEXMwAADTwoehHQH6dat",
+                        "balance":"6956625100"
+                    },
+                    {
+                        "alias":"dakk",
+                        "percentage":25.7997,
+                        "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+                        "manager":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+                        "balance":"25004950000"
+                    }
+                ],
+                "staking_balance":"96919275100"
+            },
+            "rights":{
                 "endorsment":[
                     {
                         "slots":[
                             13
                         ],
                         "level":40989,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-30T16:38:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             29
                         ],
                         "level":41046,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-30T17:35:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             29
                         ],
                         "level":41052,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-30T17:41:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             1
                         ],
                         "level":41196,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-30T20:05:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             2
                         ],
                         "level":41403,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-30T23:32:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             25
                         ],
                         "level":41578,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-31T02:27:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             5
                         ],
                         "level":41611,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-31T03:00:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             0
                         ],
                         "level":41708,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-31T04:37:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             14
                         ],
                         "level":41742,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-31T05:11:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
                         "slots":[
                             22
                         ],
                         "level":41757,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-31T05:26:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-07-31T08:51:27Z",
                         "slots":[
                             18
                         ],
                         "level":41816,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-31T06:25:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-07-31T14:43:27Z",
                         "slots":[
                             3
                         ],
                         "level":42168,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-31T12:17:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-07-31T16:02:27Z",
                         "slots":[
                             6
                         ],
                         "level":42247,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-31T13:36:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-07-31T20:50:27Z",
                         "slots":[
                             19
                         ],
                         "level":42535,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-31T18:24:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-07-31T21:17:27Z",
                         "slots":[
                             13
                         ],
                         "level":42562,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-31T18:51:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-07-31T21:35:27Z",
                         "slots":[
                             9
                         ],
                         "level":42580,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-31T19:09:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-07-31T21:43:27Z",
                         "slots":[
                             9
                         ],
                         "level":42588,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-31T19:17:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-07-31T21:46:27Z",
                         "slots":[
                             21
                         ],
                         "level":42591,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-31T19:20:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-01T00:18:27Z",
                         "slots":[
                             19
                         ],
                         "level":42743,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-31T21:52:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-01T00:44:27Z",
                         "slots":[
                             14
                         ],
                         "level":42769,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-31T22:18:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-01T01:30:27Z",
                         "slots":[
                             4
                         ],
                         "level":42815,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-07-31T23:04:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-01T04:12:27Z",
                         "slots":[
                             4
                         ],
                         "level":42977,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-01T01:46:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-01T05:34:27Z",
                         "slots":[
                             23
                         ],
                         "level":43059,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-01T03:08:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-01T06:30:27Z",
                         "slots":[
                             24
                         ],
                         "level":43115,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-01T04:04:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-01T06:43:27Z",
                         "slots":[
                             27
                         ],
                         "level":43128,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-01T04:17:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-01T09:06:27Z",
                         "slots":[
                             4
                         ],
                         "level":43271,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-01T06:40:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-01T10:14:27Z",
                         "slots":[
                             2
                         ],
                         "level":43339,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-01T07:48:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-01T18:00:27Z",
                         "slots":[
                             0
                         ],
                         "level":43805,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-01T15:34:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-01T18:02:27Z",
                         "slots":[
                             21
                         ],
                         "level":43807,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-01T15:36:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-01T18:14:27Z",
                         "slots":[
                             5
                         ],
                         "level":43819,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-01T15:48:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-01T19:54:27Z",
                         "slots":[
                             3
                         ],
                         "level":43919,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-01T17:28:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-01T21:06:27Z",
                         "slots":[
                             9
                         ],
                         "level":43991,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-01T18:40:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-02T01:02:27Z",
                         "slots":[
                             2
                         ],
                         "level":44227,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-01T22:36:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-02T01:16:27Z",
                         "slots":[
                             13
                         ],
                         "level":44241,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-01T22:50:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-02T01:54:27Z",
                         "slots":[
                             20
                         ],
                         "level":44279,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-01T23:28:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-02T02:05:27Z",
                         "slots":[
                             25
                         ],
                         "level":44290,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-01T23:39:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-02T02:53:27Z",
                         "slots":[
                             23
                         ],
                         "level":44338,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-02T00:27:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-02T07:47:27Z",
                         "slots":[
                             1
                         ],
                         "level":44632,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-02T05:21:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-02T10:25:27Z",
                         "slots":[
                             21
                         ],
                         "level":44790,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-02T07:59:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-02T11:15:27Z",
                         "slots":[
                             30
                         ],
                         "level":44840,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-02T08:49:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-02T14:00:27Z",
                         "slots":[
                             27
                         ],
                         "level":45005,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-02T11:34:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-02T14:10:27Z",
                         "slots":[
                             13
                         ],
                         "level":45015,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-02T11:44:12Z"
-                    }
-                ]
-            },
-            "reward":[],
-            "snapshot":{
-                "staking_balance":"96919275100",
-                "cycle":10,
-                "delegated":[
-                    {
-                        "address":"KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X",
-                        "alias":"ste",
-                        "percentage":11.8652,
-                        "balance":"11499740000",
-                        "manager":"tz1abo8ytLNGqbDShMkBV4SiMrGy7BnGUERz"
-                    },
-                    {
-                        "address":"KT1TpQqirScT2o4eLrcWb2qXibasVUdJ4F8f",
-                        "alias":"sio",
-                        "percentage":11.8652,
-                        "balance":"11499740000",
-                        "manager":"tz1TX2ienoCwHnrYLpS5KLAyTyJsJFqszxuf"
-                    },
-                    {
-                        "address":"KT1KQhhaJdjysa2ihdNeXCsCFsekQM4PoDzA",
-                        "alias":"ond",
-                        "percentage":28.3741,
-                        "balance":"27500000000",
-                        "manager":"tz1dEASy5o6hsTswbZxR22gpaxrEGYjUCY7j"
-                    },
-                    {
-                        "address":"KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e",
-                        "alias":"men",
-                        "percentage":2.9506,
-                        "balance":"2859740000",
-                        "manager":"tz1c1sf2snmjXwXHMZKP6zzeyLQ335S4YyGe"
-                    },
-                    {
-                        "address":"KT1HtcckeAhQoq2L9TTwreiZYcjnMANwnErh",
-                        "alias":"ana",
-                        "percentage":5.7767,
-                        "balance":"5598740000",
-                        "manager":"tz1eY7uG6SN3d6XL4pc1XSbpBAYyPRyKMd65"
-                    },
-                    {
-                        "address":"KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX",
-                        "alias":"spl",
-                        "percentage":6.1904,
-                        "balance":"5999740000",
-                        "manager":"tz1R39xjNRjNnQQfiwWCbZjFpgywJajUVJsW"
-                    },
-                    {
-                        "address":"KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N",
-                        "alias":"red",
-                        "percentage":7.1777,
-                        "balance":"6956625100",
-                        "manager":"tz1aoQnUis2Zg3crBEXMwAADTwoehHQH6dat"
-                    },
-                    {
-                        "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "alias":"dakk",
-                        "percentage":25.7997,
-                        "balance":"25004950000",
-                        "manager":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
-                    }
-                ]
-            },
-            "status":"pending",
-            "cycle":10
-        },
-        {
-            "frozen":null,
-            "rights":{
-                "blocks":[
-                    {
-                        "level":48664,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-05T00:34:12Z",
-                        "priority":0
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     }
                 ],
                 "estimated_reward":116000000.0,
+                "blocks":[
+                    {
+                        "estimated_time":"2018-08-01T00:25:27Z",
+                        "priority":0,
+                        "level":42749,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
+                    },
+                    {
+                        "estimated_time":"2018-08-02T08:24:27Z",
+                        "priority":0,
+                        "level":44668,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
+                    }
+                ]
+            }
+        },
+        {
+            "cycle":11,
+            "snapshot":{
+                "cycle":11,
+                "delegated":[
+                    {
+                        "alias":"ema",
+                        "percentage":5.2436,
+                        "address":"KT1WScDDtweGCKQioUgHi7WHTc9TVsVyyM3b",
+                        "manager":"tz1Nrtyv64rg8vCtBdk24YAwnutfNb45Adps",
+                        "balance":"5999740000"
+                    },
+                    {
+                        "alias":"ste",
+                        "percentage":10.0505,
+                        "address":"KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X",
+                        "manager":"tz1abo8ytLNGqbDShMkBV4SiMrGy7BnGUERz",
+                        "balance":"11499740000"
+                    },
+                    {
+                        "alias":"sio",
+                        "percentage":10.0505,
+                        "address":"KT1TpQqirScT2o4eLrcWb2qXibasVUdJ4F8f",
+                        "manager":"tz1TX2ienoCwHnrYLpS5KLAyTyJsJFqszxuf",
+                        "balance":"11499740000"
+                    },
+                    {
+                        "alias":"ond",
+                        "percentage":24.0345,
+                        "address":"KT1KQhhaJdjysa2ihdNeXCsCFsekQM4PoDzA",
+                        "manager":"tz1dEASy5o6hsTswbZxR22gpaxrEGYjUCY7j",
+                        "balance":"27500000000"
+                    },
+                    {
+                        "alias":"and",
+                        "percentage":10.0505,
+                        "address":"KT1KPm5aNEMN61jxj61cc5TXMjsjDBZSuFF5",
+                        "manager":"tz1avsiW5Bkm3rYQqJ89b96pEEB4W1FTe6on",
+                        "balance":"11499740000"
+                    },
+                    {
+                        "alias":"men",
+                        "percentage":2.4993,
+                        "address":"KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e",
+                        "manager":"tz1c1sf2snmjXwXHMZKP6zzeyLQ335S4YyGe",
+                        "balance":"2859740000"
+                    },
+                    {
+                        "alias":"ana",
+                        "percentage":4.8932,
+                        "address":"KT1HtcckeAhQoq2L9TTwreiZYcjnMANwnErh",
+                        "manager":"tz1eY7uG6SN3d6XL4pc1XSbpBAYyPRyKMd65",
+                        "balance":"5598740000"
+                    },
+                    {
+                        "alias":"spl",
+                        "percentage":5.2436,
+                        "address":"KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX",
+                        "manager":"tz1R39xjNRjNnQQfiwWCbZjFpgywJajUVJsW",
+                        "balance":"5999740000"
+                    },
+                    {
+                        "alias":"red",
+                        "percentage":6.0799,
+                        "address":"KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N",
+                        "manager":"tz1aoQnUis2Zg3crBEXMwAADTwoehHQH6dat",
+                        "balance":"6956625100"
+                    },
+                    {
+                        "alias":"dakk",
+                        "percentage":21.8538,
+                        "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+                        "manager":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+                        "balance":"25004950000"
+                    }
+                ],
+                "staking_balance":"114418755100"
+            },
+            "rights":{
                 "endorsment":[
                     {
+                        "estimated_time":"2018-08-02T19:36:27Z",
                         "slots":[
                             1
                         ],
                         "level":45341,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-02T17:10:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-02T21:52:27Z",
                         "slots":[
                             14
                         ],
                         "level":45477,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-02T19:26:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-02T22:09:27Z",
                         "slots":[
                             13
                         ],
                         "level":45494,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-02T19:43:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-02T23:09:27Z",
                         "slots":[
                             12
                         ],
                         "level":45554,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-02T20:43:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T01:42:27Z",
                         "slots":[
                             13
                         ],
                         "level":45707,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-02T23:16:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T03:40:27Z",
                         "slots":[
                             30
                         ],
                         "level":45825,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T01:14:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T03:47:27Z",
                         "slots":[
                             13
                         ],
                         "level":45832,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T01:21:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T04:46:27Z",
                         "slots":[
                             13
                         ],
                         "level":45891,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T02:20:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T06:31:27Z",
                         "slots":[
                             29
                         ],
                         "level":45996,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T04:05:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T06:40:27Z",
                         "slots":[
                             2
                         ],
                         "level":46005,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T04:14:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T07:24:27Z",
                         "slots":[
                             26
                         ],
                         "level":46049,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T04:58:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T07:30:27Z",
                         "slots":[
                             22
                         ],
                         "level":46055,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T05:04:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T08:00:27Z",
                         "slots":[
                             24
                         ],
                         "level":46085,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T05:34:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T08:14:27Z",
                         "slots":[
                             5
                         ],
                         "level":46099,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T05:48:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T09:15:27Z",
                         "slots":[
                             21
                         ],
                         "level":46160,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T06:49:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T09:53:27Z",
                         "slots":[
                             11
                         ],
                         "level":46198,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T07:27:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T11:09:27Z",
                         "slots":[
                             12
                         ],
                         "level":46274,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T08:43:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T14:49:27Z",
                         "slots":[
                             15
                         ],
                         "level":46494,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T12:23:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T14:58:27Z",
                         "slots":[
                             20
                         ],
                         "level":46503,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T12:32:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T15:10:27Z",
                         "slots":[
                             3
                         ],
                         "level":46515,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T12:44:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T15:24:27Z",
                         "slots":[
                             20
                         ],
                         "level":46529,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T12:58:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T15:44:27Z",
                         "slots":[
                             8
                         ],
                         "level":46549,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T13:18:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T16:34:27Z",
                         "slots":[
                             14
                         ],
                         "level":46599,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T14:08:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T16:54:27Z",
                         "slots":[
                             16
                         ],
                         "level":46619,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T14:28:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T17:36:27Z",
                         "slots":[
                             2
                         ],
                         "level":46661,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T15:10:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T18:17:27Z",
                         "slots":[
                             27
                         ],
                         "level":46702,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T15:51:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T19:41:27Z",
                         "slots":[
                             26
                         ],
                         "level":46786,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T17:15:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T22:53:27Z",
                         "slots":[
                             19
                         ],
                         "level":46978,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T20:27:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T22:58:27Z",
                         "slots":[
                             21
                         ],
                         "level":46983,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T20:32:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T23:09:27Z",
                         "slots":[
                             2
                         ],
                         "level":46994,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T20:43:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-03T23:23:27Z",
                         "slots":[
                             29
                         ],
                         "level":47008,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-03T20:57:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-04T04:46:27Z",
                         "slots":[
                             13
                         ],
                         "level":47331,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-04T02:20:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-04T08:08:27Z",
                         "slots":[
                             27
                         ],
                         "level":47533,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-04T05:42:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-04T09:57:27Z",
                         "slots":[
                             10
                         ],
                         "level":47642,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-04T07:31:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-04T12:42:27Z",
                         "slots":[
                             29
                         ],
                         "level":47807,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-04T10:16:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-04T13:36:27Z",
                         "slots":[
                             21
                         ],
                         "level":47861,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-04T11:10:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-04T13:48:27Z",
                         "slots":[
                             21
                         ],
                         "level":47873,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-04T11:22:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-04T14:23:27Z",
                         "slots":[
                             11
                         ],
                         "level":47908,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-04T11:57:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-04T15:09:27Z",
                         "slots":[
                             22
                         ],
                         "level":47954,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-04T12:43:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-04T15:49:27Z",
                         "slots":[
                             10
                         ],
                         "level":47994,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-04T13:23:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-04T16:47:27Z",
                         "slots":[
                             5
                         ],
                         "level":48052,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-04T14:21:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-04T20:39:27Z",
                         "slots":[
                             31
                         ],
                         "level":48284,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-04T18:13:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-04T22:43:27Z",
                         "slots":[
                             27
                         ],
                         "level":48408,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-04T20:17:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-04T23:48:27Z",
                         "slots":[
                             18
                         ],
                         "level":48473,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-04T21:22:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-05T00:42:27Z",
                         "slots":[
                             23
                         ],
                         "level":48527,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-04T22:16:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-05T03:18:27Z",
                         "slots":[
                             22
                         ],
                         "level":48683,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-05T00:52:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-05T07:58:27Z",
                         "slots":[
                             27
                         ],
                         "level":48963,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-05T05:32:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-05T08:15:27Z",
                         "slots":[
                             9
                         ],
                         "level":48980,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-05T05:49:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-05T08:18:27Z",
                         "slots":[
                             25
                         ],
                         "level":48983,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-05T05:52:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-05T10:47:27Z",
                         "slots":[
                             19
                         ],
                         "level":49132,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-05T08:21:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
+                    }
+                ],
+                "estimated_reward":116000000.0,
+                "blocks":[
+                    {
+                        "estimated_time":"2018-08-05T03:00:27Z",
+                        "priority":0,
+                        "level":48664,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     }
                 ]
-            },
-            "reward":[],
-            "snapshot":{
-                "staking_balance":"114418755100",
-                "cycle":11,
-                "delegated":[
-                    {
-                        "address":"KT1WScDDtweGCKQioUgHi7WHTc9TVsVyyM3b",
-                        "alias":"ema",
-                        "percentage":5.2436,
-                        "balance":"5999740000",
-                        "manager":"tz1Nrtyv64rg8vCtBdk24YAwnutfNb45Adps"
-                    },
-                    {
-                        "address":"KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X",
-                        "alias":"ste",
-                        "percentage":10.0505,
-                        "balance":"11499740000",
-                        "manager":"tz1abo8ytLNGqbDShMkBV4SiMrGy7BnGUERz"
-                    },
-                    {
-                        "address":"KT1TpQqirScT2o4eLrcWb2qXibasVUdJ4F8f",
-                        "alias":"sio",
-                        "percentage":10.0505,
-                        "balance":"11499740000",
-                        "manager":"tz1TX2ienoCwHnrYLpS5KLAyTyJsJFqszxuf"
-                    },
-                    {
-                        "address":"KT1KQhhaJdjysa2ihdNeXCsCFsekQM4PoDzA",
-                        "alias":"ond",
-                        "percentage":24.0345,
-                        "balance":"27500000000",
-                        "manager":"tz1dEASy5o6hsTswbZxR22gpaxrEGYjUCY7j"
-                    },
-                    {
-                        "address":"KT1KPm5aNEMN61jxj61cc5TXMjsjDBZSuFF5",
-                        "alias":"and",
-                        "percentage":10.0505,
-                        "balance":"11499740000",
-                        "manager":"tz1avsiW5Bkm3rYQqJ89b96pEEB4W1FTe6on"
-                    },
-                    {
-                        "address":"KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e",
-                        "alias":"men",
-                        "percentage":2.4993,
-                        "balance":"2859740000",
-                        "manager":"tz1c1sf2snmjXwXHMZKP6zzeyLQ335S4YyGe"
-                    },
-                    {
-                        "address":"KT1HtcckeAhQoq2L9TTwreiZYcjnMANwnErh",
-                        "alias":"ana",
-                        "percentage":4.8932,
-                        "balance":"5598740000",
-                        "manager":"tz1eY7uG6SN3d6XL4pc1XSbpBAYyPRyKMd65"
-                    },
-                    {
-                        "address":"KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX",
-                        "alias":"spl",
-                        "percentage":5.2436,
-                        "balance":"5999740000",
-                        "manager":"tz1R39xjNRjNnQQfiwWCbZjFpgywJajUVJsW"
-                    },
-                    {
-                        "address":"KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N",
-                        "alias":"red",
-                        "percentage":6.0799,
-                        "balance":"6956625100",
-                        "manager":"tz1aoQnUis2Zg3crBEXMwAADTwoehHQH6dat"
-                    },
-                    {
-                        "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "alias":"dakk",
-                        "percentage":21.8538,
-                        "balance":"25004950000",
-                        "manager":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
-                    }
-                ]
-            },
-            "status":"future",
-            "cycle":11
+            }
         },
         {
-            "frozen":null,
+            "cycle":12,
+            "snapshot":{
+                "cycle":12,
+                "delegated":[
+                    {
+                        "alias":"ema",
+                        "percentage":5.2436,
+                        "address":"KT1WScDDtweGCKQioUgHi7WHTc9TVsVyyM3b",
+                        "manager":"tz1Nrtyv64rg8vCtBdk24YAwnutfNb45Adps",
+                        "balance":"5999740000"
+                    },
+                    {
+                        "alias":"ste",
+                        "percentage":10.0505,
+                        "address":"KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X",
+                        "manager":"tz1abo8ytLNGqbDShMkBV4SiMrGy7BnGUERz",
+                        "balance":"11499740000"
+                    },
+                    {
+                        "alias":"sio",
+                        "percentage":10.0505,
+                        "address":"KT1TpQqirScT2o4eLrcWb2qXibasVUdJ4F8f",
+                        "manager":"tz1TX2ienoCwHnrYLpS5KLAyTyJsJFqszxuf",
+                        "balance":"11499740000"
+                    },
+                    {
+                        "alias":"ond",
+                        "percentage":24.0345,
+                        "address":"KT1KQhhaJdjysa2ihdNeXCsCFsekQM4PoDzA",
+                        "manager":"tz1dEASy5o6hsTswbZxR22gpaxrEGYjUCY7j",
+                        "balance":"27500000000"
+                    },
+                    {
+                        "alias":"and",
+                        "percentage":10.0505,
+                        "address":"KT1KPm5aNEMN61jxj61cc5TXMjsjDBZSuFF5",
+                        "manager":"tz1avsiW5Bkm3rYQqJ89b96pEEB4W1FTe6on",
+                        "balance":"11499740000"
+                    },
+                    {
+                        "alias":"men",
+                        "percentage":2.4993,
+                        "address":"KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e",
+                        "manager":"tz1c1sf2snmjXwXHMZKP6zzeyLQ335S4YyGe",
+                        "balance":"2859740000"
+                    },
+                    {
+                        "alias":"ana",
+                        "percentage":4.8932,
+                        "address":"KT1HtcckeAhQoq2L9TTwreiZYcjnMANwnErh",
+                        "manager":"tz1eY7uG6SN3d6XL4pc1XSbpBAYyPRyKMd65",
+                        "balance":"5598740000"
+                    },
+                    {
+                        "alias":"spl",
+                        "percentage":5.2436,
+                        "address":"KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX",
+                        "manager":"tz1R39xjNRjNnQQfiwWCbZjFpgywJajUVJsW",
+                        "balance":"5999740000"
+                    },
+                    {
+                        "alias":"red",
+                        "percentage":6.0799,
+                        "address":"KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N",
+                        "manager":"tz1aoQnUis2Zg3crBEXMwAADTwoehHQH6dat",
+                        "balance":"6956625100"
+                    },
+                    {
+                        "alias":"dakk",
+                        "percentage":21.8538,
+                        "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+                        "manager":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+                        "balance":"25004950000"
+                    }
+                ],
+                "staking_balance":"114418755100"
+            },
             "rights":{
-                "blocks":[],
-                "estimated_reward":94000000.0,
                 "endorsment":[
                     {
+                        "estimated_time":"2018-08-05T11:23:27Z",
                         "slots":[
                             18
                         ],
                         "level":49168,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-05T08:57:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-05T11:51:27Z",
                         "slots":[
                             22
                         ],
                         "level":49196,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-05T09:25:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-05T14:01:27Z",
                         "slots":[
                             26
                         ],
                         "level":49326,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-05T11:35:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-05T16:34:27Z",
                         "slots":[
                             0
                         ],
                         "level":49479,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-05T14:08:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-05T16:44:27Z",
                         "slots":[
                             14
                         ],
                         "level":49489,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-05T14:18:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-05T18:47:27Z",
                         "slots":[
                             16,
                             13
                         ],
                         "level":49612,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-05T16:21:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-05T19:52:27Z",
                         "slots":[
                             3
                         ],
                         "level":49677,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-05T17:26:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-05T20:53:27Z",
                         "slots":[
                             13
                         ],
                         "level":49738,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-05T18:27:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T00:07:27Z",
                         "slots":[
                             5
                         ],
                         "level":49932,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-05T21:41:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T00:38:27Z",
                         "slots":[
                             9
                         ],
                         "level":49963,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-05T22:12:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T02:26:27Z",
                         "slots":[
                             13
                         ],
                         "level":50071,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-06T00:00:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T04:55:27Z",
                         "slots":[
                             20
                         ],
                         "level":50220,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-06T02:29:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T04:58:27Z",
                         "slots":[
                             3
                         ],
                         "level":50223,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-06T02:32:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T05:15:27Z",
                         "slots":[
                             8
                         ],
                         "level":50240,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-06T02:49:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T05:26:27Z",
                         "slots":[
                             18
                         ],
                         "level":50251,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-06T03:00:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T07:32:27Z",
                         "slots":[
                             3
                         ],
                         "level":50377,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-06T05:06:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T08:33:27Z",
                         "slots":[
                             29
                         ],
                         "level":50438,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-06T06:07:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T08:39:27Z",
                         "slots":[
                             1
                         ],
                         "level":50444,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-06T06:13:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T12:24:27Z",
                         "slots":[
                             30
                         ],
                         "level":50669,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-06T09:58:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T14:23:27Z",
                         "slots":[
                             13
                         ],
                         "level":50788,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-06T11:57:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T15:13:27Z",
                         "slots":[
                             2
                         ],
                         "level":50838,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-06T12:47:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T15:33:27Z",
                         "slots":[
                             25
                         ],
                         "level":50858,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-06T13:07:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T17:15:27Z",
                         "slots":[
                             2
                         ],
                         "level":50960,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-06T14:49:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T17:32:27Z",
                         "slots":[
                             17
                         ],
                         "level":50977,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-06T15:06:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T19:28:27Z",
                         "slots":[
                             22
                         ],
                         "level":51093,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-06T17:02:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T19:33:27Z",
                         "slots":[
                             2
                         ],
                         "level":51098,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-06T17:07:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T21:45:27Z",
                         "slots":[
                             17
                         ],
                         "level":51230,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-06T19:19:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-06T21:53:27Z",
                         "slots":[
                             4
                         ],
                         "level":51238,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-06T19:27:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-07T02:03:27Z",
                         "slots":[
                             10
                         ],
                         "level":51488,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-06T23:37:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-07T02:48:27Z",
                         "slots":[
                             0
                         ],
                         "level":51533,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-07T00:22:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-07T03:45:27Z",
                         "slots":[
                             6
                         ],
                         "level":51590,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-07T01:19:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-07T07:07:27Z",
                         "slots":[
                             16
                         ],
                         "level":51792,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-07T04:41:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-07T08:08:27Z",
                         "slots":[
                             18
                         ],
                         "level":51853,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-07T05:42:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-07T09:30:27Z",
                         "slots":[
                             0
                         ],
                         "level":51935,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-07T07:04:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-07T10:31:27Z",
                         "slots":[
                             16
                         ],
                         "level":51996,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-07T08:05:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-07T10:35:27Z",
                         "slots":[
                             1
                         ],
                         "level":52000,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-07T08:09:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-07T12:35:27Z",
                         "slots":[
                             1
                         ],
                         "level":52120,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-07T10:09:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-07T17:03:27Z",
                         "slots":[
                             25
                         ],
                         "level":52388,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-07T14:37:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-07T18:30:27Z",
                         "slots":[
                             18
                         ],
                         "level":52475,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-07T16:04:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-07T18:40:27Z",
                         "slots":[
                             26
                         ],
                         "level":52485,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-07T16:14:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-07T20:17:27Z",
                         "slots":[
                             27
                         ],
                         "level":52582,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-07T17:51:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-07T23:46:27Z",
                         "slots":[
                             23
                         ],
                         "level":52791,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-07T21:20:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-08T00:32:27Z",
                         "slots":[
                             27
                         ],
                         "level":52837,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-07T22:06:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-08T02:48:27Z",
                         "slots":[
                             19
                         ],
                         "level":52973,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-08T00:22:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-08T03:30:27Z",
                         "slots":[
                             10
                         ],
                         "level":53015,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-08T01:04:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-08T03:32:27Z",
                         "slots":[
                             17
                         ],
                         "level":53017,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-08T01:06:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-08T04:06:27Z",
                         "slots":[
                             9
                         ],
                         "level":53051,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-08T01:40:12Z"
-                    }
-                ]
-            },
-            "reward":[],
-            "snapshot":{
-                "staking_balance":"114418755100",
-                "cycle":12,
-                "delegated":[
-                    {
-                        "address":"KT1WScDDtweGCKQioUgHi7WHTc9TVsVyyM3b",
-                        "alias":"ema",
-                        "percentage":5.2436,
-                        "balance":"5999740000",
-                        "manager":"tz1Nrtyv64rg8vCtBdk24YAwnutfNb45Adps"
-                    },
-                    {
-                        "address":"KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X",
-                        "alias":"ste",
-                        "percentage":10.0505,
-                        "balance":"11499740000",
-                        "manager":"tz1abo8ytLNGqbDShMkBV4SiMrGy7BnGUERz"
-                    },
-                    {
-                        "address":"KT1TpQqirScT2o4eLrcWb2qXibasVUdJ4F8f",
-                        "alias":"sio",
-                        "percentage":10.0505,
-                        "balance":"11499740000",
-                        "manager":"tz1TX2ienoCwHnrYLpS5KLAyTyJsJFqszxuf"
-                    },
-                    {
-                        "address":"KT1KQhhaJdjysa2ihdNeXCsCFsekQM4PoDzA",
-                        "alias":"ond",
-                        "percentage":24.0345,
-                        "balance":"27500000000",
-                        "manager":"tz1dEASy5o6hsTswbZxR22gpaxrEGYjUCY7j"
-                    },
-                    {
-                        "address":"KT1KPm5aNEMN61jxj61cc5TXMjsjDBZSuFF5",
-                        "alias":"and",
-                        "percentage":10.0505,
-                        "balance":"11499740000",
-                        "manager":"tz1avsiW5Bkm3rYQqJ89b96pEEB4W1FTe6on"
-                    },
-                    {
-                        "address":"KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e",
-                        "alias":"men",
-                        "percentage":2.4993,
-                        "balance":"2859740000",
-                        "manager":"tz1c1sf2snmjXwXHMZKP6zzeyLQ335S4YyGe"
-                    },
-                    {
-                        "address":"KT1HtcckeAhQoq2L9TTwreiZYcjnMANwnErh",
-                        "alias":"ana",
-                        "percentage":4.8932,
-                        "balance":"5598740000",
-                        "manager":"tz1eY7uG6SN3d6XL4pc1XSbpBAYyPRyKMd65"
-                    },
-                    {
-                        "address":"KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX",
-                        "alias":"spl",
-                        "percentage":5.2436,
-                        "balance":"5999740000",
-                        "manager":"tz1R39xjNRjNnQQfiwWCbZjFpgywJajUVJsW"
-                    },
-                    {
-                        "address":"KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N",
-                        "alias":"red",
-                        "percentage":6.0799,
-                        "balance":"6956625100",
-                        "manager":"tz1aoQnUis2Zg3crBEXMwAADTwoehHQH6dat"
-                    },
-                    {
-                        "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "alias":"dakk",
-                        "percentage":21.8538,
-                        "balance":"25004950000",
-                        "manager":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
-                    }
-                ]
-            },
-            "status":"future",
-            "cycle":12
-        },
-        {
-            "frozen":null,
-            "rights":{
-                "blocks":[
-                    {
-                        "level":56419,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T09:49:12Z",
-                        "priority":0
-                    },
-                    {
-                        "level":57291,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-11T00:21:12Z",
-                        "priority":0
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     }
                 ],
-                "estimated_reward":124000000.0,
+                "estimated_reward":94000000.0,
+                "blocks":[]
+            }
+        },
+        {
+            "cycle":13,
+            "snapshot":{
+                "cycle":13,
+                "delegated":[
+                    {
+                        "alias":"ema",
+                        "percentage":5.1658,
+                        "address":"KT1WScDDtweGCKQioUgHi7WHTc9TVsVyyM3b",
+                        "manager":"tz1Nrtyv64rg8vCtBdk24YAwnutfNb45Adps",
+                        "balance":"5999740000"
+                    },
+                    {
+                        "alias":"ste",
+                        "percentage":9.9013,
+                        "address":"KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X",
+                        "manager":"tz1abo8ytLNGqbDShMkBV4SiMrGy7BnGUERz",
+                        "balance":"11499740000"
+                    },
+                    {
+                        "alias":"sio",
+                        "percentage":9.9013,
+                        "address":"KT1TpQqirScT2o4eLrcWb2qXibasVUdJ4F8f",
+                        "manager":"tz1TX2ienoCwHnrYLpS5KLAyTyJsJFqszxuf",
+                        "balance":"11499740000"
+                    },
+                    {
+                        "alias":"cor",
+                        "percentage":1.4842,
+                        "address":"KT1RWVF3uZq7Mu3x3AAFzhtX3aZmyF2mQhJX",
+                        "manager":"tz1LtjKmJJnkqKB3cXVmGVyHuH46LEHf4BhJ",
+                        "balance":"1723880000"
+                    },
+                    {
+                        "alias":"ond",
+                        "percentage":23.6777,
+                        "address":"KT1KQhhaJdjysa2ihdNeXCsCFsekQM4PoDzA",
+                        "manager":"tz1dEASy5o6hsTswbZxR22gpaxrEGYjUCY7j",
+                        "balance":"27500000000"
+                    },
+                    {
+                        "alias":"and",
+                        "percentage":9.9013,
+                        "address":"KT1KPm5aNEMN61jxj61cc5TXMjsjDBZSuFF5",
+                        "manager":"tz1avsiW5Bkm3rYQqJ89b96pEEB4W1FTe6on",
+                        "balance":"11499740000"
+                    },
+                    {
+                        "alias":"men",
+                        "percentage":2.4622,
+                        "address":"KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e",
+                        "manager":"tz1c1sf2snmjXwXHMZKP6zzeyLQ335S4YyGe",
+                        "balance":"2859740000"
+                    },
+                    {
+                        "alias":"ana",
+                        "percentage":4.8205,
+                        "address":"KT1HtcckeAhQoq2L9TTwreiZYcjnMANwnErh",
+                        "manager":"tz1eY7uG6SN3d6XL4pc1XSbpBAYyPRyKMd65",
+                        "balance":"5598740000"
+                    },
+                    {
+                        "alias":"spl",
+                        "percentage":5.1658,
+                        "address":"KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX",
+                        "manager":"tz1R39xjNRjNnQQfiwWCbZjFpgywJajUVJsW",
+                        "balance":"5999740000"
+                    },
+                    {
+                        "alias":"red",
+                        "percentage":5.9897,
+                        "address":"KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N",
+                        "manager":"tz1aoQnUis2Zg3crBEXMwAADTwoehHQH6dat",
+                        "balance":"6956625100"
+                    },
+                    {
+                        "alias":"dakk",
+                        "percentage":21.5295,
+                        "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+                        "manager":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+                        "balance":"25004950000"
+                    }
+                ],
+                "staking_balance":"116142635100"
+            },
+            "rights":{
                 "endorsment":[
                     {
+                        "estimated_time":"2018-08-08T08:06:27Z",
                         "slots":[
                             3
                         ],
                         "level":53291,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-08T05:40:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-08T09:47:27Z",
                         "slots":[
                             2
                         ],
                         "level":53392,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-08T07:21:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-08T13:29:27Z",
                         "slots":[
                             0
                         ],
                         "level":53614,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-08T11:03:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-08T16:15:27Z",
                         "slots":[
                             22
                         ],
                         "level":53780,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-08T13:49:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-08T16:53:27Z",
                         "slots":[
                             27
                         ],
                         "level":53818,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-08T14:27:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-08T16:59:27Z",
                         "slots":[
                             16
                         ],
                         "level":53824,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-08T14:33:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-08T17:30:27Z",
                         "slots":[
                             21
                         ],
                         "level":53855,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-08T15:04:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-08T18:16:27Z",
                         "slots":[
                             12
                         ],
                         "level":53901,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-08T15:50:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-08T19:34:27Z",
                         "slots":[
                             11
                         ],
                         "level":53979,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-08T17:08:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-08T20:24:27Z",
                         "slots":[
                             24
                         ],
                         "level":54029,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-08T17:58:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-08T21:44:27Z",
                         "slots":[
                             16
                         ],
                         "level":54109,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-08T19:18:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-08T23:47:27Z",
                         "slots":[
                             12
                         ],
                         "level":54232,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-08T21:21:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-09T00:41:27Z",
                         "slots":[
                             25
                         ],
                         "level":54286,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-08T22:15:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-09T06:44:27Z",
                         "slots":[
                             17
                         ],
                         "level":54649,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-09T04:18:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-09T12:24:27Z",
                         "slots":[
                             29
                         ],
                         "level":54989,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-09T09:58:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-09T16:11:27Z",
                         "slots":[
                             24
                         ],
                         "level":55216,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-09T13:45:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-09T18:40:27Z",
                         "slots":[
                             22
                         ],
                         "level":55365,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-09T16:14:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-09T20:08:27Z",
                         "slots":[
                             5
                         ],
                         "level":55453,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-09T17:42:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-09T20:28:27Z",
                         "slots":[
                             11
                         ],
                         "level":55473,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-09T18:02:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-09T22:03:27Z",
                         "slots":[
                             25
                         ],
                         "level":55568,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-09T19:37:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-09T22:36:27Z",
                         "slots":[
                             0
                         ],
                         "level":55601,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-09T20:10:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-09T23:47:27Z",
                         "slots":[
                             17
                         ],
                         "level":55672,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-09T21:21:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T00:20:27Z",
                         "slots":[
                             7
                         ],
                         "level":55705,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-09T21:54:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T05:33:27Z",
                         "slots":[
                             26
                         ],
                         "level":56018,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T03:07:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T05:43:27Z",
                         "slots":[
                             18
                         ],
                         "level":56028,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T03:17:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T06:29:27Z",
                         "slots":[
                             31
                         ],
                         "level":56074,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T04:03:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T07:37:27Z",
                         "slots":[
                             21
                         ],
                         "level":56142,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T05:11:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T11:32:27Z",
                         "slots":[
                             21
                         ],
                         "level":56377,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T09:06:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T12:02:27Z",
                         "slots":[
                             22
                         ],
                         "level":56407,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T09:36:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T14:08:27Z",
                         "slots":[
                             10
                         ],
                         "level":56533,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T11:42:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T14:44:27Z",
                         "slots":[
                             11
                         ],
                         "level":56569,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T12:18:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T14:47:27Z",
                         "slots":[
                             16
                         ],
                         "level":56572,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T12:21:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T15:01:27Z",
                         "slots":[
                             3
                         ],
                         "level":56586,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T12:35:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T16:19:27Z",
                         "slots":[
                             13
                         ],
                         "level":56664,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T13:53:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T16:24:27Z",
                         "slots":[
                             8
                         ],
                         "level":56669,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T13:58:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T18:53:27Z",
                         "slots":[
                             22
                         ],
                         "level":56818,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T16:27:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T18:57:27Z",
                         "slots":[
                             19
                         ],
                         "level":56822,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T16:31:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T20:37:27Z",
                         "slots":[
                             23
                         ],
                         "level":56922,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T18:11:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T21:32:27Z",
                         "slots":[
                             8
                         ],
                         "level":56977,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T19:06:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T21:35:27Z",
                         "slots":[
                             6
                         ],
                         "level":56980,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T19:09:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T21:36:27Z",
                         "slots":[
                             21
                         ],
                         "level":56981,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T19:10:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-10T23:06:27Z",
                         "slots":[
                             27
                         ],
                         "level":57071,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T20:40:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-11T01:11:27Z",
                         "slots":[
                             12
                         ],
                         "level":57196,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T22:45:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-11T01:22:27Z",
                         "slots":[
                             5
                         ],
                         "level":57207,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T22:56:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-11T01:27:27Z",
                         "slots":[
                             28
                         ],
                         "level":57212,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T23:01:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-11T02:02:27Z",
                         "slots":[
                             6
                         ],
                         "level":57247,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-10T23:36:12Z"
-                    }
-                ]
-            },
-            "reward":[],
-            "snapshot":{
-                "staking_balance":"116142635100",
-                "cycle":13,
-                "delegated":[
-                    {
-                        "address":"KT1WScDDtweGCKQioUgHi7WHTc9TVsVyyM3b",
-                        "alias":"ema",
-                        "percentage":5.1658,
-                        "balance":"5999740000",
-                        "manager":"tz1Nrtyv64rg8vCtBdk24YAwnutfNb45Adps"
-                    },
-                    {
-                        "address":"KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X",
-                        "alias":"ste",
-                        "percentage":9.9013,
-                        "balance":"11499740000",
-                        "manager":"tz1abo8ytLNGqbDShMkBV4SiMrGy7BnGUERz"
-                    },
-                    {
-                        "address":"KT1TpQqirScT2o4eLrcWb2qXibasVUdJ4F8f",
-                        "alias":"sio",
-                        "percentage":9.9013,
-                        "balance":"11499740000",
-                        "manager":"tz1TX2ienoCwHnrYLpS5KLAyTyJsJFqszxuf"
-                    },
-                    {
-                        "address":"KT1RWVF3uZq7Mu3x3AAFzhtX3aZmyF2mQhJX",
-                        "alias":"cor",
-                        "percentage":1.4842,
-                        "balance":"1723880000",
-                        "manager":"tz1LtjKmJJnkqKB3cXVmGVyHuH46LEHf4BhJ"
-                    },
-                    {
-                        "address":"KT1KQhhaJdjysa2ihdNeXCsCFsekQM4PoDzA",
-                        "alias":"ond",
-                        "percentage":23.6777,
-                        "balance":"27500000000",
-                        "manager":"tz1dEASy5o6hsTswbZxR22gpaxrEGYjUCY7j"
-                    },
-                    {
-                        "address":"KT1KPm5aNEMN61jxj61cc5TXMjsjDBZSuFF5",
-                        "alias":"and",
-                        "percentage":9.9013,
-                        "balance":"11499740000",
-                        "manager":"tz1avsiW5Bkm3rYQqJ89b96pEEB4W1FTe6on"
-                    },
-                    {
-                        "address":"KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e",
-                        "alias":"men",
-                        "percentage":2.4622,
-                        "balance":"2859740000",
-                        "manager":"tz1c1sf2snmjXwXHMZKP6zzeyLQ335S4YyGe"
-                    },
-                    {
-                        "address":"KT1HtcckeAhQoq2L9TTwreiZYcjnMANwnErh",
-                        "alias":"ana",
-                        "percentage":4.8205,
-                        "balance":"5598740000",
-                        "manager":"tz1eY7uG6SN3d6XL4pc1XSbpBAYyPRyKMd65"
-                    },
-                    {
-                        "address":"KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX",
-                        "alias":"spl",
-                        "percentage":5.1658,
-                        "balance":"5999740000",
-                        "manager":"tz1R39xjNRjNnQQfiwWCbZjFpgywJajUVJsW"
-                    },
-                    {
-                        "address":"KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N",
-                        "alias":"red",
-                        "percentage":5.9897,
-                        "balance":"6956625100",
-                        "manager":"tz1aoQnUis2Zg3crBEXMwAADTwoehHQH6dat"
-                    },
-                    {
-                        "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "alias":"dakk",
-                        "percentage":21.5295,
-                        "balance":"25004950000",
-                        "manager":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
-                    }
-                ]
-            },
-            "status":"future",
-            "cycle":13
-        },
-        {
-            "frozen":null,
-            "rights":{
-                "blocks":[
-                    {
-                        "level":59355,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T10:45:12Z",
-                        "priority":0
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     }
                 ],
-                "estimated_reward":130000000.0,
+                "estimated_reward":124000000.0,
+                "blocks":[
+                    {
+                        "estimated_time":"2018-08-10T12:15:27Z",
+                        "priority":0,
+                        "level":56419,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
+                    },
+                    {
+                        "estimated_time":"2018-08-11T02:47:27Z",
+                        "priority":0,
+                        "level":57291,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
+                    }
+                ]
+            }
+        },
+        {
+            "cycle":14,
+            "snapshot":{
+                "cycle":14,
+                "delegated":[
+                    {
+                        "alias":"ema",
+                        "percentage":5.1658,
+                        "address":"KT1WScDDtweGCKQioUgHi7WHTc9TVsVyyM3b",
+                        "manager":"tz1Nrtyv64rg8vCtBdk24YAwnutfNb45Adps",
+                        "balance":"5999740000"
+                    },
+                    {
+                        "alias":"ste",
+                        "percentage":9.9013,
+                        "address":"KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X",
+                        "manager":"tz1abo8ytLNGqbDShMkBV4SiMrGy7BnGUERz",
+                        "balance":"11499740000"
+                    },
+                    {
+                        "alias":"sio",
+                        "percentage":9.9013,
+                        "address":"KT1TpQqirScT2o4eLrcWb2qXibasVUdJ4F8f",
+                        "manager":"tz1TX2ienoCwHnrYLpS5KLAyTyJsJFqszxuf",
+                        "balance":"11499740000"
+                    },
+                    {
+                        "alias":"cor",
+                        "percentage":1.4842,
+                        "address":"KT1RWVF3uZq7Mu3x3AAFzhtX3aZmyF2mQhJX",
+                        "manager":"tz1LtjKmJJnkqKB3cXVmGVyHuH46LEHf4BhJ",
+                        "balance":"1723880000"
+                    },
+                    {
+                        "alias":"ond",
+                        "percentage":23.6777,
+                        "address":"KT1KQhhaJdjysa2ihdNeXCsCFsekQM4PoDzA",
+                        "manager":"tz1dEASy5o6hsTswbZxR22gpaxrEGYjUCY7j",
+                        "balance":"27500000000"
+                    },
+                    {
+                        "alias":"and",
+                        "percentage":9.9013,
+                        "address":"KT1KPm5aNEMN61jxj61cc5TXMjsjDBZSuFF5",
+                        "manager":"tz1avsiW5Bkm3rYQqJ89b96pEEB4W1FTe6on",
+                        "balance":"11499740000"
+                    },
+                    {
+                        "alias":"men",
+                        "percentage":2.4622,
+                        "address":"KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e",
+                        "manager":"tz1c1sf2snmjXwXHMZKP6zzeyLQ335S4YyGe",
+                        "balance":"2859740000"
+                    },
+                    {
+                        "alias":"ana",
+                        "percentage":4.8205,
+                        "address":"KT1HtcckeAhQoq2L9TTwreiZYcjnMANwnErh",
+                        "manager":"tz1eY7uG6SN3d6XL4pc1XSbpBAYyPRyKMd65",
+                        "balance":"5598740000"
+                    },
+                    {
+                        "alias":"spl",
+                        "percentage":5.1658,
+                        "address":"KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX",
+                        "manager":"tz1R39xjNRjNnQQfiwWCbZjFpgywJajUVJsW",
+                        "balance":"5999740000"
+                    },
+                    {
+                        "alias":"red",
+                        "percentage":5.9897,
+                        "address":"KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N",
+                        "manager":"tz1aoQnUis2Zg3crBEXMwAADTwoehHQH6dat",
+                        "balance":"6956625100"
+                    },
+                    {
+                        "alias":"dakk",
+                        "percentage":21.5742,
+                        "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+                        "manager":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+                        "balance":"25056950000"
+                    }
+                ],
+                "staking_balance":"116142635100"
+            },
+            "rights":{
                 "endorsment":[
                     {
+                        "estimated_time":"2018-08-11T04:04:27Z",
                         "slots":[
                             9
                         ],
                         "level":57369,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-11T01:38:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-11T05:57:27Z",
                         "slots":[
                             12
                         ],
                         "level":57482,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-11T03:31:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-11T08:07:27Z",
                         "slots":[
                             1
                         ],
                         "level":57612,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-11T05:41:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-11T10:40:27Z",
                         "slots":[
                             5
                         ],
                         "level":57765,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-11T08:14:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-11T11:09:27Z",
                         "slots":[
                             25
                         ],
                         "level":57794,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-11T08:43:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-11T13:31:27Z",
                         "slots":[
                             31
                         ],
                         "level":57936,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-11T11:05:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-11T18:01:27Z",
                         "slots":[
                             20
                         ],
                         "level":58206,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-11T15:35:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-11T19:27:27Z",
                         "slots":[
                             11
                         ],
                         "level":58292,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-11T17:01:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-11T20:07:27Z",
                         "slots":[
                             25
                         ],
                         "level":58332,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-11T17:41:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-11T20:47:27Z",
                         "slots":[
                             24
                         ],
                         "level":58372,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-11T18:21:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-11T22:48:27Z",
                         "slots":[
                             12
                         ],
                         "level":58493,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-11T20:22:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-11T22:49:27Z",
                         "slots":[
                             31
                         ],
                         "level":58494,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-11T20:23:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-11T22:51:27Z",
                         "slots":[
                             20
                         ],
                         "level":58496,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-11T20:25:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-11T23:11:27Z",
                         "slots":[
                             19
                         ],
                         "level":58516,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-11T20:45:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T01:28:27Z",
                         "slots":[
                             20
                         ],
                         "level":58653,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-11T23:02:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T02:47:27Z",
                         "slots":[
                             8
                         ],
                         "level":58732,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T00:21:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T04:36:27Z",
                         "slots":[
                             26
                         ],
                         "level":58841,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T02:10:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T05:52:27Z",
                         "slots":[
                             17
                         ],
                         "level":58917,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T03:26:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T06:09:27Z",
                         "slots":[
                             14
                         ],
                         "level":58934,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T03:43:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T06:52:27Z",
                         "slots":[
                             23
                         ],
                         "level":58977,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T04:26:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T09:29:27Z",
                         "slots":[
                             12
                         ],
                         "level":59134,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T07:03:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T09:45:27Z",
                         "slots":[
                             19
                         ],
                         "level":59150,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T07:19:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T12:15:27Z",
                         "slots":[
                             29
                         ],
                         "level":59300,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T09:49:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T12:46:27Z",
                         "slots":[
                             20
                         ],
                         "level":59331,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T10:20:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T13:15:27Z",
                         "slots":[
                             30
                         ],
                         "level":59360,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T10:49:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T15:13:27Z",
                         "slots":[
                             12
                         ],
                         "level":59478,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T12:47:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T15:49:27Z",
                         "slots":[
                             27
                         ],
                         "level":59514,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T13:23:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T16:41:27Z",
                         "slots":[
                             8
                         ],
                         "level":59566,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T14:15:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T17:26:27Z",
                         "slots":[
                             12
                         ],
                         "level":59611,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T15:00:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T19:11:27Z",
                         "slots":[
                             12
                         ],
                         "level":59716,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T16:45:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T21:56:27Z",
                         "slots":[
                             6
                         ],
                         "level":59881,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T19:30:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T23:12:27Z",
                         "slots":[
                             25
                         ],
                         "level":59957,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T20:46:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T23:28:27Z",
                         "slots":[
                             9
                         ],
                         "level":59973,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T21:02:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-12T23:39:27Z",
                         "slots":[
                             5
                         ],
                         "level":59984,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T21:13:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T00:04:27Z",
                         "slots":[
                             18
                         ],
                         "level":60009,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T21:38:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T00:26:27Z",
                         "slots":[
                             9
                         ],
                         "level":60031,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T22:00:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T00:38:27Z",
                         "slots":[
                             3
                         ],
                         "level":60043,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T22:12:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T00:54:27Z",
                         "slots":[
                             28
                         ],
                         "level":60059,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T22:28:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T02:08:27Z",
                         "slots":[
                             30
                         ],
                         "level":60133,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T23:42:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T02:19:27Z",
                         "slots":[
                             5
                         ],
                         "level":60144,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-12T23:53:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T02:26:27Z",
                         "slots":[
                             9
                         ],
                         "level":60151,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-13T00:00:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T04:11:27Z",
                         "slots":[
                             1
                         ],
                         "level":60256,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-13T01:45:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T05:19:27Z",
                         "slots":[
                             13
                         ],
                         "level":60324,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-13T02:53:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T07:07:27Z",
                         "slots":[
                             2
                         ],
                         "level":60432,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-13T04:41:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T07:57:27Z",
                         "slots":[
                             25
                         ],
                         "level":60482,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-13T05:31:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T08:38:27Z",
                         "slots":[
                             4
                         ],
                         "level":60523,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-13T06:12:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T11:22:27Z",
                         "slots":[
                             30
                         ],
                         "level":60687,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-13T08:56:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T11:49:27Z",
                         "slots":[
                             9
                         ],
                         "level":60714,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-13T09:23:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T12:37:27Z",
                         "slots":[
                             25
                         ],
                         "level":60762,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-13T10:11:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T13:37:27Z",
                         "slots":[
                             5
                         ],
                         "level":60822,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-13T11:11:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T14:14:27Z",
                         "slots":[
                             4
                         ],
                         "level":60859,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-13T11:48:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T14:27:27Z",
                         "slots":[
                             22
                         ],
                         "level":60872,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-13T12:01:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T16:09:27Z",
                         "slots":[
                             30
                         ],
                         "level":60974,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-13T13:43:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T17:47:27Z",
                         "slots":[
                             24
                         ],
                         "level":61072,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-13T15:21:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T20:40:27Z",
                         "slots":[
                             12
                         ],
                         "level":61245,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-13T18:14:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T22:24:27Z",
                         "slots":[
                             16
                         ],
                         "level":61349,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-13T19:58:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-13T23:32:27Z",
                         "slots":[
                             29,
                             3
                         ],
                         "level":61417,
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-13T21:06:12Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
+                    }
+                ],
+                "estimated_reward":130000000.0,
+                "blocks":[
+                    {
+                        "estimated_time":"2018-08-12T13:11:27Z",
+                        "priority":0,
+                        "level":59355,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     }
                 ]
-            },
-            "reward":[],
-            "snapshot":{
-                "staking_balance":"116142635100",
-                "cycle":14,
-                "delegated":[
-                    {
-                        "address":"KT1WScDDtweGCKQioUgHi7WHTc9TVsVyyM3b",
-                        "alias":"ema",
-                        "percentage":5.1658,
-                        "balance":"5999740000",
-                        "manager":"tz1Nrtyv64rg8vCtBdk24YAwnutfNb45Adps"
-                    },
-                    {
-                        "address":"KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X",
-                        "alias":"ste",
-                        "percentage":9.9013,
-                        "balance":"11499740000",
-                        "manager":"tz1abo8ytLNGqbDShMkBV4SiMrGy7BnGUERz"
-                    },
-                    {
-                        "address":"KT1TpQqirScT2o4eLrcWb2qXibasVUdJ4F8f",
-                        "alias":"sio",
-                        "percentage":9.9013,
-                        "balance":"11499740000",
-                        "manager":"tz1TX2ienoCwHnrYLpS5KLAyTyJsJFqszxuf"
-                    },
-                    {
-                        "address":"KT1RWVF3uZq7Mu3x3AAFzhtX3aZmyF2mQhJX",
-                        "alias":"cor",
-                        "percentage":1.4842,
-                        "balance":"1723880000",
-                        "manager":"tz1LtjKmJJnkqKB3cXVmGVyHuH46LEHf4BhJ"
-                    },
-                    {
-                        "address":"KT1KQhhaJdjysa2ihdNeXCsCFsekQM4PoDzA",
-                        "alias":"ond",
-                        "percentage":23.6777,
-                        "balance":"27500000000",
-                        "manager":"tz1dEASy5o6hsTswbZxR22gpaxrEGYjUCY7j"
-                    },
-                    {
-                        "address":"KT1KPm5aNEMN61jxj61cc5TXMjsjDBZSuFF5",
-                        "alias":"and",
-                        "percentage":9.9013,
-                        "balance":"11499740000",
-                        "manager":"tz1avsiW5Bkm3rYQqJ89b96pEEB4W1FTe6on"
-                    },
-                    {
-                        "address":"KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e",
-                        "alias":"men",
-                        "percentage":2.4622,
-                        "balance":"2859740000",
-                        "manager":"tz1c1sf2snmjXwXHMZKP6zzeyLQ335S4YyGe"
-                    },
-                    {
-                        "address":"KT1HtcckeAhQoq2L9TTwreiZYcjnMANwnErh",
-                        "alias":"ana",
-                        "percentage":4.8205,
-                        "balance":"5598740000",
-                        "manager":"tz1eY7uG6SN3d6XL4pc1XSbpBAYyPRyKMd65"
-                    },
-                    {
-                        "address":"KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX",
-                        "alias":"spl",
-                        "percentage":5.1658,
-                        "balance":"5999740000",
-                        "manager":"tz1R39xjNRjNnQQfiwWCbZjFpgywJajUVJsW"
-                    },
-                    {
-                        "address":"KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N",
-                        "alias":"red",
-                        "percentage":5.9897,
-                        "balance":"6956625100",
-                        "manager":"tz1aoQnUis2Zg3crBEXMwAADTwoehHQH6dat"
-                    },
-                    {
-                        "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "alias":"dakk",
-                        "percentage":21.5742,
-                        "balance":"25056950000",
-                        "manager":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
-                    }
-                ]
-            },
-            "status":"future",
-            "cycle":14
+            }
         },
         {
-            "frozen":null,
+            "cycle":15,
+            "snapshot":{
+                "cycle":15,
+                "delegated":[
+                    {
+                        "alias":"ema",
+                        "percentage":5.1658,
+                        "address":"KT1WScDDtweGCKQioUgHi7WHTc9TVsVyyM3b",
+                        "manager":"tz1Nrtyv64rg8vCtBdk24YAwnutfNb45Adps",
+                        "balance":"5999740000"
+                    },
+                    {
+                        "alias":"ste",
+                        "percentage":9.9013,
+                        "address":"KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X",
+                        "manager":"tz1abo8ytLNGqbDShMkBV4SiMrGy7BnGUERz",
+                        "balance":"11499740000"
+                    },
+                    {
+                        "alias":"sio",
+                        "percentage":9.9013,
+                        "address":"KT1TpQqirScT2o4eLrcWb2qXibasVUdJ4F8f",
+                        "manager":"tz1TX2ienoCwHnrYLpS5KLAyTyJsJFqszxuf",
+                        "balance":"11499740000"
+                    },
+                    {
+                        "alias":"cor",
+                        "percentage":1.4842,
+                        "address":"KT1RWVF3uZq7Mu3x3AAFzhtX3aZmyF2mQhJX",
+                        "manager":"tz1LtjKmJJnkqKB3cXVmGVyHuH46LEHf4BhJ",
+                        "balance":"1723880000"
+                    },
+                    {
+                        "alias":"ond",
+                        "percentage":23.6777,
+                        "address":"KT1KQhhaJdjysa2ihdNeXCsCFsekQM4PoDzA",
+                        "manager":"tz1dEASy5o6hsTswbZxR22gpaxrEGYjUCY7j",
+                        "balance":"27500000000"
+                    },
+                    {
+                        "alias":"and",
+                        "percentage":9.9013,
+                        "address":"KT1KPm5aNEMN61jxj61cc5TXMjsjDBZSuFF5",
+                        "manager":"tz1avsiW5Bkm3rYQqJ89b96pEEB4W1FTe6on",
+                        "balance":"11499740000"
+                    },
+                    {
+                        "alias":"men",
+                        "percentage":2.4622,
+                        "address":"KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e",
+                        "manager":"tz1c1sf2snmjXwXHMZKP6zzeyLQ335S4YyGe",
+                        "balance":"2859740000"
+                    },
+                    {
+                        "alias":"ana",
+                        "percentage":4.8205,
+                        "address":"KT1HtcckeAhQoq2L9TTwreiZYcjnMANwnErh",
+                        "manager":"tz1eY7uG6SN3d6XL4pc1XSbpBAYyPRyKMd65",
+                        "balance":"5598740000"
+                    },
+                    {
+                        "alias":"spl",
+                        "percentage":5.1658,
+                        "address":"KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX",
+                        "manager":"tz1R39xjNRjNnQQfiwWCbZjFpgywJajUVJsW",
+                        "balance":"5999740000"
+                    },
+                    {
+                        "alias":"red",
+                        "percentage":5.9897,
+                        "address":"KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N",
+                        "manager":"tz1aoQnUis2Zg3crBEXMwAADTwoehHQH6dat",
+                        "balance":"6956625100"
+                    },
+                    {
+                        "alias":"dakk",
+                        "percentage":21.5829,
+                        "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+                        "manager":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+                        "balance":"25066950000"
+                    }
+                ],
+                "staking_balance":"116142635100"
+            },
             "rights":{
-                "blocks":[],
-                "estimated_reward":86000000.0,
                 "endorsment":[
                     {
-                        "level":61470,
+                        "estimated_time":"2018-08-14T00:25:27Z",
                         "slots":[
                             9
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-14T00:01:42Z"
+                        "level":61470,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":61522,
+                        "estimated_time":"2018-08-14T01:17:27Z",
                         "slots":[
                             3
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-14T00:53:42Z"
+                        "level":61522,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":61609,
+                        "estimated_time":"2018-08-14T02:44:27Z",
                         "slots":[
                             11
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-14T02:20:42Z"
+                        "level":61609,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":61695,
+                        "estimated_time":"2018-08-14T04:10:27Z",
                         "slots":[
                             26
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-14T03:46:42Z"
+                        "level":61695,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":61796,
+                        "estimated_time":"2018-08-14T05:51:27Z",
                         "slots":[
                             2
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-14T05:27:42Z"
+                        "level":61796,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":61853,
+                        "estimated_time":"2018-08-14T06:48:27Z",
                         "slots":[
                             10
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-14T06:24:42Z"
+                        "level":61853,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":61874,
+                        "estimated_time":"2018-08-14T07:09:27Z",
                         "slots":[
                             25
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-14T06:45:42Z"
+                        "level":61874,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":62090,
+                        "estimated_time":"2018-08-14T10:45:27Z",
                         "slots":[
                             8
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-14T10:21:42Z"
+                        "level":62090,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":62230,
+                        "estimated_time":"2018-08-14T13:05:27Z",
                         "slots":[
                             19
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-14T12:41:42Z"
+                        "level":62230,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":62419,
+                        "estimated_time":"2018-08-14T16:14:27Z",
                         "slots":[
                             13
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-14T15:50:42Z"
+                        "level":62419,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":62558,
+                        "estimated_time":"2018-08-14T18:33:27Z",
                         "slots":[
                             12
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-14T18:09:42Z"
+                        "level":62558,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":62597,
+                        "estimated_time":"2018-08-14T19:12:27Z",
                         "slots":[
                             10
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-14T18:48:42Z"
+                        "level":62597,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":62635,
+                        "estimated_time":"2018-08-14T19:50:27Z",
                         "slots":[
                             26
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-14T19:26:42Z"
+                        "level":62635,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":63120,
+                        "estimated_time":"2018-08-15T03:55:27Z",
                         "slots":[
                             11
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-15T03:31:42Z"
+                        "level":63120,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":63130,
+                        "estimated_time":"2018-08-15T04:05:27Z",
                         "slots":[
                             26
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-15T03:41:42Z"
+                        "level":63130,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":63215,
+                        "estimated_time":"2018-08-15T05:30:27Z",
                         "slots":[
                             15
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-15T05:06:42Z"
+                        "level":63215,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":63224,
+                        "estimated_time":"2018-08-15T05:39:27Z",
                         "slots":[
                             0
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-15T05:15:42Z"
+                        "level":63224,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":63346,
+                        "estimated_time":"2018-08-15T07:41:27Z",
                         "slots":[
                             1
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-15T07:17:42Z"
+                        "level":63346,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":63506,
+                        "estimated_time":"2018-08-15T10:21:27Z",
                         "slots":[
                             12
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-15T09:57:42Z"
+                        "level":63506,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":63514,
+                        "estimated_time":"2018-08-15T10:29:27Z",
                         "slots":[
                             25
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-15T10:05:42Z"
+                        "level":63514,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":63684,
+                        "estimated_time":"2018-08-15T13:19:27Z",
                         "slots":[
                             23
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-15T12:55:42Z"
+                        "level":63684,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":63685,
+                        "estimated_time":"2018-08-15T13:20:27Z",
                         "slots":[
                             19
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-15T12:56:42Z"
+                        "level":63685,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":63795,
+                        "estimated_time":"2018-08-15T15:10:27Z",
                         "slots":[
                             25
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-15T14:46:42Z"
+                        "level":63795,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":63875,
+                        "estimated_time":"2018-08-15T16:30:27Z",
                         "slots":[
                             26
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-15T16:06:42Z"
+                        "level":63875,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":64020,
+                        "estimated_time":"2018-08-15T18:55:27Z",
                         "slots":[
                             10
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-15T18:31:42Z"
+                        "level":64020,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":64101,
+                        "estimated_time":"2018-08-15T20:16:27Z",
                         "slots":[
                             24
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-15T19:52:42Z"
+                        "level":64101,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":64172,
+                        "estimated_time":"2018-08-15T21:27:27Z",
                         "slots":[
                             30
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-15T21:03:42Z"
+                        "level":64172,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
+                        "estimated_time":"2018-08-15T21:49:27Z",
+                        "slots":[
+                            15
+                        ],
                         "level":64194,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
+                    },
+                    {
+                        "estimated_time":"2018-08-16T00:30:27Z",
                         "slots":[
                             15
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-15T21:25:42Z"
-                    },
-                    {
                         "level":64355,
-                        "slots":[
-                            15
-                        ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-16T00:06:42Z"
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":64390,
+                        "estimated_time":"2018-08-16T01:05:27Z",
                         "slots":[
                             28
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-16T00:41:42Z"
+                        "level":64390,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":64478,
+                        "estimated_time":"2018-08-16T02:33:27Z",
                         "slots":[
                             31
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-16T02:09:42Z"
+                        "level":64478,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":64685,
+                        "estimated_time":"2018-08-16T06:00:27Z",
                         "slots":[
                             25
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-16T05:36:42Z"
+                        "level":64685,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":64743,
+                        "estimated_time":"2018-08-16T06:58:27Z",
                         "slots":[
                             13
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-16T06:34:42Z"
+                        "level":64743,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":64792,
+                        "estimated_time":"2018-08-16T07:47:27Z",
                         "slots":[
                             8
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-16T07:23:42Z"
+                        "level":64792,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":64899,
+                        "estimated_time":"2018-08-16T09:34:27Z",
                         "slots":[
                             5
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-16T09:10:42Z"
+                        "level":64899,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":65019,
+                        "estimated_time":"2018-08-16T11:34:27Z",
                         "slots":[
                             18
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-16T11:10:42Z"
+                        "level":65019,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":65109,
+                        "estimated_time":"2018-08-16T13:04:27Z",
                         "slots":[
                             22
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-16T12:40:42Z"
+                        "level":65109,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":65212,
+                        "estimated_time":"2018-08-16T14:47:27Z",
                         "slots":[
                             25
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-16T14:23:42Z"
+                        "level":65212,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":65259,
+                        "estimated_time":"2018-08-16T15:34:27Z",
                         "slots":[
                             3
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-16T15:10:42Z"
+                        "level":65259,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":65361,
+                        "estimated_time":"2018-08-16T17:16:27Z",
                         "slots":[
                             23
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-16T16:52:42Z"
+                        "level":65361,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":65376,
+                        "estimated_time":"2018-08-16T17:31:27Z",
                         "slots":[
                             16
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-16T17:07:42Z"
+                        "level":65376,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":65389,
+                        "estimated_time":"2018-08-16T17:44:27Z",
                         "slots":[
                             22,
                             11
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-16T17:20:42Z"
+                        "level":65389,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     },
                     {
-                        "level":65424,
+                        "estimated_time":"2018-08-16T18:19:27Z",
                         "slots":[
                             29
                         ],
-                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "estimated_time":"2018-08-16T17:55:42Z"
+                        "level":65424,
+                        "delegate":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq"
                     }
-                ]
-            },
-            "reward":[],
-            "snapshot":{
-                "staking_balance":"116142635100",
-                "cycle":15,
-                "delegated":[
-                    {
-                        "address":"KT1WScDDtweGCKQioUgHi7WHTc9TVsVyyM3b",
-                        "manager":"tz1Nrtyv64rg8vCtBdk24YAwnutfNb45Adps",
-                        "percentage":5.1658,
-                        "balance":"5999740000",
-                        "alias":"ema"
-                    },
-                    {
-                        "address":"KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X",
-                        "manager":"tz1abo8ytLNGqbDShMkBV4SiMrGy7BnGUERz",
-                        "percentage":9.9013,
-                        "balance":"11499740000",
-                        "alias":"ste"
-                    },
-                    {
-                        "address":"KT1TpQqirScT2o4eLrcWb2qXibasVUdJ4F8f",
-                        "manager":"tz1TX2ienoCwHnrYLpS5KLAyTyJsJFqszxuf",
-                        "percentage":9.9013,
-                        "balance":"11499740000",
-                        "alias":"sio"
-                    },
-                    {
-                        "address":"KT1RWVF3uZq7Mu3x3AAFzhtX3aZmyF2mQhJX",
-                        "manager":"tz1LtjKmJJnkqKB3cXVmGVyHuH46LEHf4BhJ",
-                        "percentage":1.4842,
-                        "balance":"1723880000",
-                        "alias":"cor"
-                    },
-                    {
-                        "address":"KT1KQhhaJdjysa2ihdNeXCsCFsekQM4PoDzA",
-                        "manager":"tz1dEASy5o6hsTswbZxR22gpaxrEGYjUCY7j",
-                        "percentage":23.6777,
-                        "balance":"27500000000",
-                        "alias":"ond"
-                    },
-                    {
-                        "address":"KT1KPm5aNEMN61jxj61cc5TXMjsjDBZSuFF5",
-                        "manager":"tz1avsiW5Bkm3rYQqJ89b96pEEB4W1FTe6on",
-                        "percentage":9.9013,
-                        "balance":"11499740000",
-                        "alias":"and"
-                    },
-                    {
-                        "address":"KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e",
-                        "manager":"tz1c1sf2snmjXwXHMZKP6zzeyLQ335S4YyGe",
-                        "percentage":2.4622,
-                        "balance":"2859740000",
-                        "alias":"men"
-                    },
-                    {
-                        "address":"KT1HtcckeAhQoq2L9TTwreiZYcjnMANwnErh",
-                        "manager":"tz1eY7uG6SN3d6XL4pc1XSbpBAYyPRyKMd65",
-                        "percentage":4.8205,
-                        "balance":"5598740000",
-                        "alias":"ana"
-                    },
-                    {
-                        "address":"KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX",
-                        "manager":"tz1R39xjNRjNnQQfiwWCbZjFpgywJajUVJsW",
-                        "percentage":5.1658,
-                        "balance":"5999740000",
-                        "alias":"spl"
-                    },
-                    {
-                        "address":"KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N",
-                        "manager":"tz1aoQnUis2Zg3crBEXMwAADTwoehHQH6dat",
-                        "percentage":5.9897,
-                        "balance":"6956625100",
-                        "alias":"red"
-                    },
-                    {
-                        "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "manager":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-                        "percentage":21.5829,
-                        "balance":"25066950000",
-                        "alias":"dakk"
-                    }
-                ]
-            },
-            "status":"future",
-            "cycle":15
+                ],
+                "estimated_reward":86000000.0,
+                "blocks":[]
+            }
         }
-    ]
+    ],
+    "pkh":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+    "percentage":95
 }

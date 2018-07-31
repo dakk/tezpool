@@ -7,21 +7,35 @@ app.filter('balance', function () {
 });
 
 app.controller('indexCtrl', function ($scope, $http, $filter) {
-    $scope.classOfCycleStatus = function (status) {
-        switch (status) {
-            case 'pending':
-                return 'panel-yellow';
-            case 'past':
-                return 'panel-green';
-            case 'future':
-                return 'panel-red';
-        }
+    $scope.classOfCycle = function (cycle, curcycle) {
+        if (cycle < curcycle)
+            return 'panel-green';
+        else if (cycle == curcycle)
+            return 'panel-yellow';
+        else 
+            return 'panel-red';
+    };
+
+    $scope.statusOfCycle = function (cycle, curcycle) {
+        if (cycle < curcycle)
+            return 'past' + (cycle > curcycle - 5 ? ' and frozen until cycle ' + (cycle + 5) : '');
+        else if (cycle == curcycle)
+            return 'current';
+        else 
+            return 'future';
     };
 
     $http.get('data.json').then(function (res) {
         $scope.data = res.data;
         $scope.lastcycle = res.data.cycles[res.data.cycles.length - 1];
+        $scope.frozen = {};
+        $scope.totalfrozen = 0;
 
+
+        $scope.data.frozen.forEach (f => {
+            $scope.frozen[f.cycle] = f;
+            $scope.totalfrozen += parseInt (f.rewards);
+        });
 
         setTimeout(function () {
             var generalchartdata = [];
@@ -33,7 +47,9 @@ app.controller('indexCtrl', function ($scope, $http, $filter) {
                     deleguees: c.snapshot.delegated.length,
                     stake: c.snapshot.staking_balance / 1000000000,
                     estimated_blocks: c.rights.blocks.length,
-                    estimated_endorsment: c.rights.endorsment.length
+                    estimated_endorsment: c.rights.endorsment.length,
+                    frozen: $filter('balance')(c.cycle in $scope.frozen ? $scope.frozen[c.cycle].rewards : 0),
+                    reward: 0
                 });
 
                 Morris.Donut({
@@ -48,8 +64,8 @@ app.controller('indexCtrl', function ($scope, $http, $filter) {
                 element: 'general-chart',
                 data: generalchartdata,
                 xkey: 'cycle',
-                ykeys: ['estimated_reward', 'deleguees', 'stake', 'estimated_blocks', 'estimated_endorsment'],
-                labels: ['Estimated Reward', 'Deleguees', 'Stake', 'Estimated Blocks', 'Estimated Endorsment'],
+                ykeys: ['estimated_reward', 'deleguees', 'stake', 'estimated_blocks', 'estimated_endorsment', 'frozen', 'reward'],
+                labels: ['Estimated Reward', 'Deleguees', 'Stake', 'Estimated Blocks', 'Estimated Endorsment', 'Frozen', 'Reward'],
                 pointSize: 2,
                 hideHover: 'auto',
                 resize: true,

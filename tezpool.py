@@ -160,10 +160,15 @@ elif args.action == 'updatedocs':
 
 	# Load the old docs if any
 	try:
-		f = open ('docs/data.json', 'r')
-		data = json.loads (f.read())
-		f.close ()
-		lastcycle = data['cycles'][-1]['cycle'] + 1
+		#f = open ('docs/data.json', 'r')
+		#data = json.loads (f.read())
+		#f.close ()
+		#lastcycle = curcycle - 1 #data['cycles'][-1]['cycle'] + 1
+		#data['cycles'] = list (filter (lambda y: y['cycle'] < lastcycle - 1, data['cycles']))
+		data = {
+			"cycles": []
+		}
+		lastcycle = 7
 	except:
 		data = {
 			"cycles": []
@@ -172,33 +177,23 @@ elif args.action == 'updatedocs':
 
 	print ('Starting from cycle', lastcycle)
 
-	for cycle in range (lastcycle, getCurrentCycle() + PRESERVED_CYCLES + 1):
-		fr = list(filter(lambda y: y['cycle'] == cycle, frozen))
-	
+	for cycle in range (lastcycle, getCurrentCycle() + PRESERVED_CYCLES + 1):	
 		print ('Updating docs data for cycle', cycle)
 		snap = getCycleSnapshot(cycle)
 		brights = getBakingAndEndorsmentRights(cycle)
 
-		if curcycle == cycle:
-			status = "pending"
-		elif curcycle > cycle:
-			status = "past"
-		else:
-			status = "future"
-
 		data['cycles'].append ({
 			"cycle": cycle,
 			"snapshot": snap,
-			"rights": brights,
-			"frozen": fr[0] if len(fr) == 1 else None,
-			"reward": [],
-			"status": status 
+			"rights": brights
 		})
 
 	data['pkh'] = conf['pkh']
 	data['name'] = conf['name']
 	data['deleguees'] = conf['deleguees']
 	data['percentage'] = conf['percentage']
+	data['currentcycle'] = curcycle
+	data['frozen'] = frozen
 
 	f = open ('docs/data.json', 'w')
 	f.write (json.dumps(data, separators=(',',':'), indent=4))
@@ -212,6 +207,7 @@ elif args.action == 'updatependings':
 	# the total reward of the pool for the cycle; then it calculates the reward for each delegators.
 	# For each delegators there is an Object with total pending, total paied, and cycle details. It also
 	# records the last cycle update.
+	# Frozen olds only the frozen reward; we need to save it before delete
 
 	# Load the paylog
 	try:
@@ -219,8 +215,9 @@ elif args.action == 'updatependings':
 		data = json.loads (f.read())
 		f.close ()
 	except:
-		data = { 'cycle': 7, 'pending': 0.0, 'topay': 0.0, 'paid': 0.0, 'deleguees': {} }
+		data = { 'cycle': 7, 'frozen': 0.0, 'pending': 0.0, 'paid': 0.0, 'deleguees': {} }
 
+	frozen = getFrozenBalance ()
 	elaborateddata = data
 
 	# Save the paylog
