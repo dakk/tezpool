@@ -436,7 +436,7 @@
                     }
                 ]
             },
-            "status":"pending",
+            "status":"past",
             "cycle":9
         },
         {
@@ -859,7 +859,7 @@
                     }
                 ]
             },
-            "status":"future",
+            "status":"pending",
             "cycle":10
         },
         {
