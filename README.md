@@ -3,7 +3,7 @@ TezPool is an opensource redistribution software for tezos baking pools.
 
 
 ## Configuration
-The software is configured by modifying the config.json file.
+The software is configured by modifying the ```config.json``` file.
 
 - host: the host of your node; if you run the pool in the same server of the node, leave "http://127.0.0.1:8732"
 - pkh: publickeyhash of the delegate
@@ -20,6 +20,12 @@ git clone https://github.com/dakk/tezpool
 cd tezpool
 apt-get install python3-pip
 pip3 install requests
+```
+
+Remove my private pool data and logs:
+
+```bash
+rm -r ./paylog.json docs/paylog.json docs/data.json
 ```
 
 ## Usage
