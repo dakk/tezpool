@@ -2,7 +2,10 @@ var app = angular.module('delegateApp', []);
 
 app.filter('balance', function () {
     return function (value) {
-        return Math.floor(value / 10000) / 100;
+        let vv = Math.floor(value / 10000) / 100;
+        if (isNaN (vv))
+            return 0.0;
+        return vv;
     }
 });
 
@@ -25,32 +28,36 @@ app.controller('indexCtrl', function ($scope, $http, $filter) {
             return 'future';
     };
 
+    $http.get('paylog.json').then(function (res) {
+        $scope.paylog = res.data;
+    });
+
     $http.get('data.json').then(function (res) {
         $scope.data = res.data;
         $scope.lastcycle = res.data.cycles[res.data.cycles.length - 1];
-        $scope.frozen = {};
-        $scope.totalfrozen = 0;
-
-
-        $scope.data.frozen.forEach (f => {
-            $scope.frozen[f.cycle] = f;
-            $scope.totalfrozen += parseInt (f.rewards);
-        });
 
         setTimeout(function () {
             var generalchartdata = [];
 
             $scope.data.cycles.forEach(c => {
-                generalchartdata.push({
+                var d = {
                     cycle: c.cycle,
                     estimated_reward: $filter('balance')(c.rights.estimated_reward),
                     deleguees: c.snapshot.delegated.length,
                     stake: c.snapshot.staking_balance / 1000000000,
                     estimated_blocks: c.rights.blocks.length,
-                    estimated_endorsment: c.rights.endorsment.length,
-                    frozen: $filter('balance')(c.cycle in $scope.frozen ? $scope.frozen[c.cycle].rewards : 0),
-                    reward: 0
-                });
+                    estimated_endorsment: c.rights.endorsment.length
+                };
+
+                if ($scope.paylog && c.cycle in $scope.paylog['cycles']) {
+                    d.reward = $filter('balance')($scope.paylog['cycles'][c.cycle]['reward']);
+                    d.frozen = $filter('balance')($scope.paylog['cycles'][c.cycle]['frozen']);
+                } else {
+                    d.reward = 0;
+                    d.frozen = 0;
+                }
+
+                generalchartdata.push(d);
 
                 Morris.Donut({
                     element: 'chart-percentage-' + c.cycle,
@@ -64,8 +71,8 @@ app.controller('indexCtrl', function ($scope, $http, $filter) {
                 element: 'general-chart',
                 data: generalchartdata,
                 xkey: 'cycle',
-                ykeys: ['estimated_reward', 'deleguees', 'stake', 'estimated_blocks', 'estimated_endorsment', 'frozen', 'reward'],
-                labels: ['Estimated Reward', 'Deleguees', 'Stake', 'Estimated Blocks', 'Estimated Endorsment', 'Frozen', 'Reward'],
+                ykeys: ['estimated_reward', 'deleguees', 'stake', 'estimated_blocks', 'estimated_endorsment', 'reward', 'frozen'],
+                labels: ['Estimated Reward', 'Deleguees', 'Stake', 'Estimated Blocks', 'Estimated Endorsment', 'Reward', 'Frozen'],
                 pointSize: 2,
                 hideHover: 'auto',
                 resize: true,

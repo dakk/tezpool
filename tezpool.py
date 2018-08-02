@@ -29,8 +29,8 @@ parser.add_argument('-c', '--config', metavar='config.json', dest='cfile', actio
 				   default='config.json',
 				   help='set a config file (default: config.json)')
 parser.add_argument('action', metavar='action', action='store',
-				   type=str, choices=['estimate', 'percentage', 'updatependings', 'paypendings', 'updatedocs'],
-				   help='action to perform (estimate, percentage, updatependings, paypendings, updatedocs)')
+				   type=str, choices=['updatependings', 'paypendings', 'updatedocs'],
+				   help='action to perform (updatependings, paypendings, updatedocs)')
 parser.add_argument('-cc', '--cycle', metavar='cycle', action='store', default=None,
 				   type=int, help='cycle number (default is the current cycle)')
 
@@ -57,11 +57,22 @@ def getBlockHashByIndex (idx):
 	head_level = requests.get (conf['host'] + '/chains/main/blocks/head/header').json()['level']
 	return requests.get (conf['host'] + '/chains/main/blocks/head~' + str (head_level - idx) + '/header').json()['hash']
 
-def getFrozenBalance ():
-	return requests.get (conf['host'] + '/chains/main/blocks/head/context/delegates/' + conf['pkh'] + '/frozen_balance_by_cycle').json()
+def getFrozenBalance (cycle = None):
+	if cycle == None:
+		block = 'head'
+	else:
+		ccycle = getCurrentCycle ()
+		clevel = requests.get (conf['host'] + '/chains/main/blocks/head/helpers/levels_in_current_cycle?offset=-'+str(ccycle - cycle)).json()
+		block = getBlockHashByIndex (clevel['last'])
+
+	r = requests.get (conf['host'] + '/chains/main/blocks/' + block + '/context/delegates/' + conf['pkh'] + '/frozen_balance_by_cycle').json()
+	if cycle != None:
+		return list (filter (lambda y: y['cycle'] == cycle, r))[0]
+	else:
+		return r
+
 
 def getCycleSnapshot (cycle):
-	# Get the snapshot block for every cycle /chains/main/blocks/head/context/raw/json/rolls/owner/snapshot/7
 	snapshot_block_offset = requests.get (conf['host'] + '/chains/main/blocks/head/context/raw/json/rolls/owner/snapshot/' + str(cycle)).json()[0]
 
 	# Then multiply the result with 256 and sum the cycle index, we get the block of the snapshot
@@ -119,44 +130,16 @@ def getBakingAndEndorsmentRights (cycle):
 	}
 
 def getRewardForPastCycle (cycle):
-	pass
-
-
+	return getFrozenBalance (cycle)
 
 
 # Get the current cycle if None is provided
 if args.cycle == None:
 	args.cycle = getCurrentCycle()
 
-if args.action == 'estimate':
-	print ('Cycle:', args.cycle)
-	snap = getCycleSnapshot(args.cycle)
-	brights = getBakingAndEndorsmentRights(args.cycle)
 
-	print ('Staking Balance:', formatBalance (snap['staking_balance']))
-	reward = brights['estimated_reward'] - brights['estimated_reward'] * (100 - conf['percentage']) / 100.
-
-	print ('Total estimated reward:', formatBalance (brights['estimated_reward']), 'XTZ')
-	print ('Reward without fee (' + str (conf['percentage']) + '%):', formatBalance (reward), 'XTZ')
-	print()
-	for x in snap['delegated']:
-		urew = formatBalance (reward * x['percentage'] / 100.)
-		print (x['address'], x['alias'], '->', urew, 'XTZ (' + str(x['percentage']) + '%)')
-
-
-elif args.action == 'percentage':
-	print ('Cycle:', args.cycle)
-	snap = getCycleSnapshot(args.cycle)
-
-	print ('Staking Balance:', formatBalance (snap['staking_balance']))
-
-	for x in snap['delegated']:
-		print (x['address'], x['alias'], '->', formatBalance (x['balance']), 'XTZ (' + str(x['percentage']) + '%)')
-
-
-elif args.action == 'updatedocs':
+if args.action == 'updatedocs':
 	curcycle = getCurrentCycle()
-	frozen = getFrozenBalance ()
 
 	# Load the old docs if any
 	try:
@@ -193,7 +176,6 @@ elif args.action == 'updatedocs':
 	data['deleguees'] = conf['deleguees']
 	data['percentage'] = conf['percentage']
 	data['currentcycle'] = curcycle
-	data['frozen'] = frozen
 
 	f = open ('docs/data.json', 'w')
 	f.write (json.dumps(data, separators=(',',':'), indent=4))
@@ -203,31 +185,77 @@ elif args.action == 'updatedocs':
 
 
 elif args.action == 'updatependings':
-	# This will calculate for past cycles not yet in the log and with unfrozen balance, 
-	# the total reward of the pool for the cycle; then it calculates the reward for each delegators.
-	# For each delegators there is an Object with total pending, total paied, and cycle details. It also
-	# records the last cycle update.
-	# Frozen olds only the frozen reward; we need to save it before delete
-
-	# Load the paylog
 	try:
 		f = open ('paylog.json', 'r')
 		data = json.loads (f.read())
 		f.close ()
 	except:
-		data = { 'cycle': 7, 'frozen': 0.0, 'pending': 0.0, 'paid': 0.0, 'deleguees': {} }
+		data = { 'cycle': 6, 'frozen': 0, 'pending': 0, 'paid': 0, 'deleguees': {}, 'cycles': {} }
 
-	frozen = getFrozenBalance ()
-	elaborateddata = data
+	curcycle = getCurrentCycle()
+	data['frozen'] = 0
+
+	for x in data['deleguees']:
+		data['deleguees'][x]['frozen'] = 0
+
+	for cycle in range (data['cycle'] + 1, curcycle):
+		print ('Updating for cycle', cycle)
+		frozen = (curcycle - cycle) < PRESERVED_CYCLES
+		rew = getRewardForPastCycle (cycle)
+		
+		rewsubfee = int (int (rew['rewards']) - int (rew['rewards']) * (100 - conf['percentage']) / 100.)
+
+		if not frozen:
+			data['cycle'] = cycle
+			data['pending'] += int (rew['rewards'])
+			data['pendingminusfee'] += int (rewsubfee)
+		else:
+			data['frozen'] += int (rew['rewards'])
+
+
+		data['cycles'][str(cycle)] = {
+			'frozen': rewsubfee if frozen else 0,
+			'rewardminusfee': rewsubfee if not frozen else 0,
+			'reward': int (rew['rewards']) if not frozen else 0,
+		}
+
+		snap = getCycleSnapshot (cycle)
+		for d in snap['delegated']:
+			drew = int (rewsubfee * d['percentage'] / 100.)
+			if not (d['address'] in data['deleguees']) and ((conf['private'] and d['alias'] != None) or (not conf['private'])):
+				data['deleguees'][d['address']] = {
+					'address': d['address'],
+					'frozen': drew if frozen else 0,
+					'pending': drew if not frozen else 0,
+					'paid': 0,
+					'alias': d['alias'],
+					'cycles': { }
+				}
+				data['deleguees'][d['address']]['cycles'][str(cycle)] = { 'cycle': cycle, 'percentage': d['percentage'], 'balance': d['balance'], 'frozen': drew if frozen else 0, 'reward': drew if not frozen else 0 }
+			elif (d['address'] in data['deleguees']) and ((conf['private'] and d['alias'] != None) or (not conf['private'])):
+				data['deleguees'][d['address']]['frozen'] += drew if frozen else 0
+				data['deleguees'][d['address']]['pending'] += drew if not frozen else 0
+				data['deleguees'][d['address']]['cycles'][str(cycle)] = { 'cycle': cycle, 'percentage': d['percentage'], 'balance': d['balance'], 'frozen': drew if frozen else 0, 'reward': drew if not frozen else 0 }
+
 
 	# Save the paylog
 	f = open ('paylog.json', 'w')
-	f.write (json.dumps (elaborateddata, separators=(',',':'), indent=4))
+	f.write (json.dumps (data, separators=(',',':'), indent=4))
 	f.close ()
 	f = open ('docs/paylog.json', 'w')
-	f.write (json.dumps (elaborateddata, separators=(',',':'), indent=4))
+	f.write (json.dumps (data, separators=(',',':'), indent=4))
 	f.close ()
 	
 
 elif args.action == 'paypendings':
-	pass
+	f = open ('paylog.json', 'r')
+	data = json.loads (f.read())
+	f.close ()
+	
+
+	f = open ('paylog.json', 'w')
+	f.write (json.dumps (data, separators=(',',':'), indent=4))
+	f.close ()
+	f = open ('docs/paylog.json', 'w')
+	f.write (json.dumps (data, separators=(',',':'), indent=4))
+	f.close ()

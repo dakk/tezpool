@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{{data.name}} Tezos Pool</title>
+    <title>{{data.name}} Tezos Pool asd (sharing {{data.percentage}}%)</title>
 
     <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="./vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
@@ -58,8 +58,8 @@
                                     <i class="fa fa-users fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">0</div>
-                                    <div>Payed reward</div>
+                                    <div class="huge">{{paylog.paid|balance}}</div>
+                                    <div>Paid reward</div>
                                 </div>
                             </div>
                         </div>
@@ -73,8 +73,8 @@
                                     <i class="fa fa-users fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">0 / {{totalfrozen|balance}}</div>
-                                    <div>Pending reward / Frozen reward</div>
+                                    <div class="huge">{{paylog.pending|balance}}</div>
+                                    <div>Pending reward</div>
                                 </div>
                             </div>
                         </div>
@@ -88,8 +88,8 @@
                                     <i class="fa fa-users fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">{{lastcycle.snapshot.delegated.length}}</div>
-                                    <div>Delegators</div>
+                                    <div class="huge">{{paylog.frozen|balance}}</div>
+                                    <div>Frozen reward</div>
                                 </div>
                             </div>
                         </div>
@@ -98,6 +98,24 @@
             </div>
 
             <div id="general-chart"></div>
+
+
+            <table class="table table-hover">
+                <tr>
+                    <th>Delegator</th>
+                    <th class="hidden-xs hidden-sm hidden-md">Address</th>
+                    <th>Frozen reward</th>
+                    <th>Pending reward</th>
+                    <th>Paid reward</th>
+                </tr>
+                <tr ng-repeat="d in paylog.deleguees">
+                    <td>{{d.alias}}</td>
+                    <td class="hidden-xs hidden-sm hidden-md">{{d.address}}</td>
+                    <td>{{d.frozen|balance}}</td>
+                    <td>{{d.pending|balance}}</td>
+                    <td>{{d.paid|balance}}</td>
+                </tr>
+            </table>
 
             <!--
             <div class="row">
@@ -156,22 +174,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="panel panel-green">
-                                    <div class="panel-heading">
-                                        <div class="row">
-                                            <div class="col-xs-3">
-                                                <i class="fa fa-users fa-5x"></i>
-                                            </div>
-                                            <div class="col-xs-9 text-right">
-                                                <div class="huge">{{cycle.snapshot.delegated.length}}</div>
-                                                <div>Delegators</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="panel panel-yellow">
                                     <div class="panel-heading">
                                         <div class="row">
@@ -179,8 +182,8 @@
                                                 <i class="fa fa-shopping-cart fa-5x"></i>
                                             </div>
                                             <div class="col-xs-9 text-right">
-                                                <div class="huge">{{cycle.rights.estimated_reward | balance}} / {{(frozen[cycle.cycle].rewards || 0) | balance}}</div>
-                                                <div>Estimated reward / Real reward</div>
+                                                <div class="huge">{{cycle.rights.estimated_reward | balance}} / {{paylog.cycles[cycle.cycle].frozen|balance}} / {{paylog.cycles[cycle.cycle].pending|balance}} / {{paylog.cycles[cycle.cycle].paid|balance}}</div>
+                                                <div>Estimated / Frozen / Pending / Paid reward</div>
                                             </div>
                                         </div>
                                     </div>
@@ -213,6 +216,7 @@
                                     <th class="hidden-xs hidden-sm hidden-md">Stake</th>
                                     <th>Percentage</th>
                                     <th>Estimated reward</th>
+                                    <th>Frozen reward</th>
                                     <th>Reward</th>
                                 </tr>
                                 <tr ng-repeat="d in cycle.snapshot.delegated">
@@ -221,7 +225,8 @@
                                     <td class="hidden-xs hidden-sm hidden-md">{{d.balance|balance}}</td>
                                     <td>{{d.percentage}}</td>
                                     <td>{{((cycle.rights.estimated_reward - (cycle.rights.estimated_reward / 100 * (100 - data.percentage))) / 100 * d.percentage)|balance}}</td>
-                                    <td>{{(((frozen[cycle.cycle].rewards || 0) - ((frozen[cycle.cycle].rewards || 0)  / 100 * (100 - data.percentage))) / 100 * d.percentage)|balance}}</td>
+                                    <td>{{paylog.deleguees[d.address]['cycles'][cycle.cycle].frozen|balance}}</td>
+                                    <td>{{paylog.deleguees[d.address]['cycles'][cycle.cycle].reward|balance}}</td>
                                 </tr>
                             </table>
                         </div>
