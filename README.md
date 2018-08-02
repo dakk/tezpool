@@ -39,17 +39,26 @@ optional arguments:
 ```
 
 
-Update the docs:
+Update the docs; this command will update the frontend with future cycles and reward estimation:
 
 ```bash
 python3 tezpool.py updatedocs
 ```
 
-Update the frozen / pending reward for deleguees:
+Update the frozen / pending reward for deleguees; it will edit/generate a file called paylog.json which
+contains pool payment data:
 
 ```bash
 python3 tezpool.py updatependings
 ```
+
+Pay pending reward (unfrozen rewards); it will edit paylog.json subtracting pending reward and sending transactions
+to delegators (still WIP):
+
+```bash
+python3 tezpool.py paypendings
+```
+
 
 ## Frontend
 The docs/ folder contains a tiny frontend for the pool statistics; you have to run the updatedocs action in order to keep the frontend updated.

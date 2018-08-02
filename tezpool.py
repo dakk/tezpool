@@ -248,6 +248,9 @@ elif args.action == 'paypendings':
 	data = json.loads (f.read())
 	f.close ()
 	
+	if data['pendingminusfee'] == 0:
+		print ('No pending payments available')
+		sys.exit(0)
 
 	f = open ('paylog.json', 'w')
 	f.write (json.dumps (data, separators=(',',':'), indent=4))
