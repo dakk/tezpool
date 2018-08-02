@@ -184,7 +184,7 @@ elif args.action == 'updatependings':
 		data = json.loads (f.read())
 		f.close ()
 	except:
-		data = { 'cycle': 6, 'frozen': 0, 'pending': 0, 'paid': 0, 'deleguees': {}, 'cycles': {} }
+		data = { 'cycle': 6, 'frozen': 0, 'frozenminusfee': 0, 'pendingminusfee': 0, 'pending': 0, 'paid': 0, 'deleguees': {}, 'cycles': {} }
 
 	curcycle = getCurrentCycle()
 	data['frozen'] = 0
@@ -205,10 +205,12 @@ elif args.action == 'updatependings':
 			data['pendingminusfee'] += int (rewsubfee)
 		else:
 			data['frozen'] += int (rew['rewards'])
+			data['frozenminusfee'] += int (rewsubfee)
 
 
 		data['cycles'][str(cycle)] = {
-			'frozen': rewsubfee if frozen else 0,
+			'frozenminusfee': rewsubfee if frozen else 0,
+			'frozen': int (rew['rewards']) if frozen else 0,
 			'rewardminusfee': rewsubfee if not frozen else 0,
 			'reward': int (rew['rewards']) if not frozen else 0,
 		}
