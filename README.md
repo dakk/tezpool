@@ -25,7 +25,7 @@ pip3 install requests
 Remove my private pool data and logs:
 
 ```bash
-rm -r ./paylog.json docs/paylog.json docs/data.json
+rm -r ./paylog.json ./docs/paylog.json ./docs/data.json
 ```
 
 ## Usage
