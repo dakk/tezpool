@@ -59,6 +59,8 @@ to delegators (still WIP):
 python3 tezpool.py paypendings
 ```
 
+For every new cycle you have to run both updatedocs and updatependings, and upload the new frontend data.
+
 
 ## Frontend
 The docs/ folder contains a tiny frontend for the pool statistics; you have to run the updatedocs action in order to keep the frontend updated.
