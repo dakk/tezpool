@@ -31,8 +31,6 @@ parser.add_argument('-c', '--config', metavar='config.json', dest='cfile', actio
 parser.add_argument('action', metavar='action', action='store',
 				   type=str, choices=['updatependings', 'paypendings', 'updatedocs'],
 				   help='action to perform (updatependings, paypendings, updatedocs)')
-parser.add_argument('-cc', '--cycle', metavar='cycle', action='store', default=None,
-				   type=int, help='cycle number (default is the current cycle)')
 
 args = parser.parse_args ()
 
@@ -132,10 +130,6 @@ def getBakingAndEndorsmentRights (cycle):
 def getRewardForPastCycle (cycle):
 	return getFrozenBalance (cycle)
 
-
-# Get the current cycle if None is provided
-if args.cycle == None:
-	args.cycle = getCurrentCycle()
 
 
 if args.action == 'updatedocs':

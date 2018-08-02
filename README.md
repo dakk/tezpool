@@ -30,28 +30,14 @@ usage: tezpool.py [-h] [-c config.json] [-cc cycle] action
 Tezos delegate redistribution script
 
 positional arguments:
-  action                action to perform (estimate, percentage,
-                        updatependings, paypendings)
+  action                action to perform (updatedocs, updatependings, paypendings)
 
 optional arguments:
   -h, --help            show this help message and exit
   -c config.json, --config config.json
                         set a config file (default: config.json)
-  -cc cycle, --cycle cycle
-                        cycle number (default is the current cycle)
 ```
 
-Estimate the reward for cycle 8:
-
-```bash
-python3 tezpool.py --cycle 8 estimate
-```
-
-Get the stake percentages for cycle 8:
-
-```bash
-python3 tezpool.py --cycle 8 percentage
-```
 
 Update the docs:
 
@@ -59,6 +45,11 @@ Update the docs:
 python3 tezpool.py updatedocs
 ```
 
+Update the frozen / pending reward for deleguees:
+
+```bash
+python3 tezpool.py updatependings
+```
 
 ## Frontend
 The docs/ folder contains a tiny frontend for the pool statistics; you have to run the updatedocs action in order to keep the frontend updated.
