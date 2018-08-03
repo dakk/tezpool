@@ -145,12 +145,12 @@ if args.action == 'updatedocs':
 		data = {
 			"cycles": []
 		}
-		lastcycle = 7
+		lastcycle = int (conf['startcycle'])
 	except:
 		data = {
 			"cycles": []
 		}
-		lastcycle = 7
+		lastcycle = int (conf['startcycle'])
 
 	print ('Starting from cycle', lastcycle)
 
@@ -184,7 +184,7 @@ elif args.action == 'updatependings':
 		data = json.loads (f.read())
 		f.close ()
 	except:
-		data = { 'cycle': 6, 'frozen': 0, 'frozenminusfee': 0, 'pendingminusfee': 0, 'pending': 0, 'paid': 0, 'deleguees': {}, 'cycles': {} }
+		data = { 'cycle': int (conf['startcycle']) - 1, 'frozen': 0, 'frozenminusfee': 0, 'pendingminusfee': 0, 'pending': 0, 'paid': 0, 'deleguees': {}, 'cycles': {} }
 
 	curcycle = getCurrentCycle()
 	data['frozen'] = 0

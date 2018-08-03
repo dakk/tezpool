@@ -5,6 +5,7 @@
     "payto": "contract",
     "percentage": 95,
     "private": true,
+    "startcycle": 7,
     "deleguees": {
         "tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq": "dak",
         "KT1KQhhaJdjysa2ihdNeXCsCFsekQM4PoDzA": "ond",

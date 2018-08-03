@@ -12,6 +12,7 @@ The software is configured by modifying the ```config.json``` file.
 - payto: could be "contract" if you want to pay rewards to KT addresses, or "manager" if you want to pay reward to tz addresses
 - deleguees: a dictionary with "address": "alias"
 - private: true if you want to split the reward only between addresses defined in deleguees
+- startcycle: the cycle when your delegate started to be a baker
 
 ## Install
 
