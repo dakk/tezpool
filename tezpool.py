@@ -137,15 +137,12 @@ if args.action == 'updatedocs':
 
 	# Load the old docs if any
 	try:
-		#f = open ('docs/data.json', 'r')
-		#data = json.loads (f.read())
-		#f.close ()
-		#lastcycle = curcycle - 1 #data['cycles'][-1]['cycle'] + 1
-		#data['cycles'] = list (filter (lambda y: y['cycle'] < lastcycle - 1, data['cycles']))
-		data = {
-			"cycles": []
-		}
-		lastcycle = int (conf['startcycle'])
+		f = open ('docs/data.json', 'r')
+		data = json.loads (f.read())
+		f.close ()
+
+		lastcycle = max(list(map(lambda y: y['cycle'], data['cycles']))) + 1
+		data['cycles'] = list (filter (lambda y: y['cycle'] <= lastcycle, data['cycles']))
 	except:
 		data = {
 			"cycles": []
