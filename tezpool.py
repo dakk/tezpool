@@ -185,6 +185,7 @@ elif args.action == 'updatependings':
 
 	curcycle = getCurrentCycle()
 	data['frozen'] = 0
+	data['frozenminusfee'] = 0
 
 	for x in data['deleguees']:
 		data['deleguees'][x]['frozen'] = 0
