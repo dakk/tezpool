@@ -18,5 +18,9 @@
         "KT1TpQqirScT2o4eLrcWb2qXibasVUdJ4F8f": "sio",
         "KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X": "ste",
         "KT1RWVF3uZq7Mu3x3AAFzhtX3aZmyF2mQhJX": "cor"
+    },
+    "payout": {
+        "minpayout": 0.0001,
+        "method": "tezos-client"
     }
 }

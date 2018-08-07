@@ -6,5 +6,9 @@
     "name": "MyAwesomePool",
     "private": true,
     "deleguees": {
+    },
+    "payout": {
+        "minpayout": 1.0,
+        "method": "tezos-client"
     }
 }

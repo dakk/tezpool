@@ -13,6 +13,16 @@ The software is configured by modifying the ```config.json``` file.
 - deleguees: a dictionary with "address": "alias"
 - private: true if you want to split the reward only between addresses defined in deleguees
 - startcycle: the cycle when your delegate started to be a baker
+- payout: a json object containing payment configuration
+
+### payout configuration
+
+We will implement many method for payout; the only implemented at the moment, called 'tezos-client', generates bash strings for sending 
+transactions manually.
+
+- method: payment method (only tezosclient supported atm)
+- minpayout: the minimum amount to pay
+
 
 ## Install
 

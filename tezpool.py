@@ -249,9 +249,54 @@ elif args.action == 'paypendings':
 		print ('No pending payments available')
 		sys.exit(0)
 
+	print ('There are', formatBalance(data['pendingminusfee']), 'XTZ pending in the pool')
+	paydata = ""
+	paiddeleguees = 0
+	
+	for x in data['deleguees']:
+		v = data['deleguees'][x]
+
+		if float (formatBalance(v['pending'])) < float(conf['payout']['minpayout']):
+			continue
+
+		if conf['payout']['method'] == 'tezos-client':
+			if x != conf['pkh']:
+				print ('Sending', formatBalance(v['pending']), 'XTZ to', x)
+				paydata += 'echo Sending ' + str (formatBalance(v['pending'])) + ' XTZ to ' + x + '\n'
+				paydata += './tezos-client transfer ' + str (formatBalance(v['pending'])) + ' from "my_account" to "' + x + '"\n'
+				paydata += 'sleep 1\n\n'
+			else:
+				print ('Not sending', formatBalance(v['pending']), 'XTZ to', x, 'because it\' the pool address')
+
+
+			data['deleguees'][x]['paid'] = data['deleguees'][x]['pending']
+			data['paid'] += data['deleguees'][x]['pending']
+			data['pendingminusfee'] -= data['deleguees'][x]['pending']
+			data['pending'] -= data['deleguees'][x]['pending']
+			data['deleguees'][x]['pending'] = 0 
+
+			paiddeleguees += 1
+		else:
+			print('Payout method', conf['payout']['method'], 'is not available')
+			sys.exit (0)
+
+		
+
+	if paiddeleguees == 0:
+		print ('No payments to do, exiting')
+		sys.exit (0)
+
+	if conf['payout']['method'] == 'tezos-client':
+		f = open ('payouts.sh', 'w')
+		f.write (paydata)
+		f.close ()
+		print ('payouts.sh written; exec the bash command inside to send the transactions.')
+
+
 	f = open ('paylog.json', 'w')
 	f.write (json.dumps (data, separators=(',',':'), indent=4))
 	f.close ()
 	f = open ('docs/paylog.json', 'w')
 	f.write (json.dumps (data, separators=(',',':'), indent=4))
 	f.close ()
+	print ('paylog.json updated')
