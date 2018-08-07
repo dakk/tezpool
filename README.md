@@ -55,27 +55,36 @@ optional arguments:
                         set a config file (default: config.json)
 ```
 
-
+### Cycle snapshots and data update
 Update the docs; this command will update the frontend with future cycles and reward estimation:
 
 ```bash
 python3 tezpool.py updatedocs
 ```
 
-Update the frozen / pending reward for deleguees; it will edit/generate a file called paylog.json which
-contains pool payment data:
+### Update pending reward
+Update the frozen / pending reward for deleguees; it will edit/generate a file called paylog.json 
+and data/paylog.json which contains pool payment data:
 
 ```bash
 python3 tezpool.py updatependings
 ```
 
-Pay pending reward (unfrozen rewards); it will edit paylog.json subtracting pending reward and sending transactions
-to delegators (still WIP):
+### Pay rewards
+Pay pending reward (unfrozen rewards); it will edit paylog.json and data/paylog.json subtracting pending 
+reward and sending transactions to delegators. The behaviour of the commands depends on the payout method
+specified in the config.json file: at the moment only the tezos-client method is available.
 
 ```bash
 python3 tezpool.py paypendings
 ```
 
+#### tezos-client method
+After updating paylog.json, it generates a file called payouts.sh; it contains tezos-client command
+to pay for each deleguees reward. 
+
+
+### Update 
 For every new cycle you have to run both updatedocs and updatependings, and upload the new frontend data.
 
 

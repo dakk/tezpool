@@ -173,7 +173,7 @@
             "alias":"spl"
         },
         "tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq":{
-            "paid":0,
+            "paid":51300000,
             "cycles":{
                 "9":{
                     "frozen":47481000,
@@ -213,7 +213,7 @@
             },
             "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
             "frozen":108208893,
-            "pending":51300000,
+            "pending":0,
             "alias":"dakk"
         },
         "KT1KQhhaJdjysa2ihdNeXCsCFsekQM4PoDzA":{
@@ -279,8 +279,8 @@
             "alias":"and"
         }
     },
-    "paid":0,
+    "paid":51300000,
     "frozen":281000000,
-    "pendingminusfee":51300000,
-    "pending":54000000
+    "pendingminusfee":0,
+    "pending":2700000
 }
