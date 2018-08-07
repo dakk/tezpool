@@ -270,7 +270,7 @@ elif args.action == 'paypendings':
 				print ('Not sending', formatBalance(v['pending']), 'XTZ to', x, 'because it\' the pool address')
 
 
-			data['deleguees'][x]['paid'] = data['deleguees'][x]['pending']
+			data['deleguees'][x]['paid'] += data['deleguees'][x]['pending']
 			data['paid'] += data['deleguees'][x]['pending']
 			data['pendingminusfee'] -= data['deleguees'][x]['pending']
 			data['pending'] -= data['deleguees'][x]['pending']
