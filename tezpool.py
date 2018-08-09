@@ -192,7 +192,7 @@ elif args.action == 'updatependings':
 
 	for cycle in range (data['cycle'] + 1, curcycle):
 		print ('Updating for cycle', cycle)
-		frozen = (curcycle - cycle) < PRESERVED_CYCLES
+		frozen = (curcycle - cycle - 1) < PRESERVED_CYCLES
 		rew = getRewardForPastCycle (cycle)
 		
 		rewsubfee = int (int (rew['rewards']) - int (rew['rewards']) * (100 - conf['percentage']) / 100.)
