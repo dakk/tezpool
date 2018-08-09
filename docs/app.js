@@ -20,8 +20,8 @@ app.controller('indexCtrl', function ($scope, $http, $filter) {
     };
 
     $scope.statusOfCycle = function (cycle, curcycle) {
-        if ((cycle - 1) < curcycle)
-            return 'past' + (cycle > curcycle - 5 ? ' and frozen until cycle ' + (cycle + 5) : '');
+        if (cycle < curcycle)
+            return 'past' + (cycle > curcycle - 5 - 1 ? ' and frozen until cycle ' + (cycle + 5 + 1) : '');
         else if (cycle == curcycle)
             return 'current';
         else 
