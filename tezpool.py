@@ -71,7 +71,11 @@ def getFrozenBalance (cycle = None):
 
 
 def getCycleSnapshot (cycle):
-	snapshot_block_offset = requests.get (conf['host'] + '/chains/main/blocks/head/context/raw/json/rolls/owner/snapshot/' + str(cycle)).json()[0]
+	try:
+		snapshot_block_offset = requests.get (conf['host'] + '/chains/main/blocks/head/context/raw/json/rolls/owner/snapshot/' + str(cycle)).json()[0]
+	except:
+		snapshot_block_offset = requests.get (conf['host'] + '/chains/main/blocks/head~4096/context/raw/json/rolls/owner/snapshot/' + str(cycle)).json()[0]
+		
 
 	# Then multiply the result with 256 and sum the cycle index, we get the block of the snapshot
 	snapshot_block_index = ((cycle-PRESERVED_CYCLES-2)*4096)+((snapshot_block_offset+1)*256)
