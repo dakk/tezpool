@@ -77,7 +77,7 @@
     "cycle":13,
     "deleguees":{
         "KT1WScDDtweGCKQioUgHi7WHTc9TVsVyyM3b":{
-            "paid":0,
+            "paid":16331910,
             "cycles":{
                 "11":{
                     "cycle":11,
@@ -138,11 +138,11 @@
             },
             "address":"KT1WScDDtweGCKQioUgHi7WHTc9TVsVyyM3b",
             "frozen":25942983,
-            "pending":16331910,
+            "pending":0,
             "alias":"ema"
         },
         "KT1HtcckeAhQoq2L9TTwreiZYcjnMANwnErh":{
-            "paid":0,
+            "paid":20892926,
             "cycles":{
                 "10":{
                     "cycle":10,
@@ -210,11 +210,11 @@
             },
             "address":"KT1HtcckeAhQoq2L9TTwreiZYcjnMANwnErh",
             "frozen":24208970,
-            "pending":20892926,
+            "pending":0,
             "alias":"ana"
         },
         "KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e":{
-            "paid":0,
+            "paid":10671552,
             "cycles":{
                 "10":{
                     "cycle":10,
@@ -282,11 +282,11 @@
             },
             "address":"KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e",
             "frozen":12365394,
-            "pending":10671552,
+            "pending":0,
             "alias":"men"
         },
         "KT1TpQqirScT2o4eLrcWb2qXibasVUdJ4F8f":{
-            "paid":0,
+            "paid":42913665,
             "cycles":{
                 "10":{
                     "cycle":10,
@@ -354,11 +354,11 @@
             },
             "address":"KT1TpQqirScT2o4eLrcWb2qXibasVUdJ4F8f",
             "frozen":49725058,
-            "pending":42913665,
+            "pending":0,
             "alias":"sio"
         },
         "KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N":{
-            "paid":0,
+            "paid":25979021,
             "cycles":{
                 "9":{
                     "cycle":9,
@@ -433,11 +433,11 @@
             },
             "address":"KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N",
             "frozen":30080688,
-            "pending":25979021,
+            "pending":0,
             "alias":"red"
         },
         "KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX":{
-            "paid":0,
+            "paid":22389216,
             "cycles":{
                 "10":{
                     "cycle":10,
@@ -505,11 +505,11 @@
             },
             "address":"KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX",
             "frozen":25942983,
-            "pending":22389216,
+            "pending":0,
             "alias":"spl"
         },
         "tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq":{
-            "paid":51300000,
+            "paid":203492600,
             "cycles":{
                 "9":{
                     "cycle":9,
@@ -598,11 +598,11 @@
             },
             "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
             "frozen":108833055,
-            "pending":152192600,
+            "pending":0,
             "alias":"dakk"
         },
         "KT1KQhhaJdjysa2ihdNeXCsCFsekQM4PoDzA":{
-            "paid":0,
+            "paid":102622572,
             "cycles":{
                 "10":{
                     "cycle":10,
@@ -670,11 +670,11 @@
             },
             "address":"KT1KQhhaJdjysa2ihdNeXCsCFsekQM4PoDzA",
             "frozen":118910977,
-            "pending":102622572,
+            "pending":0,
             "alias":"ond"
         },
         "KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X":{
-            "paid":0,
+            "paid":42913665,
             "cycles":{
                 "10":{
                     "cycle":10,
@@ -742,11 +742,11 @@
             },
             "address":"KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X",
             "frozen":49725058,
-            "pending":42913665,
+            "pending":0,
             "alias":"ste"
         },
         "KT1KPm5aNEMN61jxj61cc5TXMjsjDBZSuFF5":{
-            "paid":0,
+            "paid":31303567,
             "cycles":{
                 "11":{
                     "cycle":11,
@@ -807,14 +807,14 @@
             },
             "address":"KT1KPm5aNEMN61jxj61cc5TXMjsjDBZSuFF5",
             "frozen":49725058,
-            "pending":31303567,
+            "pending":0,
             "alias":"and"
         },
         "KT1RWVF3uZq7Mu3x3AAFzhtX3aZmyF2mQhJX":{
             "address":"KT1RWVF3uZq7Mu3x3AAFzhtX3aZmyF2mQhJX",
             "frozen":7453751,
-            "pending":1720187,
-            "paid":0,
+            "pending":0,
+            "paid":1720187,
             "alias":"cor",
             "cycles":{
                 "13":{
@@ -862,8 +862,8 @@
             }
         }
     },
-    "paid":51300000,
+    "paid":521230881,
     "frozen":528666666,
-    "pendingminusfee":469933332,
-    "pending":497366666
+    "pendingminusfee":2451,
+    "pending":27435785
 }
