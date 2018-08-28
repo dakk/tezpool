@@ -91,6 +91,13 @@ For every new cycle you have to run both updatedocs and updatependings, and uplo
 ## Frontend
 The docs/ folder contains a tiny frontend for the pool statistics; you have to run the updatedocs action in order to keep the frontend updated.
 
+### Terms
+
+- Estimated reward: reward value estimated for a future cycle
+- Frozen reward: reward of blocks already baked / endorsed, but still frozen for 5 cycles (PRESERVED_CYCLES)
+- Pending reward: reward value unfrozen, but pending redistribution among deleguees
+- Paid reward: reward value unfrozen and redistributed among deleguees
+
 
 ## Donate
 This software is free and opensource, but donations are always appreciated;
