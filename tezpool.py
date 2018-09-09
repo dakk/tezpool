@@ -48,7 +48,7 @@ def formatBalance (bal):
 
 
 def getCurrentCycle ():
-	return math.floor (requests.get (conf['host'] + '/chains/main/blocks/head/header').json()['level'] / BLOCKS_PER_CYCLE)
+	return requests.get (conf['host'] + '/chains/main/blocks/head/helpers/current_level').json()['cycle']
 
 
 def getBlockHashByIndex (idx):
