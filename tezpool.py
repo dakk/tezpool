@@ -52,8 +52,10 @@ def getCurrentCycle ():
 
 
 def getBlockHashByIndex (idx):
-	head_level = requests.get (conf['host'] + '/chains/main/blocks/head/header').json()['level']
-	return requests.get (conf['host'] + '/chains/main/blocks/head~' + str (head_level - idx) + '/header').json()['hash']
+	head = requests.get (conf['host'] + '/chains/main/blocks/head/header').json()
+	head_level = head['level']
+	head_hash = head['hash']
+	return requests.get (conf['host'] + '/chains/main/blocks/' + head_hash + '~' + str (head_level - idx) + '/header').json()['hash']
 
 def getFrozenBalance (cycle = None):
 	if cycle == None:
