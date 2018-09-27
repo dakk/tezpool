@@ -117,10 +117,15 @@ def getCycleSnapshot (cycle):
 
 
 
-def getBakingAndEndorsmentRights (cycle):
-	bak = requests.get (conf['host'] + "/chains/main/blocks/head/helpers/baking_rights?delegate=" + conf['pkh'] + '&cycle=' + str(cycle)).json()
-	endors = requests.get (conf['host'] + "/chains/main/blocks/head/helpers/endorsing_rights?delegate=" + conf['pkh'] + '&cycle=' + str(cycle)).json()
+def getBakingAndEndorsmentRights (cycle, curcycle):
+	nhead = curcycle * 4096 - cycle * 4096
+	if nhead < 0:
+		nhead = ""
+	else:
+		nhead = "~" + str(nhead)
 
+	bak = requests.get (conf['host'] + "/chains/main/blocks/head" + nhead + "/helpers/baking_rights?delegate=" + conf['pkh'] + '&cycle=' + str(cycle)).json()
+	endors = requests.get (conf['host'] + "/chains/main/blocks/head" + nhead + "/helpers/endorsing_rights?delegate=" + conf['pkh'] + '&cycle=' + str(cycle)).json()
 	b = list(filter(lambda x: x['priority'] == 0, bak))
 	e = endors
 	
@@ -157,7 +162,7 @@ if args.action == 'updatedocs':
 	for cycle in range (lastcycle, getCurrentCycle() + PRESERVED_CYCLES + 1):	
 		print ('Updating docs data for cycle', cycle)
 		snap = getCycleSnapshot(cycle)
-		brights = getBakingAndEndorsmentRights(cycle)
+		brights = getBakingAndEndorsmentRights(cycle, curcycle)
 
 		data['cycles'].append ({
 			"cycle": cycle,
