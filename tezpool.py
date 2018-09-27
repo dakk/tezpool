@@ -62,12 +62,7 @@ def getFrozenBalance (cycle = None):
 		block = 'head'
 	else:
 		ccycle = getCurrentCycle ()
-		nhead = curcycle * 4096 - cycle * 4096
-		if nhead < 0:
-			nhead = ""
-		else:
-			nhead = "~" + str(nhead)
-		clevel = requests.get (conf['host'] + '/chains/main/blocks/head' + nhead + '/helpers/levels_in_current_cycle?offset=-'+str(ccycle - cycle)).json()
+		clevel = requests.get (conf['host'] + '/chains/main/blocks/head/helpers/levels_in_current_cycle?offset=-'+str(ccycle - cycle)).json()
 		block = getBlockHashByIndex (clevel['last'])
 
 	r = requests.get (conf['host'] + '/chains/main/blocks/' + block + '/context/delegates/' + conf['pkh'] + '/frozen_balance_by_cycle').json()
@@ -206,7 +201,11 @@ elif args.action == 'updatependings':
 	for cycle in range (data['cycle'] + 1, curcycle):
 		print ('Updating for cycle', cycle)
 		frozen = (curcycle - cycle - 1) < PRESERVED_CYCLES
-		rew = getRewardForPastCycle (cycle)
+		try:
+			rew = getRewardForPastCycle (cycle)
+		except:
+			print ('Cant get reward for cycle', cycle)
+			continue
 		
 		rewsubfee = int (int (rew['rewards']) - int (rew['rewards']) * (100 - conf['percentage']) / 100.)
 
