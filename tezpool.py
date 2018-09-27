@@ -62,7 +62,12 @@ def getFrozenBalance (cycle = None):
 		block = 'head'
 	else:
 		ccycle = getCurrentCycle ()
-		clevel = requests.get (conf['host'] + '/chains/main/blocks/head/helpers/levels_in_current_cycle?offset=-'+str(ccycle - cycle)).json()
+		nhead = curcycle * 4096 - cycle * 4096
+		if nhead < 0:
+			nhead = ""
+		else:
+			nhead = "~" + str(nhead)
+		clevel = requests.get (conf['host'] + '/chains/main/blocks/head' + nhead + '/helpers/levels_in_current_cycle?offset=-'+str(ccycle - cycle)).json()
 		block = getBlockHashByIndex (clevel['last'])
 
 	r = requests.get (conf['host'] + '/chains/main/blocks/' + block + '/context/delegates/' + conf['pkh'] + '/frozen_balance_by_cycle').json()
