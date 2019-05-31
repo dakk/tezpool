@@ -42,30 +42,40 @@ except:
 	print ('Unable to load config file.')
 	sys.exit ()
 
+def try_get(uri, try_n=5):
+	try:
+		return requests.get (conf['host'] + uri)
+	except:
+		if try_n > 0:
+			print ('Get failed, retrying %d' % try_n)
+			return try_get(uri, try_n - 1)
+		else:
+			raise Exception('Reached max retries for get request: ' + uri)
+
 
 def formatBalance (bal):
 	return str (int (bal) / 1000000)
 
 
 def getCurrentCycle ():
-	return requests.get (conf['host'] + '/chains/main/blocks/head/helpers/current_level').json()['cycle']
+	return try_get ('/chains/main/blocks/head/helpers/current_level').json()['cycle']
 
 
 def getBlockHashByIndex (idx):
-	head = requests.get (conf['host'] + '/chains/main/blocks/head/header').json()
+	head = try_get ('/chains/main/blocks/head/header').json()
 	head_level = head['level']
 	head_hash = head['hash']
-	return requests.get (conf['host'] + '/chains/main/blocks/' + head_hash + '~' + str (head_level - idx) + '/header').json()['hash']
+	return try_get ('/chains/main/blocks/' + head_hash + '~' + str (head_level - idx) + '/header').json()['hash']
 
 def getFrozenBalance (cycle = None):
 	if cycle == None:
 		block = 'head'
 	else:
 		ccycle = getCurrentCycle ()
-		clevel = requests.get (conf['host'] + '/chains/main/blocks/head/helpers/levels_in_current_cycle?offset=-'+str(ccycle - cycle)).json()
+		clevel = try_get ('/chains/main/blocks/head/helpers/levels_in_current_cycle?offset=-'+str(ccycle - cycle)).json()
 		block = getBlockHashByIndex (clevel['last'])
 
-	r = requests.get (conf['host'] + '/chains/main/blocks/' + block + '/context/delegates/' + conf['pkh'] + '/frozen_balance_by_cycle').json()
+	r = try_get ('/chains/main/blocks/' + block + '/context/delegates/' + conf['pkh'] + '/frozen_balance_by_cycle').json()
 	if cycle != None:
 		return list (filter (lambda y: y['cycle'] == cycle, r))[0]
 	else:
@@ -73,7 +83,7 @@ def getFrozenBalance (cycle = None):
 
 
 def getCycleSnapshot (cycle):
-	#snapshot_block_offset = requests.get (conf['host'] + '/chains/main/blocks/head/context/raw/json/rolls/owner/snapshot/' + str(cycle)).json()[0]	
+	#snapshot_block_offset = try_get ('/chains/main/blocks/head/context/raw/json/rolls/owner/snapshot/' + str(cycle)).json()[0]	
 
 	# Then multiply the result with 256 and sum the cycle index, we get the block of the snapshot
 	#snapshot_block_index = ((cycle-PRESERVED_CYCLES-2)*4096)+((snapshot_block_offset+1)*256)
@@ -82,13 +92,13 @@ def getCycleSnapshot (cycle):
 	
 	# Get the delegate information for the given snapshot
 	block_hash = getBlockHashByIndex (snapshot_block_index)
-	delegate_info = requests.get (conf['host'] + "/chains/main/blocks/" + block_hash + "/context/delegates/" + conf['pkh']).json()
+	delegate_info = try_get ("/chains/main/blocks/" + block_hash + "/context/delegates/" + conf['pkh']).json()
 
 	delegated = []
 
 	# Get the delegated balance of each contract
 	for x in delegate_info['delegated_contracts']:
-		contract_info = requests.get (conf['host'] + "/chains/main/blocks/" + block_hash + "/context/contracts/" + x).json()
+		contract_info = try_get ("/chains/main/blocks/" + block_hash + "/context/contracts/" + x).json()
 
 		contract_info2 = {
 			"balance": contract_info['balance'],
@@ -124,8 +134,8 @@ def getBakingAndEndorsmentRights (cycle, curcycle):
 	else:
 		nhead = "~" + str(nhead)
 
-	bak = requests.get (conf['host'] + "/chains/main/blocks/head" + nhead + "/helpers/baking_rights?delegate=" + conf['pkh'] + '&cycle=' + str(cycle)).json()
-	endors = requests.get (conf['host'] + "/chains/main/blocks/head" + nhead + "/helpers/endorsing_rights?delegate=" + conf['pkh'] + '&cycle=' + str(cycle)).json()
+	bak = try_get ("/chains/main/blocks/head" + nhead + "/helpers/baking_rights?delegate=" + conf['pkh'] + '&cycle=' + str(cycle)).json()
+	endors = try_get ("/chains/main/blocks/head" + nhead + "/helpers/endorsing_rights?delegate=" + conf['pkh'] + '&cycle=' + str(cycle)).json()
 	b = list(filter(lambda x: x['priority'] == 0, bak))
 	e = endors
 	

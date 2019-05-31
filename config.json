@@ -1,5 +1,6 @@
 {
-    "host": "http://127.0.0.1:8732",
+    "host": "https://mainnet.tezrpc.me:443",
+    "host_old": "http://127.0.0.1:8732",
     "pkh": "tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
     "name": "dakk",
     "payto": "contract",
