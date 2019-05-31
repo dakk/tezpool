@@ -9,6 +9,9 @@
     },
     "payout": {
         "minpayout": 1.0,
-        "method": "tezos-client"
+        "deductfees": false,
+        "method": "tezos-client",
+        "tezos_client": "./tezos-client",
+        "from_account": "my_account"
     }
 }
