@@ -102,7 +102,7 @@ def getCycleSnapshot (cycle):
 
 		contract_info2 = {
 			"balance": contract_info['balance'],
-			"manager": contract_info['manager'],
+			# "manager": contract_info['manager'],
 			"address": x,
 			"alias": conf['deleguees'][x] if (x in conf['deleguees']) else None,
 			"percentage": (int (10000. * 100. * float (contract_info['balance']) / float (delegate_info['staking_balance']))) / 10000.
@@ -112,7 +112,7 @@ def getCycleSnapshot (cycle):
 	# Append the delegate as contractor
 	delegated.append({
 		"balance": delegate_info['balance'],
-		"manager": conf['pkh'],
+		# "manager": conf['pkh'],
 		"address": conf['pkh'],
 		"alias": conf['name'],
 		"percentage": (int (10000. * 100. * float (delegate_info['balance']) / float (delegate_info['staking_balance']))) / 10000.
