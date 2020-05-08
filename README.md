@@ -107,7 +107,7 @@ these are my donation addresses:
 - Ethereum: 0x18F081247ad32af38404D071eb8c246CC4F33534
 
 ## License
-Copyright 2018 Davide Gessa
+Copyright 2018-2020 Davide Gessa
 
 Permission is hereby granted, free of charge, to any person obtaining a 
 copy of this software and associated documentation files (the 
