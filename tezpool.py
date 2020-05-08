@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-#http://doc.tzalpha.net/api/rpc_proposal.html?highlight=june
-#http://doc.tzalpha.net/api/rpc.html#usage
+# http://doc.tzalpha.net/api/rpc_proposal.html?highlight=june
+# http://doc.tzalpha.net/api/rpc.html#usage
 
 import json
 import requests
@@ -11,11 +11,62 @@ import math
 import sys
 
 # Constants
+DEBUG = False
 PRESERVED_CYCLES = 5
 BLOCK_REWARD = 16 * 1000000.
 ENDORSMENT_REWARD = 2 * 1000000.
 BLOCKS_PER_CYCLE = 4096
 
+# Income/Rewards Breakdown
+idx_income_expected_income = 19
+idx_income_total_income = 21
+idx_income_total_bonds = 22
+
+idx_income_baking_income = 23
+idx_income_endorsing_income = 24
+idx_income_double_baking_income = 25
+idx_income_double_endorsing_income = 26
+idx_income_seed_income = 27
+idx_income_fees_income = 28
+idx_income_missed_baking_income = 29
+idx_income_missed_endorsing_income = 30
+idx_income_stolen_baking_income = 31
+
+idx_income_total_lost = 32
+idx_income_lost_accusation_fees = 33
+idx_income_lost_accusation_rewards = 34
+idx_income_lost_accusation_deposits = 35
+idx_income_lost_revelation_fees = 36
+idx_income_lost_revelation_rewards = 37
+
+# Cycle Snapshot
+idx_balance = 0
+idx_baker_delegated = 1
+idx_delegator_address = 2
+
+# Current balances
+idx_cb_delegator_id = 0
+idx_cb_current_balance = 1
+idx_cb_delegator_address = 2
+
+# Rights
+idx_r_type = 1
+idx_r_priority = 4
+
+# Flow
+idx_f_category = 13
+idx_f_amount_in = 15
+idx_f_frozen = 19
+
+TZSTAT_API = 'http://api.tzstats.com'
+TZSTAT_EP = {
+	'rights': '{}/tables/rights?address={}&cycle={}&limit=1000',
+	'rewards': '{}/tables/income?address={}&cycle={}',
+	'delegates': '{}/tables/snapshot?cycle={}&is_selected=1&delegate={}&columns=balance,delegated,address&limit=50000',
+	'bbalance': '{}/tables/account?delegate={}&columns=row_id,spendable_balance,address',
+	'cbalance': '{}/tables/account?address={}&columns=row_id,spendable_balance,address',
+	'flow': '{}/tables/flow?address={}&cycle={}&limit=1000'
+}
 
 # Force python3
 if sys.version_info[0] < 3:
@@ -43,11 +94,18 @@ except:
 	sys.exit ()
 
 def try_get(uri, try_n=5):
+	if not ('http' in uri):
+		uri = conf['host'] + uri
+
+	if DEBUG:
+		print ('=> try_get:', uri)
+
 	try:
-		return requests.get (conf['host'] + uri)
+		return requests.get (uri).json()
 	except:
 		if try_n > 0:
-			print ('Get failed, retrying %d' % try_n)
+			if DEBUG:
+				print ('Get failed, retrying %d' % try_n)
 			return try_get(uri, try_n - 1)
 		else:
 			raise Exception('Reached max retries for get request: ' + uri)
@@ -58,86 +116,82 @@ def formatBalance (bal):
 
 
 def getCurrentCycle ():
-	return try_get ('/chains/main/blocks/head/helpers/current_level').json()['cycle']
+	return try_get ('/chains/main/blocks/head/helpers/current_level')['cycle']
 
 
-def getBlockHashByIndex (idx):
-	head = try_get ('/chains/main/blocks/head/header').json()
-	head_level = head['level']
-	head_hash = head['hash']
-	return try_get ('/chains/main/blocks/' + head_hash + '~' + str (head_level - idx) + '/header').json()['hash']
+def getFrozenBalance(cycle):
+	flow = try_get(TZSTAT_EP['flow'].format(TZSTAT_API, conf['pkh'], cycle))
+	# print (flow)
+	flow = list(filter(lambda x: x[idx_f_category] == 'rewards', flow))
+	#  and x[idx_f_frozen] == 1
+	fr_amount = 0.0
+	for x in flow:
+		fr_amount += x[idx_f_amount_in]
 
-def getFrozenBalance (cycle = None):
-	if cycle == None:
-		block = 'head'
-	else:
-		ccycle = getCurrentCycle ()
-		clevel = try_get ('/chains/main/blocks/head/helpers/levels_in_current_cycle?offset=-'+str(ccycle - cycle)).json()
-		block = getBlockHashByIndex (clevel['last'])
+	fr_amount = fr_amount * 1000000
 
-	r = try_get ('/chains/main/blocks/' + block + '/context/delegates/' + conf['pkh'] + '/frozen_balance_by_cycle').json()
-	if cycle != None:
-		return list (filter (lambda y: y['cycle'] == cycle, r))[0]
-	else:
-		return r
+	print ('Cycle: {}\tReward: {} tz'.format(cycle, formatBalance(fr_amount)))
+
+	return {
+		'rewards': fr_amount
+	}
 
 
-def getCycleSnapshot (cycle):
-	#snapshot_block_offset = try_get ('/chains/main/blocks/head/context/raw/json/rolls/owner/snapshot/' + str(cycle)).json()[0]	
-
-	# Then multiply the result with 256 and sum the cycle index, we get the block of the snapshot
-	#snapshot_block_index = ((cycle-PRESERVED_CYCLES-2)*4096)+((snapshot_block_offset+1)*256)
-
-	snapshot_block_index = ((cycle-PRESERVED_CYCLES-2)*4096)+4095
-	
-	# Get the delegate information for the given snapshot
-	block_hash = getBlockHashByIndex (snapshot_block_index)
-	delegate_info = try_get ("/chains/main/blocks/" + block_hash + "/context/delegates/" + conf['pkh']).json()
-
+def getCycleSnapshot(cycle):
+	delegate_info = try_get (TZSTAT_EP['delegates'].format(TZSTAT_API, cycle, conf['pkh']))
 	delegated = []
+	staking_balance = 0
+
+	for x in delegate_info:
+		staking_balance += float(x[idx_balance])
+	staking_balance = int(staking_balance * 1000000.)
+
+	print ('Staking balance for cycle {}: {} tz'.format(cycle, formatBalance(staking_balance)))
+
 
 	# Get the delegated balance of each contract
-	for x in delegate_info['delegated_contracts']:
-		contract_info = try_get ("/chains/main/blocks/" + block_hash + "/context/contracts/" + x).json()
+	for x in delegate_info:
+		addr = x[idx_delegator_address]
+		bal = float(x[idx_balance]) * 1000000.
 
 		contract_info2 = {
-			"balance": contract_info['balance'],
+			"balance": int(bal), #x['balance'],
 			# "manager": contract_info['manager'],
-			"address": x,
-			"alias": conf['deleguees'][x] if (x in conf['deleguees']) else None,
-			"percentage": (int (10000. * 100. * float (contract_info['balance']) / float (delegate_info['staking_balance']))) / 10000.
+			"address": addr,
+			"alias": conf['deleguees'][addr] if (addr in conf['deleguees']) else None,
+			"percentage": (int (10000. * 100. * bal / float(staking_balance))) / 10000.
 		}
 		delegated.append(contract_info2)
+		print ('Cycle: {}\tAddress: {}\tBalance: {}\tPercentage: {}%'.format(cycle, addr, formatBalance(bal), contract_info2['percentage']))
 
-	# Append the delegate as contractor
-	delegated.append({
-		"balance": delegate_info['balance'],
-		# "manager": conf['pkh'],
-		"address": conf['pkh'],
-		"alias": conf['name'],
-		"percentage": (int (10000. * 100. * float (delegate_info['balance']) / float (delegate_info['staking_balance']))) / 10000.
-	})
 
+	# Assert the sum of percentage is 100%
+	perc = 0.0
+	for x in delegated:
+		perc += x['percentage']
+
+	if perc < 99.9:
+		raise "Percentage is not 100%!"
 
 	return {
 		"cycle": cycle,
-		"staking_balance": delegate_info['staking_balance'],
+		"staking_balance": staking_balance,
 		"delegated": delegated
 	}
 
 
-
 def getBakingAndEndorsmentRights (cycle, curcycle):
-	nhead = curcycle * 4096 - cycle * 4096
-	if nhead < 0:
-		nhead = ""
-	else:
-		nhead = "~" + str(nhead)
+	rights = try_get (TZSTAT_EP['rights'].format(TZSTAT_API, conf['pkh'], cycle))
+	rights = list(filter(lambda x: x[idx_r_type] == 'endorsing' or (x[idx_r_type] == 'baking' and x[idx_r_priority] == 0), rights))
 
-	bak = try_get ("/chains/main/blocks/head" + nhead + "/helpers/baking_rights?delegate=" + conf['pkh'] + '&cycle=' + str(cycle)).json()
-	endors = try_get ("/chains/main/blocks/head" + nhead + "/helpers/endorsing_rights?delegate=" + conf['pkh'] + '&cycle=' + str(cycle)).json()
-	b = list(filter(lambda x: x['priority'] == 0, bak))
-	e = endors
+	b = []
+	e = []
+	
+	for x in rights:
+		if x[idx_r_type] == 'baking':
+			b.append(x[2])
+		elif x[idx_r_type] == 'endorsing':
+			e.append(x[2])
 	
 	return {
 		'blocks': b,
@@ -169,10 +223,12 @@ if args.action == 'updatedocs':
 
 	print ('Starting from cycle', lastcycle)
 
-	for cycle in range (lastcycle, getCurrentCycle() + PRESERVED_CYCLES + 1):	
+	for cycle in range (lastcycle, getCurrentCycle() - 1): # + PRESERVED_CYCLES + 1):	
 		print ('Updating docs data for cycle', cycle)
 		snap = getCycleSnapshot(cycle)
+		time.sleep(0.5)
 		brights = getBakingAndEndorsmentRights(cycle, curcycle)
+		time.sleep(0.5)
 
 		data['cycles'].append ({
 			"cycle": cycle,
@@ -208,11 +264,12 @@ elif args.action == 'updatependings':
 	for x in data['deleguees']:
 		data['deleguees'][x]['frozen'] = 0
 
-	for cycle in range (data['cycle'] + 1, curcycle):
+	for cycle in range (data['cycle'] + 1, curcycle - 1):
 		print ('Updating for cycle', cycle)
 		frozen = (curcycle - cycle - 1) < PRESERVED_CYCLES
 		try:
 			rew = getRewardForPastCycle (cycle)
+			time.sleep(0.5)
 		except:
 			print ('Cant get reward for cycle', cycle)
 			continue
@@ -236,6 +293,7 @@ elif args.action == 'updatependings':
 		}
 
 		snap = getCycleSnapshot (cycle)
+		time.sleep(0.5)
 		for d in snap['delegated']:
 			drew = int (rewsubfee * d['percentage'] / 100.)
 			if not (d['address'] in data['deleguees']) and ((conf['private'] and d['alias'] != None) or (not conf['private'])):
