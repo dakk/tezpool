@@ -54,15 +54,16 @@ idx_r_type = 1
 idx_r_priority = 4
 
 # Flow
-idx_f_category = 13
-idx_f_amount_in = 15
-idx_f_frozen = 19
+idx_f_category = 9
+idx_f_amount_in = 11
+# idx_f_amount_out = 12
+# idx_f_frozen = 19
 
 TZSTAT_API = 'http://api.tzstats.com'
 TZSTAT_EP = {
 	'rights': '{}/tables/rights?address={}&cycle={}&limit=1000',
 	'rewards': '{}/tables/income?address={}&cycle={}',
-	'delegates': '{}/tables/snapshot?cycle={}&is_selected=1&delegate={}&columns=balance,delegated,address&limit=50000',
+	'delegates': '{}/tables/snapshot?cycle={}&is_selected=1&baker={}&columns=balance,delegated,address&limit=50000',
 	'bbalance': '{}/tables/account?delegate={}&columns=row_id,spendable_balance,address',
 	'cbalance': '{}/tables/account?address={}&columns=row_id,spendable_balance,address',
 	'flow': '{}/tables/flow?address={}&cycle={}&limit=1000'
@@ -126,7 +127,7 @@ def getFrozenBalance(cycle):
 	#  and x[idx_f_frozen] == 1
 	fr_amount = 0.0
 	for x in flow:
-		fr_amount += x[idx_f_amount_in]
+		fr_amount += x[idx_f_amount_in] #- x[idx_f_amount_out]
 
 	fr_amount = fr_amount * 1000000
 
