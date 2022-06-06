@@ -4,11 +4,10 @@
 # http://doc.tzalpha.net/api/rpc.html#usage
 
 import json
-import requests
 import time
 import argparse
-import math
 import sys
+import requests
 
 # Constants
 DEBUG = False
@@ -95,7 +94,7 @@ except:
 	sys.exit ()
 
 def try_get(uri, try_n=5):
-	if not ('http' in uri):
+	if 'http' not in uri:
 		uri = conf['host'] + uri
 
 	if DEBUG:
@@ -163,7 +162,8 @@ def getCycleSnapshot(cycle):
 			"percentage": (int (10000. * 100. * bal / float(staking_balance))) / 10000.
 		}
 		delegated.append(contract_info2)
-		print ('Cycle: {}\tAddress: {}\tBalance: {}\tPercentage: {}%'.format(cycle, addr, formatBalance(bal), contract_info2['percentage']))
+		print ('Cycle: {}\tAddress: {}\tBalance: {}\tPercentage: {}%'.format(
+			cycle, addr, formatBalance(bal), contract_info2['percentage']))
 
 
 	# Assert the sum of percentage is 100%
@@ -172,7 +172,7 @@ def getCycleSnapshot(cycle):
 		perc += x['percentage']
 
 	if perc < 99.9:
-		raise "Percentage is not 100%!"
+		raise Exception("Percentage is not 100%!")
 
 	return {
 		"cycle": cycle,
@@ -187,13 +187,13 @@ def getBakingAndEndorsmentRights (cycle, curcycle):
 
 	b = []
 	e = []
-	
+
 	for x in rights:
 		if x[idx_r_type] == 'baking':
 			b.append(x[2])
 		elif x[idx_r_type] == 'endorsing':
 			e.append(x[2])
-	
+
 	return {
 		'blocks': b,
 		'endorsment': e,
@@ -224,7 +224,7 @@ if args.action == 'updatedocs':
 
 	print ('Starting from cycle', lastcycle)
 
-	for cycle in range (lastcycle, getCurrentCycle() - 1): # + PRESERVED_CYCLES + 1):	
+	for cycle in range (lastcycle, getCurrentCycle() - 1): # + PRESERVED_CYCLES + 1):
 		print ('Updating docs data for cycle', cycle)
 		snap = getCycleSnapshot(cycle)
 		time.sleep(0.5)
@@ -256,7 +256,16 @@ elif args.action == 'updatependings':
 		data = json.loads (f.read())
 		f.close ()
 	except:
-		data = { 'cycle': int (conf['startcycle']) - 1, 'frozen': 0, 'frozenminusfee': 0, 'pendingminusfee': 0, 'pending': 0, 'paid': 0, 'deleguees': {}, 'cycles': {} }
+		data = { 
+			'cycle': int (conf['startcycle']) - 1,
+			'frozen': 0,
+			'frozenminusfee': 0,
+			'pendingminusfee': 0,
+			'pending': 0,
+			'paid': 0,
+			'deleguees': {},
+			'cycles': {}
+		}
 
 	curcycle = getCurrentCycle()
 	data['frozen'] = 0
@@ -274,7 +283,7 @@ elif args.action == 'updatependings':
 		except:
 			print ('Cant get reward for cycle', cycle)
 			continue
-		
+
 		rewsubfee = int (int (rew['rewards']) - int (rew['rewards']) * (100 - conf['percentage']) / 100.)
 
 		if not frozen:
@@ -297,7 +306,7 @@ elif args.action == 'updatependings':
 		time.sleep(0.5)
 		for d in snap['delegated']:
 			drew = int (rewsubfee * d['percentage'] / 100.)
-			if not (d['address'] in data['deleguees']) and ((conf['private'] and d['alias'] != None) or (not conf['private'])):
+			if not (d['address'] in data['deleguees']) and ((conf['private'] and d['alias'] is not None) or (not conf['private'])):
 				data['deleguees'][d['address']] = {
 					'address': d['address'],
 					'frozen': drew if frozen else 0,
@@ -307,7 +316,7 @@ elif args.action == 'updatependings':
 					'cycles': { }
 				}
 				data['deleguees'][d['address']]['cycles'][str(cycle)] = { 'cycle': cycle, 'percentage': d['percentage'], 'balance': d['balance'], 'frozen': drew if frozen else 0, 'reward': drew if not frozen else 0 }
-			elif (d['address'] in data['deleguees']) and ((conf['private'] and d['alias'] != None) or (not conf['private'])):
+			elif (d['address'] in data['deleguees']) and ((conf['private'] and d['alias'] is not None) or (not conf['private'])):
 				data['deleguees'][d['address']]['frozen'] += drew if frozen else 0
 				data['deleguees'][d['address']]['pending'] += drew if not frozen else 0
 				data['deleguees'][d['address']]['cycles'][str(cycle)] = { 'cycle': cycle, 'percentage': d['percentage'], 'balance': d['balance'], 'frozen': drew if frozen else 0, 'reward': drew if not frozen else 0 }
@@ -320,13 +329,13 @@ elif args.action == 'updatependings':
 	f = open ('docs/paylog.json', 'w')
 	f.write (json.dumps (data, separators=(',',':'), indent=4))
 	f.close ()
-	
+
 
 elif args.action == 'paypendings':
 	f = open ('paylog.json', 'r')
 	data = json.loads (f.read())
 	f.close ()
-	
+
 	if data['pendingminusfee'] == 0:
 		print ('No pending payments available')
 		sys.exit(0)
@@ -334,7 +343,7 @@ elif args.action == 'paypendings':
 	print ('There are', formatBalance(data['pendingminusfee']), 'XTZ pending in the pool')
 	paydata = ""
 	paiddeleguees = 0
-	
+
 	for x in data['deleguees']:
 		v = data['deleguees'][x]
 
@@ -362,7 +371,7 @@ elif args.action == 'paypendings':
 			print('Payout method', conf['payout']['method'], 'is not available')
 			sys.exit (0)
 
-		
+
 
 	if paiddeleguees == 0:
 		print ('No payments to do, exiting')
