@@ -53,7 +53,7 @@ idx_r_type = 1
 idx_r_priority = 4
 
 # Flow
-idx_f_category = 9
+idx_f_category = 10
 idx_f_amount_in = 11
 # idx_f_amount_out = 12
 # idx_f_frozen = 19
@@ -79,12 +79,18 @@ parser = argparse.ArgumentParser(description='Tezos delegate redistribution scri
 parser.add_argument('-c', '--config', metavar='config.json', dest='cfile', action='store',
 				   default='config.json',
 				   help='set a config file (default: config.json)')
+parser.add_argument('-d', '--dry-run', metavar='dryrun', dest='dryrun', action='store_const',
+				   default=False, const=True,
+				   help='dry run (default: False)')
 parser.add_argument('action', metavar='action', action='store',
 				   type=str, choices=['updatependings', 'paypendings', 'updatedocs'],
 				   help='action to perform (updatependings, paypendings, updatedocs)')
 
 args = parser.parse_args ()
 
+DRY_RUN = args.dryrun
+if DRY_RUN:
+	print ("Dry running enabled.")
 
 # Load the config file
 try:
@@ -121,12 +127,13 @@ def getCurrentCycle ():
 
 def getFrozenBalance(cycle):
 	flow = try_get(TZSTAT_EP['flow'].format(TZSTAT_API, conf['pkh'], cycle))
-	# print (flow)
-	flow = list(filter(lambda x: x[idx_f_category] == 'rewards', flow))
-	#  and x[idx_f_frozen] == 1
+	
 	fr_amount = 0.0
 	for x in flow:
-		fr_amount += x[idx_f_amount_in] #- x[idx_f_amount_out]
+		mcat = x[idx_f_category-1]
+		cat = x[idx_f_category]
+		if mcat == 'balance' and (cat == 'reward' or cat == 'baking' or cat =='bonus'):
+			fr_amount += x[idx_f_amount_in] #- x[idx_f_amount_out]
 
 	fr_amount = fr_amount * 1000000
 
@@ -243,9 +250,12 @@ if args.action == 'updatedocs':
 	data['percentage'] = conf['percentage']
 	data['currentcycle'] = curcycle
 
-	f = open ('docs/data.json', 'w')
-	f.write (json.dumps(data, separators=(',',':'), indent=4))
-	f.close ()
+	if DRY_RUN:
+		print ('Dry run, not saving data')
+	else:
+		f = open ('docs/data.json', 'w')
+		f.write (json.dumps(data, separators=(',',':'), indent=4))
+		f.close ()
 
 	print ('Up to date')
 
@@ -323,12 +333,15 @@ elif args.action == 'updatependings':
 
 
 	# Save the paylog
-	f = open ('paylog.json', 'w')
-	f.write (json.dumps (data, separators=(',',':'), indent=4))
-	f.close ()
-	f = open ('docs/paylog.json', 'w')
-	f.write (json.dumps (data, separators=(',',':'), indent=4))
-	f.close ()
+	if DRY_RUN:
+		print ('Dry run, not saving')
+	else:
+		f = open ('paylog.json', 'w')
+		f.write (json.dumps (data, separators=(',',':'), indent=4))
+		f.close ()
+		f = open ('docs/paylog.json', 'w')
+		f.write (json.dumps (data, separators=(',',':'), indent=4))
+		f.close ()
 
 
 elif args.action == 'paypendings':
@@ -384,10 +397,13 @@ elif args.action == 'paypendings':
 		print ('payouts.sh written; exec the bash command inside to send the transactions.')
 
 
-	f = open ('paylog.json', 'w')
-	f.write (json.dumps (data, separators=(',',':'), indent=4))
-	f.close ()
-	f = open ('docs/paylog.json', 'w')
-	f.write (json.dumps (data, separators=(',',':'), indent=4))
-	f.close ()
-	print ('paylog.json updated')
+	if DRY_RUN:
+		print ('Dry run, not saving paylog')
+	else:
+		f = open ('paylog.json', 'w')
+		f.write (json.dumps (data, separators=(',',':'), indent=4))
+		f.close ()
+		f = open ('docs/paylog.json', 'w')
+		f.write (json.dumps (data, separators=(',',':'), indent=4))
+		f.close ()
+		print ('paylog.json updated')
