@@ -13,12 +13,14 @@
         "KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e": "men",
         "KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N": "red",
         "KT1KPm5aNEMN61jxj61cc5TXMjsjDBZSuFF5": "and",
-        "KT1WScDDtweGCKQioUgHi7WHTc9TVsVyyM3b": "ema",
-        "KT1HtcckeAhQoq2L9TTwreiZYcjnMANwnErh": "ana",
-        "KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX": "spl",
+        "KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX": "spl"
+    },
+    "disabled": {
+        "KT1RWVF3uZq7Mu3x3AAFzhtX3aZmyF2mQhJX": "cor",
+	"KT1HtcckeAhQoq2L9TTwreiZYcjnMANwnErh": "ana",
         "KT1TpQqirScT2o4eLrcWb2qXibasVUdJ4F8f": "sio",
         "KT1UuNjaWzA9YseRBmYn6XceUrXoQE4ZHJ8X": "ste",
-        "KT1RWVF3uZq7Mu3x3AAFzhtX3aZmyF2mQhJX": "cor"
+        "KT1WScDDtweGCKQioUgHi7WHTc9TVsVyyM3b": "ema"
     },
     "payout": {
         "minpayout": 0.0001,
