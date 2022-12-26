@@ -26,7 +26,7 @@
         "minpayout": 0.0001,
         "method": "tezos-client",
         "deductfees": false,
-        "tezos_client": "./tezos-client",
+        "tezos_client": "octez-client",
         "from_account": "my_account"
     }
 }
