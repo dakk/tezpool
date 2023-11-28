@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-# http://doc.tzalpha.net/api/rpc_proposal.html?highlight=june
-# http://doc.tzalpha.net/api/rpc.html#usage
-
 import json
 import time
 import argparse
@@ -58,14 +55,14 @@ idx_f_amount_in = 11
 # idx_f_amount_out = 12
 # idx_f_frozen = 19
 
-TZSTAT_API = 'http://api.tzstats.com'
+TZSTAT_API = 'http://api.tzpro.io'
 TZSTAT_EP = {
-	'rights': '{}/tables/rights?address={}&cycle={}&limit=1000',
-	'rewards': '{}/tables/income?address={}&cycle={}',
-	'delegates': '{}/tables/snapshot?cycle={}&is_selected=1&baker={}&columns=balance,delegated,address&limit=50000',
-	'bbalance': '{}/tables/account?delegate={}&columns=row_id,spendable_balance,address',
-	'cbalance': '{}/tables/account?address={}&columns=row_id,spendable_balance,address',
-	'flow': '{}/tables/flow?address={}&cycle={}&limit=1000'
+	'rights': '{}/tables/rights?address={}&cycle={}&limit=1000&api_key={}',
+	'rewards': '{}/tables/income?address={}&cycle={}&api_key={}',
+	'delegates': '{}/tables/snapshot?cycle={}&is_selected=1&baker={}&columns=balance,delegated,address&limit=50000&api_key={}',
+	'bbalance': '{}/tables/account?delegate={}&columns=row_id,spendable_balance,address&api_key={}',
+	'cbalance': '{}/tables/account?address={}&columns=row_id,spendable_balance,address&api_key={}',
+	'flow': '{}/tables/flow?address={}&cycle={}&limit=1000&api_key={}'
 }
 
 # Force python3
@@ -126,7 +123,7 @@ def getCurrentCycle ():
 
 
 def getFrozenBalance(cycle):
-	flow = try_get(TZSTAT_EP['flow'].format(TZSTAT_API, conf['pkh'], cycle))
+	flow = try_get(TZSTAT_EP['flow'].format(TZSTAT_API, conf['pkh'], cycle, conf['api_key']))
 	
 	fr_amount = 0.0
 	for x in flow:
@@ -145,7 +142,7 @@ def getFrozenBalance(cycle):
 
 
 def getCycleSnapshot(cycle):
-	delegate_info = try_get (TZSTAT_EP['delegates'].format(TZSTAT_API, cycle, conf['pkh']))
+	delegate_info = try_get (TZSTAT_EP['delegates'].format(TZSTAT_API, cycle, conf['pkh'], conf['api_key']))
 	delegated = []
 	staking_balance = 0
 
@@ -189,7 +186,7 @@ def getCycleSnapshot(cycle):
 
 
 def getBakingAndEndorsmentRights (cycle, curcycle):
-	rights = try_get (TZSTAT_EP['rights'].format(TZSTAT_API, conf['pkh'], cycle))
+	rights = try_get (TZSTAT_EP['rights'].format(TZSTAT_API, conf['pkh'], cycle, conf['api_key']))
 	rights = list(filter(lambda x: x[idx_r_type] == 'endorsing' or (x[idx_r_type] == 'baking' and x[idx_r_priority] == 0), rights))
 
 	b = []

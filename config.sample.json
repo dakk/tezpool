@@ -1,6 +1,7 @@
 {
     "host": "http://127.0.0.1:8732",
     "pkh": "",
+    "api_key": "",
     "percentage": 95,
     "payto": "contract",
     "name": "MyAwesomePool",
