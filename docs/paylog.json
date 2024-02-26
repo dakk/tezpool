@@ -1,5 +1,5 @@
 {
-    "frozenminusfee":103628732,
+    "frozenminusfee":170098519,
     "cycles":{
         "9":{
             "frozenminusfee":0,
@@ -4118,31 +4118,91 @@
             "reward":37478398
         },
         "693":{
-            "frozenminusfee":16549163,
-            "frozen":17420172,
-            "rewardminusfee":0,
-            "reward":0
+            "frozenminusfee":0,
+            "frozen":0,
+            "rewardminusfee":16549163,
+            "reward":17420172
         },
         "694":{
-            "frozenminusfee":35014756,
-            "frozen":36857638,
-            "rewardminusfee":0,
-            "reward":0
+            "frozenminusfee":0,
+            "frozen":0,
+            "rewardminusfee":35014756,
+            "reward":36857638
         },
         "695":{
-            "frozenminusfee":26041469,
-            "frozen":27412073,
+            "frozenminusfee":0,
+            "frozen":0,
+            "rewardminusfee":26041469,
+            "reward":27412073
+        },
+        "696":{
+            "frozenminusfee":0,
+            "frozen":0,
+            "rewardminusfee":26023344,
+            "reward":27392994
+        },
+        "697":{
+            "frozenminusfee":0,
+            "frozen":0,
+            "rewardminusfee":35528814,
+            "reward":37398752
+        },
+        "698":{
+            "frozenminusfee":0,
+            "frozen":0,
+            "rewardminusfee":16532884,
+            "reward":17403036
+        },
+        "699":{
+            "frozenminusfee":0,
+            "frozen":0,
+            "rewardminusfee":35393050,
+            "reward":37255843
+        },
+        "700":{
+            "frozenminusfee":0,
+            "frozen":0,
+            "rewardminusfee":35545191,
+            "reward":37415991
+        },
+        "701":{
+            "frozenminusfee":0,
+            "frozen":0,
+            "rewardminusfee":16924941,
+            "reward":17815728
+        },
+        "702":{
+            "frozenminusfee":0,
+            "frozen":0,
+            "rewardminusfee":54408015,
+            "reward":57271595
+        },
+        "703":{
+            "frozenminusfee":48790631,
+            "frozen":51358559,
             "rewardminusfee":0,
             "reward":0
         },
-        "696":{
-            "frozenminusfee":26023344,
-            "frozen":27392994,
+        "704":{
+            "frozenminusfee":40103987,
+            "frozen":42214724,
+            "rewardminusfee":0,
+            "reward":0
+        },
+        "705":{
+            "frozenminusfee":40542126,
+            "frozen":42675923,
+            "rewardminusfee":0,
+            "reward":0
+        },
+        "706":{
+            "frozenminusfee":40661775,
+            "frozen":42801869,
             "rewardminusfee":0,
             "reward":0
         }
     },
-    "cycle":692,
+    "cycle":702,
     "deleguees":{
         "KT1WScDDtweGCKQioUgHi7WHTc9TVsVyyM3b":{
             "paid":799737085,
@@ -10995,7 +11055,7 @@
             "alias":"ana"
         },
         "KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e":{
-            "paid":1035084453,
+            "paid":1050827691,
             "cycles":{
                 "10":{
                     "cycle":10,
@@ -15782,33 +15842,103 @@
                     "cycle":693,
                     "percentage":5.281,
                     "balance":3820083019,
-                    "frozen":873961,
-                    "reward":0
+                    "frozen":0,
+                    "reward":873961
                 },
                 "694":{
                     "cycle":694,
                     "percentage":5.2791,
                     "balance":3820083019,
-                    "frozen":1848463,
-                    "reward":0
+                    "frozen":0,
+                    "reward":1848463
                 },
                 "695":{
                     "cycle":695,
                     "percentage":5.2763,
                     "balance":3820083019,
-                    "frozen":1374026,
-                    "reward":0
+                    "frozen":0,
+                    "reward":1374026
                 },
                 "696":{
                     "cycle":696,
                     "percentage":5.2751,
                     "balance":3820083019,
-                    "frozen":1372757,
+                    "frozen":0,
+                    "reward":1372757
+                },
+                "697":{
+                    "cycle":697,
+                    "percentage":5.2723,
+                    "balance":3820083019,
+                    "frozen":0,
+                    "reward":1873185
+                },
+                "698":{
+                    "cycle":698,
+                    "percentage":5.2959,
+                    "balance":3838629654,
+                    "frozen":0,
+                    "reward":875565
+                },
+                "699":{
+                    "cycle":699,
+                    "percentage":5.2939,
+                    "balance":3838629654,
+                    "frozen":0,
+                    "reward":1873672
+                },
+                "700":{
+                    "cycle":700,
+                    "percentage":5.2905,
+                    "balance":3838629654,
+                    "frozen":0,
+                    "reward":1880518
+                },
+                "701":{
+                    "cycle":701,
+                    "percentage":5.2892,
+                    "balance":3838629654,
+                    "frozen":0,
+                    "reward":895193
+                },
+                "702":{
+                    "cycle":702,
+                    "percentage":5.2858,
+                    "balance":3838629654,
+                    "frozen":0,
+                    "reward":2875898
+                },
+                "703":{
+                    "cycle":703,
+                    "percentage":5.2823,
+                    "balance":3838629654,
+                    "frozen":2577267,
+                    "reward":0
+                },
+                "704":{
+                    "cycle":704,
+                    "percentage":5.2789,
+                    "balance":3838629654,
+                    "frozen":2117049,
+                    "reward":0
+                },
+                "705":{
+                    "cycle":705,
+                    "percentage":5.2755,
+                    "balance":3838629654,
+                    "frozen":2138799,
+                    "reward":0
+                },
+                "706":{
+                    "cycle":706,
+                    "percentage":5.272,
+                    "balance":3838629654,
+                    "frozen":2143688,
                     "reward":0
                 }
             },
             "address":"KT1JLRENDnZG4mtH6exB7D2t9ttXsoveEt5e",
-            "frozen":5469207,
+            "frozen":8976803,
             "pending":0,
             "alias":"men"
         },
@@ -17404,7 +17534,7 @@
             "alias":"sio"
         },
         "KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N":{
-            "paid":2401354020,
+            "paid":2436738663,
             "cycles":{
                 "9":{
                     "cycle":9,
@@ -22198,38 +22328,108 @@
                     "cycle":693,
                     "percentage":11.87,
                     "balance":8586269560,
-                    "frozen":1964385,
-                    "reward":0
+                    "frozen":0,
+                    "reward":1964385
                 },
                 "694":{
                     "cycle":694,
                     "percentage":11.8656,
                     "balance":8586269560,
-                    "frozen":4154710,
-                    "reward":0
+                    "frozen":0,
+                    "reward":4154710
                 },
                 "695":{
                     "cycle":695,
                     "percentage":11.8595,
                     "balance":8586269560,
-                    "frozen":3088388,
-                    "reward":0
+                    "frozen":0,
+                    "reward":3088388
                 },
                 "696":{
                     "cycle":696,
                     "percentage":11.8567,
                     "balance":8586269560,
-                    "frozen":3085509,
+                    "frozen":0,
+                    "reward":3085509
+                },
+                "697":{
+                    "cycle":697,
+                    "percentage":11.8505,
+                    "balance":8586269560,
+                    "frozen":0,
+                    "reward":4210342
+                },
+                "698":{
+                    "cycle":698,
+                    "percentage":11.9029,
+                    "balance":8627457644,
+                    "frozen":0,
+                    "reward":1967892
+                },
+                "699":{
+                    "cycle":699,
+                    "percentage":11.8984,
+                    "balance":8627457644,
+                    "frozen":0,
+                    "reward":4211206
+                },
+                "700":{
+                    "cycle":700,
+                    "percentage":11.8906,
+                    "balance":8627457644,
+                    "frozen":0,
+                    "reward":4226536
+                },
+                "701":{
+                    "cycle":701,
+                    "percentage":11.8878,
+                    "balance":8627457644,
+                    "frozen":0,
+                    "reward":2012003
+                },
+                "702":{
+                    "cycle":702,
+                    "percentage":11.88,
+                    "balance":8627457644,
+                    "frozen":0,
+                    "reward":6463672
+                },
+                "703":{
+                    "cycle":703,
+                    "percentage":11.8723,
+                    "balance":8627457644,
+                    "frozen":5792570,
+                    "reward":0
+                },
+                "704":{
+                    "cycle":704,
+                    "percentage":11.8646,
+                    "balance":8627457644,
+                    "frozen":4758177,
+                    "reward":0
+                },
+                "705":{
+                    "cycle":705,
+                    "percentage":11.8569,
+                    "balance":8627457644,
+                    "frozen":4807039,
+                    "reward":0
+                },
+                "706":{
+                    "cycle":706,
+                    "percentage":11.8492,
+                    "balance":8627457644,
+                    "frozen":4818095,
                     "reward":0
                 }
             },
             "address":"KT18ctzhc7VTtiZpohPEowFQvTmAJZGuMo2N",
-            "frozen":12292992,
+            "frozen":20175881,
             "pending":0,
             "alias":"red"
         },
         "KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX":{
-            "paid":2169547360,
+            "paid":2202478549,
             "cycles":{
                 "10":{
                     "cycle":10,
@@ -27016,38 +27216,108 @@
                     "cycle":693,
                     "percentage":11.0465,
                     "balance":7990574598,
-                    "frozen":1828103,
-                    "reward":0
+                    "frozen":0,
+                    "reward":1828103
                 },
                 "694":{
                     "cycle":694,
                     "percentage":11.0424,
                     "balance":7990574598,
-                    "frozen":3866469,
-                    "reward":0
+                    "frozen":0,
+                    "reward":3866469
                 },
                 "695":{
                     "cycle":695,
                     "percentage":11.0367,
                     "balance":7990574598,
-                    "frozen":2874118,
-                    "reward":0
+                    "frozen":0,
+                    "reward":2874118
                 },
                 "696":{
                     "cycle":696,
                     "percentage":11.0341,
                     "balance":7990574598,
-                    "frozen":2871441,
+                    "frozen":0,
+                    "reward":2871441
+                },
+                "697":{
+                    "cycle":697,
+                    "percentage":11.0284,
+                    "balance":7990574598,
+                    "frozen":0,
+                    "reward":3918259
+                },
+                "698":{
+                    "cycle":698,
+                    "percentage":11.078,
+                    "balance":8029550082,
+                    "frozen":0,
+                    "reward":1831512
+                },
+                "699":{
+                    "cycle":699,
+                    "percentage":11.0738,
+                    "balance":8029550082,
+                    "frozen":0,
+                    "reward":3919355
+                },
+                "700":{
+                    "cycle":700,
+                    "percentage":11.0666,
+                    "balance":8029550082,
+                    "frozen":0,
+                    "reward":3933644
+                },
+                "701":{
+                    "cycle":701,
+                    "percentage":11.0639,
+                    "balance":8029550082,
+                    "frozen":0,
+                    "reward":1872558
+                },
+                "702":{
+                    "cycle":702,
+                    "percentage":11.0567,
+                    "balance":8029550082,
+                    "frozen":0,
+                    "reward":6015730
+                },
+                "703":{
+                    "cycle":703,
+                    "percentage":11.0495,
+                    "balance":8029550082,
+                    "frozen":5391120,
+                    "reward":0
+                },
+                "704":{
+                    "cycle":704,
+                    "percentage":11.0423,
+                    "balance":8029550082,
+                    "frozen":4428402,
+                    "reward":0
+                },
+                "705":{
+                    "cycle":705,
+                    "percentage":11.0352,
+                    "balance":8029550082,
+                    "frozen":4473904,
+                    "reward":0
+                },
+                "706":{
+                    "cycle":706,
+                    "percentage":11.028,
+                    "balance":8029550082,
+                    "frozen":4484180,
                     "reward":0
                 }
             },
             "address":"KT1D6auSy8nE9bxjikuxxYpUkjXJus3vJ7hX",
-            "frozen":11440131,
+            "frozen":18777606,
             "pending":0,
             "alias":"spl"
         },
         "tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq":{
-            "paid":9740639110,
+            "paid":9891373761,
             "cycles":{
                 "9":{
                     "cycle":9,
@@ -31855,33 +32125,103 @@
                     "cycle":693,
                     "percentage":50.6134,
                     "balance":36611401592,
-                    "frozen":8376094,
-                    "reward":0
+                    "frozen":0,
+                    "reward":8376094
                 },
                 "694":{
                     "cycle":694,
                     "percentage":50.6318,
                     "balance":36638380377,
-                    "frozen":17728601,
-                    "reward":0
+                    "frozen":0,
+                    "reward":17728601
                 },
                 "695":{
                     "cycle":695,
                     "percentage":50.6572,
                     "balance":36675672731,
-                    "frozen":13191879,
-                    "reward":0
+                    "frozen":0,
+                    "reward":13191879
                 },
                 "696":{
                     "cycle":696,
                     "percentage":50.6691,
                     "balance":36693091475,
-                    "frozen":13185794,
+                    "frozen":0,
+                    "reward":13185794
+                },
+                "697":{
+                    "cycle":697,
+                    "percentage":50.6946,
+                    "balance":36730464222,
+                    "frozen":0,
+                    "reward":18011190
+                },
+                "698":{
+                    "cycle":698,
+                    "percentage":50.4735,
+                    "balance":36584143275,
+                    "frozen":0,
+                    "reward":8344725
+                },
+                "699":{
+                    "cycle":699,
+                    "percentage":50.4922,
+                    "balance":36611550613,
+                    "frozen":0,
+                    "reward":17870729
+                },
+                "700":{
+                    "cycle":700,
+                    "percentage":50.5245,
+                    "balance":36658797974,
+                    "frozen":0,
+                    "reward":17959030
+                },
+                "701":{
+                    "cycle":701,
+                    "percentage":50.5363,
+                    "balance":36676218146,
+                    "frozen":0,
+                    "reward":8553238
+                },
+                "702":{
+                    "cycle":702,
+                    "percentage":50.5686,
+                    "balance":36723594203,
+                    "frozen":0,
+                    "reward":27513371
+                },
+                "703":{
+                    "cycle":703,
+                    "percentage":50.6007,
+                    "balance":36770834141,
+                    "frozen":24688400,
+                    "reward":0
+                },
+                "704":{
+                    "cycle":704,
+                    "percentage":50.633,
+                    "balance":36818265687,
+                    "frozen":20305851,
+                    "reward":0
+                },
+                "705":{
+                    "cycle":705,
+                    "percentage":50.6648,
+                    "balance":36865214415,
+                    "frozen":20540587,
+                    "reward":0
+                },
+                "706":{
+                    "cycle":706,
+                    "percentage":50.697,
+                    "balance":36912647825,
+                    "frozen":20614300,
                     "reward":0
                 }
             },
             "address":"tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
-            "frozen":52482368,
+            "frozen":86149138,
             "pending":0,
             "alias":"dakk"
         },
@@ -35985,7 +36325,7 @@
             "alias":"ste"
         },
         "KT1KPm5aNEMN61jxj61cc5TXMjsjDBZSuFF5":{
-            "paid":4141208439,
+            "paid":4204062181,
             "cycles":{
                 "11":{
                     "cycle":11,
@@ -40765,33 +41105,103 @@
                     "cycle":693,
                     "percentage":21.0834,
                     "balance":15250749245,
-                    "frozen":3489126,
-                    "reward":0
+                    "frozen":0,
+                    "reward":3489126
                 },
                 "694":{
                     "cycle":694,
                     "percentage":21.0755,
                     "balance":15250749245,
-                    "frozen":7379534,
-                    "reward":0
+                    "frozen":0,
+                    "reward":7379534
                 },
                 "695":{
                     "cycle":695,
                     "percentage":21.0646,
                     "balance":15250749245,
-                    "frozen":5485531,
-                    "reward":0
+                    "frozen":0,
+                    "reward":5485531
                 },
                 "696":{
                     "cycle":696,
                     "percentage":21.0596,
                     "balance":15250749245,
-                    "frozen":5480412,
+                    "frozen":0,
+                    "reward":5480412
+                },
+                "697":{
+                    "cycle":697,
+                    "percentage":21.0487,
+                    "balance":15250749245,
+                    "frozen":0,
+                    "reward":7478353
+                },
+                "698":{
+                    "cycle":698,
+                    "percentage":21.1443,
+                    "balance":15325777416,
+                    "frozen":0,
+                    "reward":3495762
+                },
+                "699":{
+                    "cycle":699,
+                    "percentage":21.1363,
+                    "balance":15325777416,
+                    "frozen":0,
+                    "reward":7480781
+                },
+                "700":{
+                    "cycle":700,
+                    "percentage":21.1225,
+                    "balance":15325777416,
+                    "frozen":0,
+                    "reward":7508032
+                },
+                "701":{
+                    "cycle":701,
+                    "percentage":21.1174,
+                    "balance":15325777416,
+                    "frozen":0,
+                    "reward":3574107
+                },
+                "702":{
+                    "cycle":702,
+                    "percentage":21.1037,
+                    "balance":15325777416,
+                    "frozen":0,
+                    "reward":11482104
+                },
+                "703":{
+                    "cycle":703,
+                    "percentage":21.0899,
+                    "balance":15325777416,
+                    "frozen":10289895,
+                    "reward":0
+                },
+                "704":{
+                    "cycle":704,
+                    "percentage":21.0762,
+                    "balance":15325777416,
+                    "frozen":8452396,
+                    "reward":0
+                },
+                "705":{
+                    "cycle":705,
+                    "percentage":21.0626,
+                    "balance":15325777416,
+                    "frozen":8539225,
+                    "reward":0
+                },
+                "706":{
+                    "cycle":706,
+                    "percentage":21.0489,
+                    "balance":15325777416,
+                    "frozen":8558856,
                     "reward":0
                 }
             },
             "address":"KT1KPm5aNEMN61jxj61cc5TXMjsjDBZSuFF5",
-            "frozen":21834603,
+            "frozen":35840372,
             "pending":0,
             "alias":"and"
         },
@@ -44256,8 +44666,8 @@
             }
         }
     },
-    "paid":23811578076,
-    "frozen":109082877,
-    "pendingminusfee":-30335255,
-    "pending":1221309277
+    "paid":24109225539,
+    "frozen":179051075,
+    "pendingminusfee":-30021091,
+    "pending":1237305636
 }
