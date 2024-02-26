@@ -59,7 +59,7 @@ TZSTAT_API = 'http://api.tzpro.io'
 TZSTAT_EP = {
 	'rights': '{}/tables/rights?address={}&cycle={}&limit=1000&api_key={}',
 	'rewards': '{}/tables/income?address={}&cycle={}&api_key={}',
-	'delegates': '{}/tables/snapshot?cycle={}&is_selected=1&baker={}&columns=balance,delegated,address&limit=50000&api_key={}',
+	'delegates': '{}/tables/snapshot?cycle={}&baker={}&columns=balance,delegated,address&limit=50000&api_key={}', #is_selected=1&
 	'bbalance': '{}/tables/account?delegate={}&columns=row_id,spendable_balance,address&api_key={}',
 	'cbalance': '{}/tables/account?address={}&columns=row_id,spendable_balance,address&api_key={}',
 	'flow': '{}/tables/flow?address={}&cycle={}&limit=1000&api_key={}'
@@ -145,6 +145,7 @@ def getCycleSnapshot(cycle):
 	delegate_info = try_get (TZSTAT_EP['delegates'].format(TZSTAT_API, cycle, conf['pkh'], conf['api_key']))
 	delegated = []
 	staking_balance = 0
+ 
 
 	for x in delegate_info:
 		staking_balance += float(x[idx_balance])
