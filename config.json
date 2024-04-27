@@ -2,6 +2,7 @@
     "host_": "https://mainnet.tezrpc.me:443",
     "host": "http://127.0.0.1:8732",
     "pkh": "tz1THsLcunLo8CmDm9f2y1xHuXttXZCpyFnq",
+    "api_key": "KQUNLWJXRXGMCLV06VXZGG61AKNJVC4",
     "name": "dakk",
     "payto": "contract",
     "percentage": 95,
