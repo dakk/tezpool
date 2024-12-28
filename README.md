@@ -1,5 +1,8 @@
-# TezPool
+# TezPool 
 TezPool is an opensource redistribution software for tezos baking pools.
+
+[!CAUTION]
+This software does not work, since Tzpro API are not functional anymore.
 
 
 ## Configuration
